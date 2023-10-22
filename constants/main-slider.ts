@@ -37,5 +37,5 @@ export const MAIN_SLIDE_IMAGES = [
   },
 ];
 
-export const MAIN_SLIDE_INTERVAL = 8000;
+export const MAIN_SLIDE_INTERVAL = 9000;
 export const MAIN_SLIDE_TRANSITION = 1000;

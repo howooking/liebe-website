@@ -17,7 +17,7 @@ export default function Slider() {
       interval={MAIN_SLIDE_INTERVAL}
       autoFocus
       useKeyboardArrows
-      transitionTime={0}
+      transitionTime={MAIN_SLIDE_TRANSITION}
       showArrows={false}
       showStatus={false}
       emulateTouch={false}

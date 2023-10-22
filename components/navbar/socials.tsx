@@ -6,6 +6,7 @@ export default function Socials() {
     <div className="flex md:flex-col items-center">
       {SOCIALS.map((social) => (
         <Link
+          target="_blank"
           href={social.href}
           key={social.label}
           className="h-[90px] w-[90px] flex justify-center items-center hover:opacity-50 transition"
