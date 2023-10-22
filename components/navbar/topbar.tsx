@@ -19,11 +19,11 @@ export default function Topbar() {
           className="w-[90px] h-[90px] bg-primary flex flex-col justify-center items-center hover:opacity-50 transition"
         >
           <Image alt="white liebe logo" src={logo} className="w-11" priority />
-          <h1 className="text-white text-center text-xs font-bold">
+          <div className="text-white text-center text-xs font-bold">
             LIEBE
             <br />
             동물병원
-          </h1>
+          </div>
         </Link>
         <Drawer />
       </div>
