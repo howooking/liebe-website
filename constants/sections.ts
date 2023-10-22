@@ -4,7 +4,7 @@ export const SECTIONS = [
     href: "/#main",
   },
   {
-    label: "리베소개",
+    label: "인사말",
     href: "/#salute",
   },
   {
@@ -12,7 +12,7 @@ export const SECTIONS = [
     href: "/#subject",
   },
   {
-    label: "직원소개",
+    label: "의료진소개",
     href: "/#staff",
   },
   {

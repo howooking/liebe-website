@@ -8,9 +8,6 @@ export default function Typography() {
         사랑과 케어로 함께하는 건강한 반려생활의 길로 안내합니다
       </p>
       <h1 className="text-5xl opacity-100">리베동물메디컬센터</h1>
-      <Link href="/#salute">
-        <FiChevronDown className="animate-bounce mt-10 hover:animate-none transition cursor-pointer" />
-      </Link>
     </div>
   );
 }
