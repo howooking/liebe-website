@@ -3,7 +3,8 @@ import { Noto_Sans_KR } from "next/font/google";
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/navbar";
+import Sidebar from "@/components/navbar/sidebar";
+import Topbar from "@/components/navbar/topbar";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -30,7 +31,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          <Sidebar />
+          <Topbar />
           {children}
         </ThemeProvider>
       </body>
