@@ -6,6 +6,7 @@ import Socials from "./socials";
 import dynamic from "next/dynamic";
 import Dots from "./dots";
 import Logo from "./logo";
+import PhoneNumber from "./phone-number";
 
 const Drawer = dynamic(() => import("@/components/navbar/drawer"), {
   ssr: false,
@@ -23,6 +24,7 @@ export default function Sidebar() {
         </Link>
         <Drawer />
       </div>
+      <PhoneNumber />
       {/* <Dots /> */}
       <Socials />
     </div>

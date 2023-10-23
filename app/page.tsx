@@ -12,8 +12,8 @@ export default function Home() {
       <Main />
       <Salute />
       <Subject />
-      {/* <Staff /> */}
-      {/* <Facility /> */}
+      <Facility />
+      <Staff />
       <Map />
     </div>
   );

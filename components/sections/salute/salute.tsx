@@ -10,13 +10,7 @@ import Section from "@/components/section";
 export default function Salute() {
   return (
     <Section hash="salute">
-      <div
-        className="relative w-full h-screen overflow-hidden flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(to left top, #e2ff9d, #efec8c, #f8d882, #fdc57e, #fdb37f)",
-        }}
-      >
+      <div className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-slate-950">
         <SectionTitle title="인사말" />
         <motion.div
           initial={{ opacity: 0 }}
