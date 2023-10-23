@@ -4,6 +4,6 @@ type SectionTitleProps = {
 
 export default function SectionTitle({ title }: SectionTitleProps) {
   return (
-    <div className="absolute top-10 left-10 text-2xl font-bold">{title}</div>
+    <div className="absolute top-1 left-1 text-2xl font-bold">{title}</div>
   );
 }

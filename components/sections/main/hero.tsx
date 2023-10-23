@@ -32,9 +32,6 @@ const Hero = () => {
           <Circles />
         </div>
       </section>
-      <Section hash="salute">
-        <Salute />
-      </Section>
     </>
   );
 };

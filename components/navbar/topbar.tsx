@@ -13,7 +13,7 @@ const Drawer = dynamic(() => import("@/components/navbar/drawer"), {
 
 export default function Topbar() {
   return (
-    <div className="z-50 fixed w-full bg-muted flex items-center justify-between md:hidden">
+    <div className="z-50 fixed w-full bg-slate-100 flex items-center justify-between md:hidden">
       <Drawer />
       <Socials />
     </div>
