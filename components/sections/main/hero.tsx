@@ -1,15 +1,18 @@
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
-import cat from "@/public/main-slider/cat.jpg";
-import client from "@/public/main-slider/client.jpg";
-import handling from "@/public/main-slider/handling.jpg";
+import cat from "@/public/hero/cat.jpg";
+import round from "@/public/hero/round.jpg";
+import surgery from "@/public/hero/surgery.jpg";
+import hongClient from "@/public/hero/hong-client.jpg";
+import kimClient from "@/public/hero/kim-client.jpg";
+import handling from "@/public/hero/handling.jpg";
 import icu from "@/public/main-slider/icu.jpg";
 import nightView from "@/public/main-slider/night-view.jpg";
-import surgery from "@/public/main-slider/surgery.jpg";
 import xRay from "@/public/main-slider/x-ray.jpg";
 import Salute from "../salute/salute";
 import Section from "@/components/section";
+import Image from "next/image";
 
 const Hero = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -91,25 +94,39 @@ const Images = ({
       <motion.div
         className="col-span-2 relative z-10"
         style={{
-          backgroundImage: "url(/main-slider/cat.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           scale,
           x: image1Offset,
           y: image1Offset,
         }}
-      />
+      >
+        <Image
+          src={cat}
+          alt="cat"
+          fill
+          priority
+          placeholder="blur"
+          quality={30}
+          className="object-cover object-center"
+        />
+      </motion.div>
       <motion.div
         className="row-span-2 relative z-10"
         style={{
-          backgroundImage: "url(/hero/round.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           scale,
           x: image2OffsetX,
           y: image2OffsetY,
         }}
-      />
+      >
+        <Image
+          src={round}
+          alt="round"
+          fill
+          priority
+          placeholder="blur"
+          quality={30}
+          className="object-cover object-center"
+        />
+      </motion.div>
 
       <motion.div
         className="row-span-2 relative z-10"
@@ -121,41 +138,72 @@ const Images = ({
           x: image3OffsetX,
           y: image3OffsetY,
         }}
-      />
+      >
+        <Image
+          src={surgery}
+          alt="round"
+          fill
+          priority
+          placeholder="blur"
+          quality={30}
+          className="object-cover object-center"
+        />
+      </motion.div>
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/hero/kim-client.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           scale,
           x: image4OffsetX,
           y: image4OffsetY,
         }}
-      />
+      >
+        <Image
+          src={kimClient}
+          alt="round"
+          fill
+          priority
+          placeholder="blur"
+          quality={30}
+          className="object-cover object-center"
+        />
+      </motion.div>
 
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/main-slider/client.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           scale,
           x: image5OffsetX,
           y: image5OffsetY,
         }}
-      />
+      >
+        <Image
+          src={hongClient}
+          alt="round"
+          fill
+          priority
+          placeholder="blur"
+          quality={30}
+          className="object-cover object-center"
+        />
+      </motion.div>
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage: "url(/main-slider/handling.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           scale,
           x: image6OffsetX,
           y: image6OffsetY,
         }}
-      />
+      >
+        <Image
+          src={handling}
+          alt="round"
+          fill
+          priority
+          placeholder="blur"
+          quality={30}
+          className="object-cover object-center"
+        />
+      </motion.div>
     </>
   );
 };
