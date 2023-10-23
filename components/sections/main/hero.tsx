@@ -1,3 +1,5 @@
+"use client";
+
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
@@ -13,6 +15,7 @@ import xRay from "@/public/main-slider/x-ray.jpg";
 import Salute from "../salute/salute";
 import Section from "@/components/section";
 import Image from "next/image";
+import Typography from "./typography";
 
 const Hero = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -54,13 +57,7 @@ const Copy = ({
       }}
       className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
     >
-      <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center">
-        <span className="text-secondary">리베</span>
-        <span className="text-primary">동물메디컬센터</span>
-      </h1>
-      <p className="text-stone-600 text-base md:text-2xl text-center my-6">
-        사랑과 케어로 함께하는 건강한 반려생활의 길로 안내합니다
-      </p>
+      <Typography />
     </motion.div>
   );
 };

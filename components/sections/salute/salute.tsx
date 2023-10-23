@@ -10,10 +10,18 @@ export default function Salute() {
   return (
     <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       <SectionTitle title="인사말" />
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         <Message />
       </motion.div>
-      <motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         <Image
           src={salute}
           alt="salute"
