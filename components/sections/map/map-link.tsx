@@ -24,7 +24,7 @@ export default function MapLink({
         color: textColor,
         border: `2px solid ${textColor}`,
       }}
-      className="text-xs px-2 py-2 flex justify-center items-center rounded-md font-bold hover:scale-105 transition"
+      className="text-xs px-2 py-2 flex justify-center items-center rounded-md font-bold hover:opacity-90 transition"
     >
       {title}
     </Link>

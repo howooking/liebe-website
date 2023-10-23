@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
 import Sidebar from "@/components/navbar/sidebar";
 import Topbar from "@/components/navbar/topbar";
 
@@ -25,16 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-sans antialiased", font.className)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Sidebar />
-          <Topbar />
-          {children}
-        </ThemeProvider>
+        <Sidebar />
+        <Topbar />
+        {children}
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex justify-between bg-primary text-white items-center py-2 px-10 text-sm">
+    <div className="flex justify-between bg-foreground text-white items-center py-2 px-10 text-sm">
       <div>
         <p>리베동물메디컬센터</p>
         <p>서울특별시 송파구 삼전로 56 리베동물메디컬센터</p>

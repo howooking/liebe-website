@@ -33,11 +33,7 @@ export default function Section({
   }, [hash, setCurrSection]);
 
   return (
-    <section
-      className="h-screen scroll-snap pl-[90px]"
-      id={hash}
-      ref={sectionRef}
-    >
+    <section className="md:pl-[90px]" id={hash} ref={sectionRef}>
       {children}
     </section>
   );

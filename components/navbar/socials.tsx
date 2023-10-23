@@ -9,7 +9,7 @@ export default function Socials() {
           target="_blank"
           href={social.href}
           key={social.label}
-          className="h-[90px] w-[90px] flex justify-center items-center hover:opacity-50 transition"
+          className="h-[40px] w-[40px] md:h-[90px] md:w-[90px] flex justify-center items-center hover:opacity-50 transition"
         >
           <social.icon size={social.size} />
         </Link>

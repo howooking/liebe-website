@@ -9,7 +9,7 @@ import { SECTIONS } from "@/constants/sections";
 export default function Drawer() {
   return (
     <Sheet>
-      <SheetTrigger className="h-[90px] w-[90px] hover:opacity-50 transition">
+      <SheetTrigger className="h-[40px] w-[40px] md:h-[90px] md:w-[90px] hover:opacity-50 transition">
         <Button size="icon" variant="ghost">
           <AiOutlineMenu size={20} />
         </Button>
