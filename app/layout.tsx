@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
-import Sidebar from "@/components/navbar/sidebar";
-import Topbar from "@/components/navbar/topbar";
+import Navbar from "@/components/navbar/navbar";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -24,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-sans antialiased", font.className)}>
-        <Sidebar />
-        <Topbar />
+        {/* <Sidebar /> */}
+        <Navbar />
         {children}
       </body>
     </html>

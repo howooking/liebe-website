@@ -33,7 +33,7 @@ export default function Section({
   }, [hash, setCurrSection]);
 
   return (
-    <section className="md:pl-[90px]" id={hash} ref={sectionRef}>
+    <section className="relative" id={hash} ref={sectionRef}>
       {children}
     </section>
   );

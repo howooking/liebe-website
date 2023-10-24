@@ -25,8 +25,8 @@ const Hero = () => {
 
   return (
     <>
-      <section ref={targetRef} className="bg-white h-[350vh] ">
-        <div className="h-screen sticky w-full top-[40px] md:top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
+      <section ref={targetRef} className="h-[350vh]">
+        <div className="sticky top-[40px] z-0 grid h-screen w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4 md:top-0">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />
           <Circles />
@@ -52,7 +52,7 @@ const Copy = ({
         opacity: copyOpacity,
         y: copyY,
       }}
-      className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
+      className="absolute z-20 flex h-screen w-full flex-col items-center justify-center px-8"
     >
       <Typography />
     </motion.div>
@@ -86,7 +86,7 @@ const Images = ({
   return (
     <>
       <motion.div
-        className="col-span-2 relative z-10"
+        className="relative z-10 col-span-2"
         style={{
           scale,
           x: image1Offset,
@@ -104,7 +104,7 @@ const Images = ({
         />
       </motion.div>
       <motion.div
-        className="row-span-2 relative z-10"
+        className="relative z-10 row-span-2"
         style={{
           scale,
           x: image2OffsetX,
@@ -123,7 +123,7 @@ const Images = ({
       </motion.div>
 
       <motion.div
-        className="row-span-2 relative z-10"
+        className="relative z-10 row-span-2"
         style={{
           backgroundImage: "url(/main-slider/surgery.jpg)",
           backgroundSize: "cover",
@@ -204,8 +204,8 @@ const Images = ({
 
 const Circles = () => (
   <>
-    <div className="w-3/5 max-w-[850px] min-w-[400px] aspect-square border-[8px] border-primary rounded-full absolute z-0 left-0 top-0 -translate-x-[50%] -translate-y-[50%]" />
-    <div className="w-1/2 max-w-[600px] min-w-[300px] aspect-square border-[8px] border-secondary rounded-full absolute z-0 right-0 bottom-0 translate-x-[50%] translate-y-[50%]" />
+    <div className="absolute left-0 top-0 z-0 aspect-square w-3/5 min-w-[400px] max-w-[850px] -translate-x-[50%] -translate-y-[50%] rounded-full border-[8px] border-primary" />
+    <div className="absolute bottom-0 right-0 z-0 aspect-square w-1/2 min-w-[300px] max-w-[600px] translate-x-[50%] translate-y-[50%] rounded-full border-[8px] border-secondary" />
   </>
 );
 

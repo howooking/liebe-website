@@ -62,7 +62,7 @@ export default function Panel({
               src={imgSrc}
               fill
               placeholder="blur"
-              quality={30}
+              quality={50}
               className="object-cover object-center"
             />
             <motion.div

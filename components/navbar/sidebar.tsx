@@ -14,7 +14,7 @@ const Drawer = dynamic(() => import("@/components/navbar/drawer"), {
 
 export default function Sidebar() {
   return (
-    <div className="w-[90px] bg-slate-100 fixed inset-0 md:flex flex-col items-center justify-between hidden">
+    <div className="w-[90px] bg-slate-100 fixed inset-0 md:flex flex-col items-center justify-between hidden z-50">
       <div className="flex flex-col items-center ">
         <Link
           href="/#main"

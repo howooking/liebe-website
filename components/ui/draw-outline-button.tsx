@@ -9,7 +9,7 @@ export default function DrawOutlineButton({
   return (
     <button
       {...rest}
-      className="group relative w-full h-full transition-colors duration-[400ms]"
+      className="group relative w-full h-full transition-colors duration-500"
     >
       <div className="flex flex-col justify-center items-center">
         {children}
