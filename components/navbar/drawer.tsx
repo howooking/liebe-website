@@ -8,6 +8,9 @@ import { useCurrSectionStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
+import Image from "next/image";
+import spinner from "@/public/spinner.svg";
 
 export default function Drawer() {
   const { currSection, setCurrSection } = useCurrSectionStore();
@@ -18,24 +21,21 @@ export default function Drawer() {
   }, []);
 
   if (!isClient) {
-    return <>loading</>;
+    return <Image src={spinner} alt="spinner" width={35} />;
   }
   return (
     <Sheet>
-      <SheetTrigger className="h-[50px] w-[50px]">
-        <Button size="icon" className="bg-secondary hover:bg-neutral-900">
+      <SheetTrigger className="z-10">
+        <Button variant="ghost" size="icon" className="p-0">
           <AiOutlineMenu size={24} />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="bg-foreground">
+      <SheetContent side="right" className="bg-stone-900">
         <ul className="flex h-full flex-col justify-center gap-5 text-center text-3xl font-bold text-background">
           {SECTIONS.map((section) => (
             <li key={section.label}>
               <SheetClose asChild>
-                <a
-                  href={section.href}
-                  onClick={() => setCurrSection(section.href.slice(2))}
-                >
+                <Link href={section.href}>
                   <DrawOutlineButton>
                     <div
                       className={cn(
@@ -46,7 +46,7 @@ export default function Drawer() {
                       {section.label}
                     </div>
                   </DrawOutlineButton>
-                </a>
+                </Link>
               </SheetClose>
             </li>
           ))}

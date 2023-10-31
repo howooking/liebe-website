@@ -9,15 +9,11 @@ import surgery from "@/public/hero/surgery.jpg";
 import hongClient from "@/public/hero/hong-client.jpg";
 import kimClient from "@/public/hero/kim-client.jpg";
 import handling from "@/public/hero/handling.jpg";
-import icu from "@/public/main-slider/icu.jpg";
-import nightView from "@/public/main-slider/night-view.jpg";
-import xRay from "@/public/main-slider/x-ray.jpg";
-import Salute from "../salute/salute";
-import Section from "@/components/section";
 import Image from "next/image";
 import Typography from "./typography";
+import Circles from "./circles";
 
-const Hero = () => {
+export default function Hero() {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -26,7 +22,7 @@ const Hero = () => {
   return (
     <>
       <section ref={targetRef} className="h-[350vh]">
-        <div className="sticky top-[40px] z-0 grid h-screen w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4 md:top-0">
+        <div className="sticky grid h-screen w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4 pt-[72px] md:top-0">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />
           <Circles />
@@ -34,7 +30,7 @@ const Hero = () => {
       </section>
     </>
   );
-};
+}
 
 const Copy = ({
   scrollYProgress,
@@ -125,7 +121,6 @@ const Images = ({
       <motion.div
         className="relative z-10 row-span-2"
         style={{
-          backgroundImage: "url(/main-slider/surgery.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -201,12 +196,3 @@ const Images = ({
     </>
   );
 };
-
-const Circles = () => (
-  <>
-    <div className="absolute left-0 top-0 z-0 aspect-square w-3/5 min-w-[400px] max-w-[850px] -translate-x-[50%] -translate-y-[50%] rounded-full border-[8px] border-primary" />
-    <div className="absolute bottom-0 right-0 z-0 aspect-square w-1/2 min-w-[300px] max-w-[600px] translate-x-[50%] translate-y-[50%] rounded-full border-[8px] border-secondary" />
-  </>
-);
-
-export default Hero;

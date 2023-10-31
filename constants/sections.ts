@@ -1,23 +1,19 @@
 export const SECTIONS = [
   {
-    label: "맨위로",
-    href: "/#main",
-  },
-  {
-    label: "인사말",
-    href: "/#salute",
+    label: "홈으로",
+    href: "/",
   },
   {
     label: "진료과목",
-    href: "/#subject",
+    href: "/subject",
   },
   {
     label: "의료진소개",
-    href: "/#staff",
+    href: "/staff",
   },
   {
     label: "시설안내",
-    href: "/#facility",
+    href: "/facility",
   },
   {
     label: "오시는길",

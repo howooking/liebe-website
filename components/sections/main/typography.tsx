@@ -12,14 +12,14 @@ export default function Typography() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
     >
-      <h1 className="bg-gradient-to-r from-secondary to-primary bg-clip-text py-1 text-8xl font-extrabold text-transparent">
+      <h1 className="bg-gradient-to-r from-primary to-secondary bg-clip-text py-1 text-8xl font-extrabold text-transparent">
         리베 동물메디컬센터
       </h1>
       <p className="text-3xl text-foreground text-stone-700">
         사랑과 케어로 함께하는
         <br className="block md:hidden" /> 건강한 반려생활의 길로 안내합니다
       </p>
-      <p className="flex animate-bounce items-center gap-2 text-stone-500">
+      <p className="mt-10 flex animate-bounce items-center gap-2 text-stone-500">
         스크롤 아래로
         <BsMouse />
       </p>

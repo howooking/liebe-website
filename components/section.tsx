@@ -10,30 +10,34 @@ export default function Section({
   children: React.ReactNode;
   hash: string;
 }) {
-  const sectionRef = useRef(null);
-  const { setCurrSection } = useCurrSectionStore();
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            window.history.pushState(null, "", `#${hash}`);
-            setCurrSection(hash);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+  // const sectionRef = useRef(null);
+  // const { setCurrSection } = useCurrSectionStore();
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           window.history.pushState(null, "", `#${hash}`);
+  //           setCurrSection(hash);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.2 },
+  //   );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+  //   if (sectionRef.current) observer.observe(sectionRef.current);
 
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
-  }, [hash, setCurrSection]);
+  //   return () => {
+  //     if (sectionRef.current) observer.unobserve(sectionRef.current);
+  //   };
+  // }, [hash, setCurrSection]);
 
   return (
-    <section className="relative" id={hash} ref={sectionRef}>
+    <section
+      className="scroll-p-72"
+      id={hash}
+      // ={sectionRef}
+    >
       {children}
     </section>
   );
