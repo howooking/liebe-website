@@ -28,22 +28,22 @@ export default function TimeTable({ off }: { off?: number[] }) {
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead className="text-center">일</TableHead>
-          <TableHead className="text-center">월</TableHead>
-          <TableHead className="text-center">화</TableHead>
-          <TableHead className="text-center">수</TableHead>
-          <TableHead className="text-center">목</TableHead>
-          <TableHead className="text-center">금</TableHead>
-          <TableHead className="text-center">토</TableHead>
+          <TableHead className="text-center text-stone-800">일</TableHead>
+          <TableHead className="text-center text-stone-800">월</TableHead>
+          <TableHead className="text-center text-stone-800">화</TableHead>
+          <TableHead className="text-center text-stone-800">수</TableHead>
+          <TableHead className="text-center text-stone-800">목</TableHead>
+          <TableHead className="text-center text-stone-800">금</TableHead>
+          <TableHead className="text-center text-stone-800">토</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         <TableRow>
-          {schedules.map((schedule) => (
-            <TableCell key={schedule} className="text-center">
+          {schedules.map((schedule, index) => (
+            <TableCell key={index} className="text-center">
               <Badge
                 variant={schedule === "휴무" ? "destructive" : "outline"}
-                className="px-1 py-1 text-xs"
+                className="px-1 py-0.5 text-xs"
               >
                 {schedule}
               </Badge>

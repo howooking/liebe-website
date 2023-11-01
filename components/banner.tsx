@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
+import React from "react";
 
 export default function Banner({
   imageSrc,
@@ -8,7 +9,7 @@ export default function Banner({
 }: {
   imageSrc: StaticImageData;
   title: string;
-  subTitle: string;
+  subTitle: React.ReactNode;
 }) {
   return (
     <div className="relative flex h-80 items-center justify-center">
@@ -25,9 +26,10 @@ export default function Banner({
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold text-primary">{title}</h2>
-        <p>{subTitle}</p>
+        <div>{subTitle}</div>
       </motion.div>
     </div>
   );

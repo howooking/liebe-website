@@ -20,11 +20,17 @@ export default function Staff() {
         <Banner
           imageSrc={staffBanner}
           title="리베 의료진을 소개합니다"
-          subTitle="석·박사급 분야별 전문 의료진으로 구성된 의료진들을 소개합니다"
+          subTitle={
+            <div className="text-center">
+              석·박사급 분야별 전문 의료진으로 구성된{" "}
+              <br className="sm:hidden" />
+              의료진들을 소개합니다
+            </div>
+          }
         />
         <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
         <Container>
-          <ul className="my-8 grid grid-cols-2 gap-8">
+          <ul className="grid-col-1 my-8 grid gap-8 md:grid-cols-2">
             {STAFFS[selected].map((staff) => (
               <StaffCard key={staff.name} staff={staff} selected={selected} />
             ))}

@@ -17,7 +17,7 @@ export default function Subject() {
         <Banner
           imageSrc={subjectBanner}
           title="병원 진료 안내"
-          subTitle="진료 예약 / 진료 시간 / 진료 과목"
+          subTitle="진료 예약 / 진료 시간 / 진료과목"
         />
         <Container>
           <CallCard />
