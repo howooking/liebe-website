@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 type SectionTitleProps = {
   children: React.ReactNode;
-  subTitle?: string;
+  subTitle?: React.ReactNode;
 };
 
 export default function SectionTitle({
@@ -16,9 +16,9 @@ export default function SectionTitle({
       transition={{ duration: 1 }}
       className="mb-10"
     >
-      <div className="my-4 flex flex-col items-center gap-2">
-        <h2 className="text-3xl font-bold">{children}</h2>
-        <p>{subTitle}</p>
+      <div className="flex flex-col items-center justify-center gap-4">
+        <h2 className="text-xl font-bold sm:text-3xl">{children}</h2>
+        <p className="text-sm">{subTitle}</p>
       </div>
     </motion.div>
   );

@@ -15,7 +15,6 @@ import spinner from "@/public/spinner.svg";
 export default function Drawer() {
   const { currSection, setCurrSection } = useCurrSectionStore();
   const [isClient, setIsClient] = useState(false);
-  console.log(currSection);
 
   useEffect(() => {
     setIsClient(true);

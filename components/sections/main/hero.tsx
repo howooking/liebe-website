@@ -99,6 +99,7 @@ const Images = ({
           placeholder="blur"
           quality={30}
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
       <motion.div
@@ -117,6 +118,7 @@ const Images = ({
           placeholder="blur"
           quality={30}
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
 
@@ -138,6 +140,7 @@ const Images = ({
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
       <motion.div
@@ -156,6 +159,7 @@ const Images = ({
           placeholder="blur"
           quality={30}
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
 
@@ -175,6 +179,7 @@ const Images = ({
           placeholder="blur"
           quality={30}
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
       <motion.div
@@ -193,6 +198,7 @@ const Images = ({
           placeholder="blur"
           quality={30}
           className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
     </>
