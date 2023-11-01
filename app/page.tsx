@@ -4,10 +4,10 @@ import Salute from "@/components/sections/salute/salute";
 
 export default async function Home() {
   return (
-    <div>
+    <>
       <Main />
       <Salute />
       <Map />
-    </div>
+    </>
   );
 }

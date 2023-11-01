@@ -66,27 +66,3 @@ html {
 ::-webkit-scrollbar {
   width: 0rem;
 }
-/* 
-.heading {
-  background: linear-gradient(
-    to right,
-    #f08d47 10%,
-    #8eb62f 50%,
-    #f08d47 80%,
-    #8eb62f 90%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 500% auto;
-  animation: textShine 5s ease-in-out infinite alternate;
-}
-
-@keyframes textShine {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-} */

@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <Section id="/">
-      <section ref={targetRef} className="h-[300vh] ">
+      <section ref={targetRef} className="h-[350vh] ">
         <div className="sticky top-[73px] grid h-[calc(100vh-73px)] w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />

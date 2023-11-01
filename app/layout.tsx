@@ -1,11 +1,12 @@
+import "@/app/globals.css";
+
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
-import "@/app/globals.css";
+
 import { cn } from "@/lib/utils";
-import { Suspense } from "react";
-import Loading from "./loading";
-import Navbar from "@/components/navbar/Navbar";
+
 import Footer from "@/components/sections/footer/footer";
+import Navbar from "@/components/navbar/navbar";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -98,7 +99,7 @@ export default function RootLayout({
         className={cn("font-sans text-stone-800 antialiased", font.className)}
       >
         <Navbar />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        {children}
         <Footer />
       </body>
     </html>

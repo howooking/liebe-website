@@ -1,19 +1,22 @@
 "use client";
 
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
-import { AiOutlineMenu } from "react-icons/ai";
-import { SECTIONS } from "@/constants/sections";
-import DrawOutlineButton from "../ui/draw-outline-button";
-import { useCurrSectionStore } from "@/lib/store";
-import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import Image from "next/image";
+import { AiOutlineMenu } from "react-icons/ai";
+
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import DrawOutlineButton from "@/components/ui/draw-outline-button";
+import { Button } from "@/components/ui/button";
+import { SECTIONS } from "@/constants/sections";
+
 import spinner from "@/public/spinner.svg";
 
 export default function Drawer() {
-  const { currSection, setCurrSection } = useCurrSectionStore();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -31,7 +34,7 @@ export default function Drawer() {
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="right" className="bg-stone-800">
+      <SheetContent side="right" className="bg-stone-900">
         <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-stone-50">
           {SECTIONS.map((section) => (
             <li key={section.label}>

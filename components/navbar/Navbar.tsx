@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { SOCIALS } from "@/constants/socials";
 import Container from "@/components/container";
 import Drawer from "@/components/navbar/drawer";
@@ -18,7 +19,7 @@ export default function Navbar() {
                   <Link
                     target="_blank"
                     href={social.href}
-                    className="flex items-center gap-1 px-2 transition hover:bg-stone-800 hover:text-white"
+                    className="flex items-center gap-1 px-2 transition hover:bg-stone-900 hover:text-stone-50"
                   >
                     <social.icon size={social.size} />
                     <p className="hidden md:block">{social.desc}</p>
