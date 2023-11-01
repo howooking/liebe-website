@@ -3,7 +3,7 @@ import Section from "@/components/section";
 
 export default function Main() {
   return (
-    <Section id="">
+    <Section id="/">
       <Hero />
     </Section>
   );

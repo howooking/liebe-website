@@ -43,19 +43,28 @@ export default function Salute() {
                 <Message />
                 <Separator className="md:my-4" />
                 <div className="flex items-center justify-between">
-                  <div className="flex gap-2">
+                  <div className="flex gap-4">
                     <Button
                       asChild
-                      size={(width as number) < 830 ? "sm" : "default"}
+                      size={(width as number) < 940 ? "sm" : "default"}
                     >
-                      <Link href="/staff" className="text-[9px] sm:text-base">
-                        읜료진 소개
+                      <Link href="/subject" className="text-[9px] sm:text-base">
+                        진료 안내
                       </Link>
                     </Button>
                     <Button
-                      variant="outline"
                       asChild
-                      size={(width as number) < 830 ? "sm" : "default"}
+                      variant="outline"
+                      size={(width as number) < 940 ? "sm" : "default"}
+                    >
+                      <Link href="/staff" className="text-[9px] sm:text-base">
+                        의료진 소개
+                      </Link>
+                    </Button>
+                    <Button
+                      variant="link"
+                      asChild
+                      size={(width as number) < 940 ? "sm" : "default"}
                     >
                       <Link
                         href="/facility"
@@ -65,15 +74,17 @@ export default function Salute() {
                       </Link>
                     </Button>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <span className="text-sm sm:text-2xl">대표원장</span>
-                    <span className="font-script text-2xl sm:text-4xl">
-                      김홍석
-                    </span>
-                  </div>
                 </div>
               </div>
-              <Image src={salute} alt="salute" width={200} />
+              <div className="flex shrink-0 flex-col items-center justify-between">
+                <Image src={salute} alt="salute" width={200} />
+                <div className="flex items-center gap-4">
+                  <span className="text-sm sm:text-2xl">대표원장</span>
+                  <span className="font-script text-2xl sm:text-4xl">
+                    김홍석
+                  </span>
+                </div>
+              </div>
             </motion.div>
           </div>
         </Container>

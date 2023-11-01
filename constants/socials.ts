@@ -23,7 +23,7 @@ export const SOCIALS = [
   {
     label: "kakao",
     href: "https://pf.kakao.com/_uwdNT",
-    desc: "카카오상담",
+    desc: "카카오톡상담",
     icon: RiKakaoTalkFill,
     size: 16,
     // color: "#FAE200",

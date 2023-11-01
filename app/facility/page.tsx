@@ -4,7 +4,7 @@ import Banner from "@/components/banner";
 import Tabs from "@/components/tab";
 import { FACILITY_IMAGES } from "@/constants/facility";
 
-import facilityBanner from "@/public/facility/ficility_banner.jpg";
+import facilityBanner from "@/public/facility/ficility-banner.jpg";
 import { useMemo, useState } from "react";
 import CardCarousel from "./carousel";
 import SectionTitle from "@/components/sectionTitle";
@@ -24,9 +24,6 @@ export default function Facility() {
           subTitle="최첨단 장비들과 반려가족들을 위한 공간들"
         />
         <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
-        <SectionTitle>
-          병원 <span className="text-primary">둘러보기</span>
-        </SectionTitle>
         <CardCarousel items={FACILITY_IMAGES[selected]} />
         <LevelInfo />
       </div>

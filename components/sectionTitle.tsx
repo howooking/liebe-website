@@ -1,3 +1,6 @@
+"use client";
+
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 type SectionTitleProps = {
@@ -14,11 +17,10 @@ export default function SectionTitle({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="mb-10"
     >
-      <div className="flex flex-col items-center justify-center gap-4">
+      <div className="my-4 flex flex-col items-center justify-center gap-4">
         <h2 className="text-xl font-bold sm:text-3xl">{children}</h2>
-        <p className="text-sm">{subTitle}</p>
+        <p className={cn(!subTitle && "hidden", "text-sm")}>{subTitle}</p>
       </div>
     </motion.div>
   );

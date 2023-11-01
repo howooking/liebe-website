@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
 export default function Banner({
@@ -19,10 +20,15 @@ export default function Banner({
         className="object-cover"
       />
       <div className="absolute h-full w-full bg-black/50" />
-      <div className="z-10 flex flex-col items-center gap-4 text-white">
+      <motion.div
+        className="z-10 flex flex-col items-center gap-4 text-white"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h2 className="text-3xl font-bold text-primary">{title}</h2>
         <p>{subTitle}</p>
-      </div>
+      </motion.div>
     </div>
   );
 }

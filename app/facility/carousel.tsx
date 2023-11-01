@@ -49,7 +49,7 @@ export default function CardCarousel({ items }: { items: ItemType[] }) {
 
   return (
     <section ref={ref}>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden py-8">
         <Container>
           {/* CARDS */}
           <motion.div

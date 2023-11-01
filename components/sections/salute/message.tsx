@@ -3,7 +3,7 @@ console.warn("리베창립연도");
 export default function Message() {
   return (
     <>
-      <p className="text-center text-primary sm:mb-5 sm:text-xl">
+      <p className="mt-5 text-center text-primary sm:mb-5 sm:text-xl">
         리베동물메디컬센터를
         <br className="md:hidden" /> 찾아주셔서 감사합니다
       </p>

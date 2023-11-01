@@ -36,14 +36,11 @@ export default function Drawer() {
           {SECTIONS.map((section) => (
             <li key={section.label}>
               <SheetClose asChild>
-                <Link
-                  href={section.href}
-                  onClick={() => setCurrSection(section.href.replace(/#/g, ""))}
-                >
+                <a href={section.href}>
                   <DrawOutlineButton>
                     <div className="px-4 py-2">{section.label}</div>
                   </DrawOutlineButton>
-                </Link>
+                </a>
               </SheetClose>
             </li>
           ))}

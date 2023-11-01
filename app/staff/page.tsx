@@ -8,7 +8,7 @@ import Container from "@/components/container";
 import StaffCard from "./staff-card";
 import Banner from "@/components/banner";
 
-import staffBanner from "@/public/staff/staff_banner.jpg";
+import staffBanner from "@/public/staff/staff-banner.jpg";
 import Section from "@/components/section";
 
 export default function Staff() {

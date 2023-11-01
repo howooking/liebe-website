@@ -8,7 +8,7 @@ export const SECTIONS = [
     href: "/#salute",
   },
   {
-    label: "진료과목",
+    label: "진료안내",
     href: "/subject",
   },
   {
