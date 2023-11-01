@@ -2,6 +2,7 @@
 
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 import cat from "@/public/hero/cat.jpg";
 import round from "@/public/hero/round.jpg";
@@ -9,9 +10,10 @@ import surgery from "@/public/hero/surgery.jpg";
 import seoClient from "@/public/hero/seo-client.jpg";
 import kimClient from "@/public/hero/kim-client.jpg";
 import infoClient from "@/public/hero/info-client.jpg";
-import Image from "next/image";
-import Typography from "./typography";
-import Circles from "./circles";
+
+import Typography from "@/components/sections/main/typography";
+import Circles from "@/components/sections/main/circles";
+import Section from "@/components/section";
 
 export default function Hero() {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -20,13 +22,15 @@ export default function Hero() {
   });
 
   return (
-    <section ref={targetRef} className="h-[300vh] ">
-      <div className="sticky top-[73px] grid h-[calc(100vh-73px)] w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4">
-        <Copy scrollYProgress={scrollYProgress} />
-        <Images scrollYProgress={scrollYProgress} />
-        <Circles />
-      </div>
-    </section>
+    <Section id="/">
+      <section ref={targetRef} className="h-[300vh] ">
+        <div className="sticky top-[73px] grid h-[calc(100vh-73px)] w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4">
+          <Copy scrollYProgress={scrollYProgress} />
+          <Images scrollYProgress={scrollYProgress} />
+          <Circles />
+        </div>
+      </section>
+    </Section>
   );
 }
 
@@ -132,7 +136,7 @@ const Images = ({
           fill
           priority
           placeholder="blur"
-          quality={30}
+          quality={50}
           className="object-cover object-center"
         />
       </motion.div>

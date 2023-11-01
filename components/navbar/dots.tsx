@@ -1,4 +1,7 @@
-"use client";
+console.log("not using");
+
+("use client");
+
 import { GoDot, GoDotFill } from "react-icons/go";
 
 import { SECTIONS } from "@/constants/sections";
@@ -8,13 +11,13 @@ export default function Dots() {
   const { currSection } = useCurrSectionStore();
 
   return (
-    <div className="md:flex flex-col gap-2 hidden">
+    <div className="hidden flex-col gap-2 md:flex">
       {SECTIONS.map((section) => (
         <a href={section.href} key={section.label} title={section.label}>
           {`/#${currSection}` === section.href ? (
-            <GoDotFill className="hover:opacity-50 transition" />
+            <GoDotFill className="transition hover:opacity-50" />
           ) : (
-            <GoDot className="hover:opacity-50 transition" />
+            <GoDot className="transition hover:opacity-50" />
           )}
         </a>
       ))}

@@ -15,6 +15,7 @@ import spinner from "@/public/spinner.svg";
 export default function Drawer() {
   const { currSection, setCurrSection } = useCurrSectionStore();
   const [isClient, setIsClient] = useState(false);
+  console.log(currSection);
 
   useEffect(() => {
     setIsClient(true);
@@ -25,26 +26,23 @@ export default function Drawer() {
   }
   return (
     <Sheet>
-      <SheetTrigger className="z-10">
+      <SheetTrigger>
         <Button variant="ghost" size="icon" className="p-0">
           <AiOutlineMenu size={24} />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="bg-stone-900">
-        <ul className="flex h-full flex-col justify-center gap-5 text-center text-3xl font-bold text-background">
+
+      <SheetContent side="right" className="bg-stone-800">
+        <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-stone-50">
           {SECTIONS.map((section) => (
             <li key={section.label}>
               <SheetClose asChild>
-                <Link href={section.href}>
+                <Link
+                  href={section.href}
+                  onClick={() => setCurrSection(section.href.replace(/#/g, ""))}
+                >
                   <DrawOutlineButton>
-                    <div
-                      className={cn(
-                        `/#${currSection}` === section.href && "text-secondary",
-                        "px-4 py-2",
-                      )}
-                    >
-                      {section.label}
-                    </div>
+                    <div className="px-4 py-2">{section.label}</div>
                   </DrawOutlineButton>
                 </Link>
               </SheetClose>
