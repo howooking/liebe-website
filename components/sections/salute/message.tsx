@@ -3,9 +3,9 @@ console.warn("리베창립연도");
 export default function Message() {
   return (
     <>
-      <p className="text-center text-lg text-primary sm:mb-5 sm:text-2xl">
+      <p className="text-center text-primary sm:mb-5 sm:text-xl">
         리베동물메디컬센터를
-        <br className="lg:hidden" /> 찾아주셔서 감사합니다
+        <br className="md:hidden" /> 찾아주셔서 감사합니다
       </p>
       <div className="flex flex-col gap-2 text-xs sm:gap-5 sm:text-sm">
         <p>LIEBE는 독일어로 사랑을 뜻합니다.</p>
