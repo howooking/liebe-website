@@ -7,7 +7,6 @@ import { FACILITY_IMAGES } from "@/constants/facility";
 import facilityBanner from "@/public/facility/ficility-banner.jpg";
 import { useMemo, useState } from "react";
 import CardCarousel from "./carousel";
-import SectionTitle from "@/components/sectionTitle";
 import LevelInfo from "./level-info";
 import Section from "@/components/section";
 
@@ -24,7 +23,7 @@ export default function Facility() {
           subTitle="최첨단 장비들과 반려가족들을 위한 공간들"
         />
         <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
-        <CardCarousel items={FACILITY_IMAGES[selected]} />
+        <CardCarousel items={FACILITY_IMAGES[selected]} selected={selected} />
         <LevelInfo />
       </div>
     </Section>

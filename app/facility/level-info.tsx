@@ -6,7 +6,12 @@ import { LEVELS_INFO } from "@/constants/facility";
 
 export default function LevelInfo() {
   return (
-    <div className="px-4">
+    <motion.div
+      className="px-4"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    >
       <div className="mx-auto max-w-3xl">
         {Object.keys(LEVELS_INFO).map((level) => (
           <Level
@@ -22,7 +27,7 @@ export default function LevelInfo() {
           </Level>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -40,7 +45,7 @@ const Level = ({
   return (
     <motion.div
       animate={open ? "open" : "closed"}
-      className="border-b-[1px] border-b-slate-300"
+      className="border-b-[1px] border-b-stone-300"
     >
       <button
         onClick={() => setOpen((pv) => !pv)}
@@ -55,7 +60,7 @@ const Level = ({
               color: "rgba(3, 6, 23, 1)",
             },
           }}
-          className="bg-primary bg-clip-text text-left text-lg font-medium"
+          className="bg-primary bg-clip-text text-left text-lg font-bold"
         >
           {title}
         </motion.span>

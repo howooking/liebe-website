@@ -30,16 +30,7 @@ import third3 from "@/public/facility/third3.jpg";
 import third4 from "@/public/facility/third4.jpg";
 import third5 from "@/public/facility/third5.jpg";
 import third6 from "@/public/facility/third6.jpg";
-import n2 from "@/public/facility/n2.jpg";
-import n3 from "@/public/facility/n3.jpg";
-import n4 from "@/public/facility/n4.jpg";
-import n5 from "@/public/facility/n5.jpg";
-import n6 from "@/public/facility/n6.jpg";
-import m1 from "@/public/facility/m1.jpg";
-import m2 from "@/public/facility/m2.jpg";
-import m3 from "@/public/facility/m3.jpg";
-import m4 from "@/public/facility/m4.jpg";
-import m5 from "@/public/facility/m5.jpg";
+
 import { StaticImageData } from "next/image";
 
 type FacilityImages = {
@@ -235,7 +226,7 @@ export const LEVELS_INFO: LevelsInfo = {
       eng: "Consulting Room 1,2",
     },
     {
-      kor: "고양이 대기실 / 고양이 진료실",
+      kor: "고양이 대기실 / 진료실",
       eng: "Cat Friendly Zone",
     },
     {

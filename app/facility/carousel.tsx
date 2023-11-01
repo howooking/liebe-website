@@ -1,37 +1,36 @@
 import Container from "@/components/container";
-import Section from "@/components/section";
+import useWindowSize from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
+import Card from "./card";
 
-type ItemType = {
-  image: StaticImageData;
-  title: string;
-};
+const BREAKPOINTS = 990;
 
-const CARD_WIDTH = 800;
-const CARD_HEIGHT = 450;
-const MARGIN = 20;
-const CARD_SIZE = CARD_WIDTH + MARGIN;
-
-const BREAKPOINTS = {
-  sm: 640,
-  lg: 1024,
-};
-
-export default function CardCarousel({ items }: { items: ItemType[] }) {
+export default function CardCarousel({
+  items,
+  selected,
+}: {
+  items: { image: StaticImageData; title: string }[];
+  selected: string;
+}) {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
 
-  const CARD_BUFFER =
-    width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
+  const CARD_WIDTH = width > 990 ? 800 : 300;
+  const CARD_HEIGHT = width > 990 ? 450 : 225;
+  const MARGIN = 20;
+  const CARD_SIZE = CARD_WIDTH + MARGIN;
+
+  useEffect(() => {
+    setOffset(0);
+  }, [selected]);
 
   const CAN_SHIFT_LEFT = offset < 0;
 
-  const CAN_SHIFT_RIGHT =
-    Math.abs(offset) < CARD_SIZE * (items.length - CARD_BUFFER + 1);
+  const CAN_SHIFT_RIGHT = Math.abs(offset) < CARD_SIZE * (items.length - 1);
 
   const shiftLeft = () => {
     if (!CAN_SHIFT_LEFT) {
@@ -48,10 +47,14 @@ export default function CardCarousel({ items }: { items: ItemType[] }) {
   };
 
   return (
-    <section ref={ref}>
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    >
       <div className="relative overflow-hidden py-8">
         <Container>
-          {/* CARDS */}
           <motion.div
             animate={{
               x: offset,
@@ -59,7 +62,13 @@ export default function CardCarousel({ items }: { items: ItemType[] }) {
             className="flex"
           >
             {items.map((item) => (
-              <Card key={item.title} {...item} />
+              <Card
+                key={item.title}
+                {...item}
+                CARD_HEIGHT={CARD_HEIGHT}
+                CARD_WIDTH={CARD_WIDTH}
+                MARGIN={MARGIN}
+              />
             ))}
           </motion.div>
         </Container>
@@ -71,7 +80,7 @@ export default function CardCarousel({ items }: { items: ItemType[] }) {
             animate={{
               x: CAN_SHIFT_LEFT ? "0%" : "-100%",
             }}
-            className="absolute left-0 top-[60%] z-30 rounded-r-xl bg-primary/40 p-3 pl-2 text-4xl text-white backdrop-blur-sm transition-[padding] hover:pl-3"
+            className="absolute left-0 top-[55%] z-30 rounded-r-xl bg-primary/50 p-3 pl-2 text-xl text-white backdrop-blur-sm transition-[padding] hover:pl-3 lg:text-4xl"
             onClick={shiftLeft}
           >
             <FiChevronLeft />
@@ -81,40 +90,13 @@ export default function CardCarousel({ items }: { items: ItemType[] }) {
             animate={{
               x: CAN_SHIFT_RIGHT ? "0%" : "100%",
             }}
-            className="absolute right-0 top-[60%] z-30 rounded-l-xl bg-primary/40 p-3 pr-2 text-4xl text-white backdrop-blur-sm transition-[padding] hover:pr-3"
+            className="absolute right-0 top-[55%] z-30 rounded-l-xl bg-primary/40 p-3 pr-2 text-xl text-white backdrop-blur-sm transition-[padding] hover:pr-3 lg:text-4xl"
             onClick={shiftRight}
           >
             <FiChevronRight />
           </motion.button>
         </>
       </div>
-    </section>
+    </motion.section>
   );
 }
-
-const Card = ({ image, title }: ItemType) => {
-  return (
-    <div
-      className="relative shrink-0 overflow-hidden rounded-2xl  shadow-md"
-      style={{
-        width: "50vw",
-        height: CARD_HEIGHT,
-        marginRight: MARGIN,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    >
-      <Image
-        quality={50}
-        alt={title}
-        src={image}
-        placeholder="blur"
-        fill
-        className="object-cover object-center"
-      />
-      <div className="absolute inset-0 z-20 rounded-2xl bg-gradient-to-b from-black/40 via-black/20 to-black/0 p-4 text-white">
-        <p className="font-bold">{title}</p>
-      </div>
-    </div>
-  );
-};

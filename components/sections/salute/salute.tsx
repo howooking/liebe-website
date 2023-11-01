@@ -43,7 +43,7 @@ export default function Salute() {
                 <Message />
                 <Separator className="md:my-4" />
                 <div className="flex items-center justify-between">
-                  <div className="flex gap-4">
+                  <div className="flex w-full justify-between gap-4 sm:justify-start">
                     <Button
                       asChild
                       size={(width as number) < 940 ? "sm" : "default"}
@@ -78,9 +78,9 @@ export default function Salute() {
               </div>
               <div className="flex shrink-0 flex-col items-center justify-between">
                 <Image src={salute} alt="salute" width={200} />
-                <div className="flex items-center gap-4">
-                  <span className="text-sm sm:text-2xl">대표원장</span>
-                  <span className="font-script text-2xl sm:text-4xl">
+                <div className="mt-2 flex items-center gap-4">
+                  <span className="text-xl sm:text-2xl">대표원장</span>
+                  <span className="font-script text-4xl sm:text-5xl">
                     김홍석
                   </span>
                 </div>
