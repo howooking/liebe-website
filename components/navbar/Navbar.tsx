@@ -5,7 +5,7 @@ import Drawer from "@/components/navbar/drawer";
 
 export default function Navbar() {
   return (
-    <header className="fixed z-50 w-full">
+    <header className="fixed z-50 w-full bg-white">
       <div className="border-b">
         <Container>
           <div className="flex h-8 items-center justify-between">

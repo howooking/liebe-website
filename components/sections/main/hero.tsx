@@ -6,9 +6,9 @@ import { useRef } from "react";
 import cat from "@/public/hero/cat.jpg";
 import round from "@/public/hero/round.jpg";
 import surgery from "@/public/hero/surgery.jpg";
-import hongClient from "@/public/hero/hong-client.jpg";
+import seoClient from "@/public/hero/seo-client.jpg";
 import kimClient from "@/public/hero/kim-client.jpg";
-import handling from "@/public/hero/handling.jpg";
+import infoClient from "@/public/hero/info-client.jpg";
 import Image from "next/image";
 import Typography from "./typography";
 import Circles from "./circles";
@@ -20,7 +20,7 @@ export default function Hero() {
   });
 
   return (
-    <section ref={targetRef} className="h-[350vh] ">
+    <section ref={targetRef} className="h-[300vh] ">
       <div className="sticky top-[73px] grid h-[calc(100vh-73px)] w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4">
         <Copy scrollYProgress={scrollYProgress} />
         <Images scrollYProgress={scrollYProgress} />
@@ -164,7 +164,7 @@ const Images = ({
         }}
       >
         <Image
-          src={hongClient}
+          src={seoClient}
           alt="round"
           fill
           priority
@@ -182,7 +182,7 @@ const Images = ({
         }}
       >
         <Image
-          src={handling}
+          src={infoClient}
           alt="round"
           fill
           priority
