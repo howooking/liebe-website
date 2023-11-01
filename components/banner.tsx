@@ -14,6 +14,7 @@ export default function Banner({
   return (
     <div className="relative flex h-80 items-center justify-center">
       <Image
+        quality={40}
         fill
         placeholder="blur"
         alt="staff banner"
