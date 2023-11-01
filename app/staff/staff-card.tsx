@@ -20,7 +20,7 @@ export default function StaffCard({ staff, selected }: StaffCardProps) {
     >
       <Card className="p-4 sm:p-8">
         <div className="flex flex-col-reverse items-center justify-between md:flex-row md:items-start">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-center gap-4 md:items-start">
             <div>
               <span className="md:3xl text-xl font-bold sm:text-2xl">
                 {staff.name}
