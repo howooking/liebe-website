@@ -2,15 +2,12 @@ import Container from "@/components/container";
 
 export default function Footer() {
   return (
-    <div className="bg-stone-800 py-5 text-[10px] text-stone-100 sm:py-10 sm:text-sm">
+    <div className="bg-stone-800 py-5 text-[11px] text-stone-100 sm:py-10 sm:text-sm">
       <Container>
         <div className="flex justify-between">
           <div>
             <p>리베동물메디컬센터</p>
-            <p>
-              서울특별시 송파구 삼전로 56 <br className="md:hidden" />
-              리베동물메디컬센터
-            </p>
+            <p>서울특별시 송파구 삼전로 56</p>
             <p>liebeamc2@daum.net</p>
             <p>
               Copyright (c) 2014 <br className="md:hidden" /> 리베동물메디컬센터

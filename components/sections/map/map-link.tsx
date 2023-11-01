@@ -1,6 +1,4 @@
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import React from "react";
 
 type MapLinkProps = {
   title: string;
@@ -24,7 +22,7 @@ export default function MapLink({
         color: textColor,
         border: `2px solid ${textColor}`,
       }}
-      className="z-20 flex items-center justify-center rounded-md px-2 py-2 text-xs font-bold transition hover:scale-110"
+      className="z-20 flex items-center justify-center rounded-md px-2 py-2 text-xs font-bold transition hover:scale-110 md:text-sm"
     >
       {title}
     </Link>
