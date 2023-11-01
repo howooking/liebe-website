@@ -51,7 +51,7 @@ export default function CardCarousel({
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.2 }}
+      transition={{ duration: 1 }}
     >
       <div className="relative overflow-hidden py-8">
         <Container>

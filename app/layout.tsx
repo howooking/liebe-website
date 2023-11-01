@@ -29,9 +29,7 @@ export default function RootLayout({
         className={cn("font-sans text-stone-800 antialiased", font.className)}
       >
         <Navbar />
-        <div>
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-        </div>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
       </body>
     </html>

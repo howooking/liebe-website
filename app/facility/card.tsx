@@ -27,13 +27,14 @@ export default function Card({
       }}
     >
       <Image
-        quality={70}
+        priority
+        quality={60}
         alt={title}
         src={image}
         placeholder="blur"
         fill
         className="object-cover object-center"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
+        sizes="(max-width: 768px) 70vw, (max-width: 1200px) 60vw, 50vw"
       />
       <div className="absolute inset-0 z-20 rounded-2xl bg-gradient-to-b from-black/40 via-black/20 to-black/0 p-4 text-sm text-white sm:text-base">
         <p className="font-bold">{title}</p>
