@@ -1,44 +1,23 @@
 "use client";
 
 import { useCurrSectionStore } from "@/lib/store";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Section({
   children,
-  hash,
+  id,
 }: {
   children: React.ReactNode;
-  hash: string;
+  id: string;
 }) {
-  // const sectionRef = useRef(null);
-  // const { setCurrSection } = useCurrSectionStore();
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           window.history.pushState(null, "", `#${hash}`);
-  //           setCurrSection(hash);
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.2 },
-  //   );
-
-  //   if (sectionRef.current) observer.observe(sectionRef.current);
-
-  //   return () => {
-  //     if (sectionRef.current) observer.unobserve(sectionRef.current);
-  //   };
-  // }, [hash, setCurrSection]);
-
+  const { setCurrSection } = useCurrSectionStore();
   return (
-    <section
-      className="scroll-p-72"
-      id={hash}
-      // ={sectionRef}
+    <motion.section
+      id={id}
+      onViewportEnter={() => setCurrSection(id)}
+      className="scroll-mt-[72px]"
     >
       {children}
-    </section>
+    </motion.section>
   );
 }

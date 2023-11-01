@@ -7,7 +7,7 @@ import Section from "@/components/section";
 
 export default function Map() {
   return (
-    <Section hash="map">
+    <Section id="map">
       <div className="relative flex h-[calc(100vh-72px)] flex-col">
         <GoogleMap />
         <div className="absolute right-10 top-10 flex flex-col gap-4">

@@ -10,7 +10,7 @@ export const SOCIALS = [
     icon: SiNaver,
     desc: "네이버블로그",
     size: 10,
-    color: "#03C75A",
+    // color: "#03C75A",
   },
   {
     label: "instagram",
@@ -18,7 +18,7 @@ export const SOCIALS = [
     icon: BiLogoInstagramAlt,
     desc: "인스타그램",
     size: 18,
-    color: "#03C75A",
+    // color: "#03C75A",
   },
   {
     label: "kakao",
@@ -26,7 +26,7 @@ export const SOCIALS = [
     desc: "카카오상담",
     icon: RiKakaoTalkFill,
     size: 16,
-    color: "#FAE200",
+    // color: "#FAE200",
   },
   {
     label: "phone",
@@ -34,6 +34,6 @@ export const SOCIALS = [
     icon: AiFillPhone,
     desc: "02.6953.7502",
     size: 16,
-    color: "#03C75A",
+    // color: "#03C75A",
   },
 ];

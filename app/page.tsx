@@ -19,9 +19,6 @@ export default async function Home() {
       {/* <ClientLoading loading={loading} /> */}
       <Main />
       <Salute />
-      {/* <Subject /> */}
-      {/* <Facility /> */}
-      {/* <Staff /> */}
       <Map />
     </div>
   );

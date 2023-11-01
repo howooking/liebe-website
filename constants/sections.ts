@@ -4,6 +4,10 @@ export const SECTIONS = [
     href: "/",
   },
   {
+    label: "인사말",
+    href: "/#salute",
+  },
+  {
     label: "진료과목",
     href: "/subject",
   },

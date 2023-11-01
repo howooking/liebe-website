@@ -59,14 +59,7 @@
 }
 
 html {
-  /* scroll-snap-type: y mandatory; */
-  scroll-behavior: smooth;
-  /* todo */
-  /* scroll-padding-top: 50px; */
-}
-.scroll-snap {
-  /* scroll-snap-align: start; */
-  /* scroll-snap-stop: always; */
+  scroll-behavior: smooth !important;
 }
 
 ::-webkit-scrollbar {

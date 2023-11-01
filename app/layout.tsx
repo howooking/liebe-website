@@ -4,7 +4,7 @@ import "@/app/globals.css";
 import { cn } from "@/lib/utils";
 import { Suspense } from "react";
 import Loading from "./loading";
-import Topbar from "@/components/navbar/topbar";
+import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/sections/footer/footer";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
@@ -28,8 +28,8 @@ export default function RootLayout({
       <body
         className={cn("font-sans text-stone-800 antialiased", font.className)}
       >
-        <Topbar />
-        <div className="min-h-screen">
+        <Navbar />
+        <div>
           <Suspense fallback={<Loading />}>{children}</Suspense>
         </div>
         <Footer />

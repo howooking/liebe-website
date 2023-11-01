@@ -20,15 +20,13 @@ export default function Hero() {
   });
 
   return (
-    <>
-      <section ref={targetRef} className="h-[350vh]">
-        <div className="sticky grid h-screen w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4 pt-[72px] md:top-0">
-          <Copy scrollYProgress={scrollYProgress} />
-          <Images scrollYProgress={scrollYProgress} />
-          <Circles />
-        </div>
-      </section>
-    </>
+    <section ref={targetRef} className="h-[350vh] ">
+      <div className="sticky top-[73px] grid h-[calc(100vh-73px)] w-full grid-cols-3 grid-rows-3 gap-4 overflow-hidden p-4">
+        <Copy scrollYProgress={scrollYProgress} />
+        <Images scrollYProgress={scrollYProgress} />
+        <Circles />
+      </div>
+    </section>
   );
 }
 
