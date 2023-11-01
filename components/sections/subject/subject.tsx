@@ -5,9 +5,9 @@ import Accordion from "./arccodion";
 
 export default function Subject() {
   return (
-    <Section hash="subject">
-      <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
-        <SectionTitle title="진료과목" />
+    <Section id="subject">
+      <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
+        <SectionTitle>진료과목</SectionTitle>
         <Accordion />
       </div>
     </Section>

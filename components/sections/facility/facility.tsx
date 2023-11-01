@@ -4,8 +4,8 @@ import HorizontalScroll from "./horizontal-scroll";
 
 export default function Facility() {
   return (
-    <Section hash="facility">
-      <SectionTitle title="시설소개" />
+    <Section id="facility">
+      <SectionTitle>시설소개</SectionTitle>
       <HorizontalScroll />
     </Section>
   );
