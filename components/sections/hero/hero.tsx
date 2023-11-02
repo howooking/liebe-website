@@ -4,16 +4,16 @@ import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
+import Typography from "@/components/sections/hero/typography";
+import Circles from "@/components/sections/hero/circles";
+import Section from "@/components/section";
+
 import cat from "@/public/hero/cat.jpg";
 import round from "@/public/hero/round.jpg";
 import surgery from "@/public/hero/surgery.jpg";
 import seoClient from "@/public/hero/seo-client.jpg";
 import kimClient from "@/public/hero/kim-client.jpg";
 import infoClient from "@/public/hero/info-client.jpg";
-
-import Typography from "@/components/sections/main/typography";
-import Circles from "@/components/sections/main/circles";
-import Section from "@/components/section";
 
 export default function Hero() {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -97,9 +97,9 @@ const Images = ({
           fill
           priority
           placeholder="blur"
-          quality={70}
+          quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
         />
       </motion.div>
       <motion.div
@@ -118,7 +118,7 @@ const Images = ({
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
         />
       </motion.div>
 
@@ -140,7 +140,7 @@ const Images = ({
           placeholder="blur"
           quality={100}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
         />
       </motion.div>
       <motion.div
@@ -159,7 +159,7 @@ const Images = ({
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
         />
       </motion.div>
 
@@ -179,7 +179,7 @@ const Images = ({
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
         />
       </motion.div>
       <motion.div
@@ -198,7 +198,7 @@ const Images = ({
           placeholder="blur"
           quality={70}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
         />
       </motion.div>
     </>

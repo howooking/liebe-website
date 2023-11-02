@@ -18,7 +18,7 @@ export default function Salute() {
 
   return (
     <Section id="salute">
-      <div className="bg-stone-100 py-8 lg:py-0">
+      <div className="bg-stone-50 py-8 lg:py-0">
         <Container>
           <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center">
             <SectionTitle

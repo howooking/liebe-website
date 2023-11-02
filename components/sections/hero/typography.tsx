@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import { Black_Han_Sans } from "next/font/google";
 import { BsMouse } from "react-icons/bs";
-
-const font = Black_Han_Sans({ weight: "400", subsets: ["latin"] });
 
 export default function Typography() {
   return (
@@ -19,7 +16,7 @@ export default function Typography() {
         사랑과 케어로 함께하는 <br className="block md:hidden" />
         건강한 반려생활의 길로 안내합니다
       </p>
-      <p className="mt-10 flex animate-bounce items-center gap-2 text-stone-500">
+      <p className="mt-10 flex animate-bounce items-center gap-2 text-stone-600">
         스크롤 아래로
         <BsMouse />
       </p>
