@@ -1,11 +1,10 @@
 export default function Message() {
   return (
     <>
-      <p className="mt-5 text-center text-primary sm:mb-5 sm:text-left sm:text-xl">
-        리베동물메디컬센터를
-        <br className="md:hidden" /> 찾아주셔서 감사합니다
+      <p className="mt-5 text-center text-sm text-primary sm:mb-5 sm:text-xl md:text-left">
+        리베동물메디컬센터를 찾아주셔서 감사합니다
       </p>
-      <div className="flex flex-col gap-2 text-xs sm:gap-5 sm:text-sm">
+      <div className="flex flex-col gap-2 text-sm sm:gap-5">
         <p>LIEBE는 독일어로 사랑을 뜻합니다.</p>
         <p>
           사랑으로 가득한 리베동물메디컬에서는 반려동물과 보호자분들을 위해

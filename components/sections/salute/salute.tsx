@@ -4,18 +4,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import salute from "@/public/profile/salute.png";
+import salute from "@/public/salute.png";
 import Message from "@/components/sections/salute/message";
 import Section from "@/components/section";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import SectionTitle from "@/components/sectionTitle";
 import Container from "@/components/container";
-import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Salute() {
-  const { width } = useWindowSize();
-
   return (
     <Section id="salute">
       <div className="bg-stone-50 py-8 lg:py-0">
@@ -44,28 +41,18 @@ export default function Salute() {
                 <Separator className="md:my-4" />
                 <div className="flex items-center justify-between">
                   <div className="flex w-full justify-between gap-4 sm:justify-start">
-                    <Button
-                      asChild
-                      size={(width as number) < 940 ? "sm" : "default"}
-                    >
+                    <Button asChild size="sm">
                       <Link href="/subject" className="text-[9px] sm:text-base">
                         진료 안내
                       </Link>
                     </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size={(width as number) < 940 ? "sm" : "default"}
-                    >
+
+                    <Button asChild variant="outline" size="sm">
                       <Link href="/staff" className="text-[9px] sm:text-base">
                         의료진 소개
                       </Link>
                     </Button>
-                    <Button
-                      variant="link"
-                      asChild
-                      size={(width as number) < 940 ? "sm" : "default"}
-                    >
+                    <Button variant="link" asChild size="sm">
                       <Link
                         href="/facility"
                         className="text-[9px] sm:text-base"
