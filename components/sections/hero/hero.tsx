@@ -24,7 +24,7 @@ export default function Hero() {
 
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: targetRef,
+    target: loading ? undefined : targetRef,
   });
 
   if (loading) {
