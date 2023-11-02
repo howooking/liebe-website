@@ -1,12 +1,12 @@
 "use client";
 
-import Banner from "@/components/banner";
-import Container from "@/components/container";
-import Section from "@/components/section";
+import Banner from "@/components/common/banner";
+import Container from "@/components/common/container";
+import Section from "@/components/common/section";
 import subjectBanner from "@/public/subjects/subject-banner.jpg";
 import TimeInfo from "./time-info";
 import Accordion from "@/app/subject/arccodion";
-import SectionTitle from "@/components/sectionTitle";
+import SectionTitle from "@/components/common/sectionTitle";
 import { Separator } from "@/components/ui/separator";
 import CallCard from "./call-card";
 

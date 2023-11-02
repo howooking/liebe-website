@@ -1,12 +1,12 @@
 "use client";
 
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import Typography from "@/components/sections/hero/typography";
 import Circles from "@/components/sections/hero/circles";
-import Section from "@/components/section";
+import Section from "@/components/common/section";
 
 import cat from "@/public/hero/cat.jpg";
 import round from "@/public/hero/round.jpg";
@@ -14,12 +14,22 @@ import surgery from "@/public/hero/surgery.jpg";
 import seoClient from "@/public/hero/seo-client.jpg";
 import kimClient from "@/public/hero/kim-client.jpg";
 import infoClient from "@/public/hero/info-client.jpg";
+import Loading from "@/app/loading";
 
 export default function Hero() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <Section id="/">
@@ -99,7 +109,7 @@ const Images = ({
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
+          sizes="calc(66.67vw - 27px)"
         />
       </motion.div>
       <motion.div
@@ -118,7 +128,7 @@ const Images = ({
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
+          sizes="calc(33.33vw - 21px)"
         />
       </motion.div>
 
@@ -134,13 +144,13 @@ const Images = ({
       >
         <Image
           src={surgery}
-          alt="round"
+          alt="surgery"
           fill
           priority
           placeholder="blur"
           quality={100}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
+          sizes="calc(33.33vw - 21px)"
         />
       </motion.div>
       <motion.div
@@ -153,13 +163,13 @@ const Images = ({
       >
         <Image
           src={kimClient}
-          alt="round"
+          alt="kim client"
           fill
           priority
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
+          sizes="calc(33.33vw - 21px)"
         />
       </motion.div>
 
@@ -173,13 +183,13 @@ const Images = ({
       >
         <Image
           src={seoClient}
-          alt="round"
+          alt="seo client"
           fill
           priority
           placeholder="blur"
           quality={50}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
+          sizes="calc(33.33vw - 21px)"
         />
       </motion.div>
       <motion.div
@@ -192,13 +202,13 @@ const Images = ({
       >
         <Image
           src={infoClient}
-          alt="round"
+          alt="info client"
           fill
           priority
           placeholder="blur"
           quality={70}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 55vw"
+          sizes="calc(33.33vw - 21px)"
         />
       </motion.div>
     </>

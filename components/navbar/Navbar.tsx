@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { SOCIALS } from "@/constants/socials";
-import Container from "@/components/container";
+import Container from "@/components/common/container";
 import Drawer from "@/components/navbar/drawer";
 
 export default function Navbar() {

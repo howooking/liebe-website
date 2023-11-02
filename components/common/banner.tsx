@@ -14,12 +14,13 @@ export default function Banner({
   return (
     <div className="relative flex h-80 items-center justify-center">
       <Image
-        quality={40}
+        quality={100}
         fill
         placeholder="blur"
         alt="staff banner"
         src={imageSrc}
         className="object-cover"
+        sizes="100vw"
       />
       <div className="absolute h-full w-full bg-black/50" />
       <motion.div

@@ -2,7 +2,7 @@ import { MAP_LINKS } from "@/constants/map-links";
 
 import MapLink from "@/components/sections/map/map-link";
 import GoogleMap from "@/components/sections/map/google-map";
-import Section from "@/components/section";
+import Section from "@/components/common/section";
 
 export default function Map() {
   return (

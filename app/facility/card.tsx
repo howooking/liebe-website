@@ -34,7 +34,7 @@ export default function Card({
         placeholder="blur"
         fill
         className="object-cover object-center"
-        sizes="(max-width: 768px) 70vw, (max-width: 1200px) 60vw, 50vw"
+        sizes="(min-width: 1000px) 800px, 300px"
       />
       <div className="absolute inset-0 z-20 rounded-2xl bg-gradient-to-b from-black/40 via-black/20 to-black/0 p-4 text-sm text-white sm:text-base">
         <p className="font-bold">{title}</p>

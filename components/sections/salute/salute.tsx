@@ -6,11 +6,11 @@ import Link from "next/link";
 
 import salute from "@/public/salute.png";
 import Message from "@/components/sections/salute/message";
-import Section from "@/components/section";
+import Section from "@/components/common/section";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import SectionTitle from "@/components/sectionTitle";
-import Container from "@/components/container";
+import SectionTitle from "@/components/common/sectionTitle";
+import Container from "@/components/common/container";
 
 export default function Salute() {
   return (
