@@ -60,7 +60,11 @@
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.scroll-snap {
+  scroll-snap-align: center;
 }
 
 ::-webkit-scrollbar {

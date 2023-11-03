@@ -1,17 +1,23 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export default function Section({
   children,
   id,
+  slider,
 }: {
   children: React.ReactNode;
   id: string;
+  slider?: boolean;
 }) {
   return (
-    <motion.section id={id} className="scroll-mt-[72px]">
+    <section
+      id={id}
+      className={cn(
+        slider ? "scroll-mt-[0px]" : "scroll-mt-[48px]",
+        "scroll-snap relative min-h-[calc(100vh-48px)] scroll-mt-[48px]",
+      )}
+    >
       {children}
-    </motion.section>
+    </section>
   );
 }
