@@ -67,6 +67,7 @@ export default function Panel({
               placeholder="blur"
               quality={50}
               className="object-cover object-center"
+              sizes="(min-width: 1040px) calc(83.32vw - 427px), (min-width: 780px) calc(83.33vw - 72px), 79.78vw"
             />
             <motion.div
               variants={descriptionVariants}

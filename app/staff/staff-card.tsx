@@ -39,13 +39,14 @@ export default function StaffCard({ staff, selected }: StaffCardProps) {
             </ul>
           </div>
 
-          <div>
+          <div className="relative h-[250px] w-[250px]">
             <Image
               src={staff.image}
               alt={staff.name}
               placeholder="blur"
               className="rounded-full"
-              height={250}
+              fill
+              sizes="(min-width: 1380px) 250px, (min-width: 1040px) calc(20.31vw - 26px), (min-width: 780px) calc(24.58vw - 59px), 250px"
             />
           </div>
         </div>
