@@ -4,11 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Container from "@/components/common/container";
-import MobileDrawer from "@/components/navbar/mobile-drawer";
-import NavLinks from "@/components/navbar/nav-links";
+import MobileDrawer from "@/components/common/mobile-drawer";
 import mainLogo from "@/public/main-logo.png";
 import useScroll from "@/hooks/useScroll";
 import { usePathname } from "next/navigation";
+import NavLinks from "./nav-links";
 
 export default function Navbar() {
   const scrollY = useScroll();
