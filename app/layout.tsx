@@ -89,6 +89,7 @@ export const metadata: Metadata = {
     "강아지수중런닝머신",
   ],
 };
+
 export default function RootLayout({
   children,
 }: {
