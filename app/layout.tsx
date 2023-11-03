@@ -6,8 +6,8 @@ import { Noto_Sans_KR } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import Footer from "@/components/sections/footer/footer";
-import Navbar from "@/components/navbar/navbar";
 import MobileFixedFooter from "@/components/common/mobile-fixed-footer";
+import Navbar from "@/components/navbar/navbar";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
