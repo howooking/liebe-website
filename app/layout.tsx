@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import Footer from "@/components/sections/footer/footer";
 import MobileFixedFooter from "@/components/common/mobile-fixed-footer";
-import Navbar from "@/components/navbar/navbar";
+import Navbar from "@/components/common/navbar";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
