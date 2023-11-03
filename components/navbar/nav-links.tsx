@@ -9,7 +9,7 @@ export default function NavLinks({ isRoot }: { isRoot: boolean }) {
 
   return (
     <ul
-      className="flex items-center justify-center gap-5"
+      className="hidden items-center justify-center gap-4 text-sm sm:flex md:text-base"
       style={{ color: scrollY > 50 || !isRoot ? "black" : "" }}
     >
       {SECTIONS.map((section) => (

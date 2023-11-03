@@ -11,13 +11,16 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import DrawOutlineButton from "@/components/ui/draw-outline-button";
-import { Button } from "@/components/ui/button";
 import { SECTIONS } from "@/constants/sections";
 
 import spinner from "@/public/spinner.svg";
 import Link from "next/link";
 
-export default function MobileDrawer() {
+export default function MobileDrawer({
+  isScrollTop,
+}: {
+  isScrollTop: boolean;
+}) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -30,9 +33,10 @@ export default function MobileDrawer() {
   return (
     <Sheet>
       <SheetTrigger className="sm:hidden">
-        <Button variant="ghost" size="icon" className="p-0">
-          <AiOutlineMenu size={24} />
-        </Button>
+        <AiOutlineMenu
+          size={24}
+          style={{ color: isScrollTop ? "white" : "black" }}
+        />
       </SheetTrigger>
 
       <SheetContent side="right" className="bg-stone-900">

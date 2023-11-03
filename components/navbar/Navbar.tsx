@@ -14,12 +14,12 @@ export default function Navbar() {
   const scrollY = useScroll();
   const path = usePathname();
   const isRoot = path === "/";
-  console.log(isRoot);
+  const isScrollTop = scrollY === 0;
 
   return (
     <header
-      className="hover:text-stongroup-[]: group fixed z-50 w-full text-white shadow-sm transition"
-      style={{ background: scrollY > 50 || !isRoot ? "white" : "transparent" }}
+      className="fixed z-50 w-full text-white shadow-sm transition"
+      style={{ background: !isScrollTop || !isRoot ? "white" : "transparent" }}
     >
       <Container>
         <div className="flex h-12 items-center justify-between">
@@ -28,20 +28,20 @@ export default function Navbar() {
             <h1 className="text-xl font-semibold">
               <span
                 className="group-hover:text-primary"
-                style={{ color: scrollY > 50 || !isRoot ? "#f08d47" : "white" }}
+                style={{ color: !isScrollTop || !isRoot ? "#f08d47" : "white" }}
               >
                 리베
               </span>
               <span
                 className="group-hover:text-secondary"
-                style={{ color: scrollY > 50 || !isRoot ? "#8eb62f" : "white" }}
+                style={{ color: !isScrollTop || !isRoot ? "#8eb62f" : "white" }}
               >
                 동물메디컬센터
               </span>
             </h1>
           </Link>
           <NavLinks isRoot={isRoot} />
-          <MobileDrawer />
+          <MobileDrawer isScrollTop={isScrollTop} />
         </div>
       </Container>
     </header>
