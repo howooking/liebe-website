@@ -27,7 +27,7 @@ export const SLIDES = [
   },
   {
     src: s5,
-    title: "Dedicated To More Than Two Species",
+    title: "More Than Two Species",
     subtitle: "특수동물 또한 소중한 가족입니다",
   },
 ];

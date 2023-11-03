@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import Typography from "@/components/sections/hero/typography";
-import Circles from "@/components/sections/hero/circles";
+import Circles from "@/components/sections/hero/circles-old";
 import Section from "@/components/common/section";
 
 import cat from "@/public/hero/cat.jpg";

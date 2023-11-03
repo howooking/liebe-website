@@ -20,6 +20,7 @@ export default function Slider() {
       {SLIDES.map((slide, index) => (
         <div key={index}>
           <Image
+            quality={100}
             src={slide.src}
             alt={`slide-${index + 1}`}
             placeholder="blur"
@@ -36,8 +37,8 @@ export default function Slider() {
               transition={{ duration: 1.5 }}
               exit={{ opacity: 0 }}
             >
-              <p className="text-7xl">{slide.title}</p>
-              <p className="text-3xl">{slide.subtitle}</p>
+              <p className="text-2xl md:text-5xl lg:text-7xl">{slide.title}</p>
+              <p className="text-sm md:text-xl lg:text-3xl">{slide.subtitle}</p>
             </motion.div>
           </div>
         </div>

@@ -41,6 +41,15 @@ export default function MobileDrawer({
 
       <SheetContent side="right" className="bg-stone-900">
         <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-stone-50">
+          <li>
+            <SheetClose asChild>
+              <Link href="/">
+                <DrawOutlineButton>
+                  <div className="px-4 py-2">홈으로</div>
+                </DrawOutlineButton>
+              </Link>
+            </SheetClose>
+          </li>
           {SECTIONS.map((section) => (
             <li key={section.label}>
               <SheetClose asChild>
