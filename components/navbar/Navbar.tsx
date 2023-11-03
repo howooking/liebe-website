@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed z-50 w-full text-white shadow-sm transition"
+      className="fixed z-50 w-full text-white shadow transition"
       style={{ background: !isScrollTop || !isRoot ? "white" : "transparent" }}
     >
       <Container>
@@ -41,7 +41,7 @@ export default function Navbar() {
             </h1>
           </Link>
           <NavLinks isRoot={isRoot} />
-          <MobileDrawer isScrollTop={isScrollTop} />
+          <MobileDrawer isScrollTop={isScrollTop} isRoot={isRoot} />
         </div>
       </Container>
     </header>

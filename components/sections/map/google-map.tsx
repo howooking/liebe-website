@@ -6,7 +6,7 @@ export default function GoogleMap() {
       allowFullScreen
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-      className="h-[calc(100vh-48px)]"
+      className="h-[calc(100vh-96px)]"
     />
   );
 }

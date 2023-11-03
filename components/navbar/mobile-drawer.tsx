@@ -18,8 +18,10 @@ import Link from "next/link";
 
 export default function MobileDrawer({
   isScrollTop,
+  isRoot,
 }: {
   isScrollTop: boolean;
+  isRoot: boolean;
 }) {
   const [isClient, setIsClient] = useState(false);
 
@@ -35,7 +37,7 @@ export default function MobileDrawer({
       <SheetTrigger className="sm:hidden">
         <AiOutlineMenu
           size={24}
-          style={{ color: isScrollTop ? "white" : "black" }}
+          style={{ color: !isScrollTop || !isRoot ? "black" : "white" }}
         />
       </SheetTrigger>
 

@@ -14,7 +14,7 @@ export default function Section({
       id={id}
       className={cn(
         slider ? "scroll-mt-[0px]" : "scroll-mt-[48px]",
-        "scroll-snap relative min-h-[calc(100vh-48px)] scroll-mt-[48px]",
+        "scroll-snap relative min-h-[calc(100vh-48px)]",
       )}
     >
       {children}
