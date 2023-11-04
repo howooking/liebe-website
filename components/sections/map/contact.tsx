@@ -27,7 +27,7 @@ export default function Contact() {
 
       <div>
         <h2 className="mb-4 text-xl font-bold sm:text-2xl">진료시간 안내</h2>
-        <TimeInfo front />
+        <TimeInfo />
       </div>
 
       <div>

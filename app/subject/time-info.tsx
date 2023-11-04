@@ -9,8 +9,8 @@ import {
 import { TIME_INFOS } from "@/constants/time";
 import { cn } from "@/lib/utils";
 
-export default function TimeInfo({ front }: { front: boolean }) {
-  const mappedInfos = front ? TIME_INFOS.slice(0, 4) : TIME_INFOS;
+export default function TimeInfo({ detail }: { detail?: boolean }) {
+  const mappedInfos = detail ? TIME_INFOS : TIME_INFOS.slice(0, 4);
   return (
     <div>
       <Table className="overflow-hidden rounded-lg">
