@@ -14,9 +14,10 @@ export default function Facility() {
   const tabs = useMemo(() => Object.keys(FACILITY_IMAGES), []);
 
   const [selected, setSelected] = useState(tabs[0]);
+
   return (
     <Section id="facility">
-      <div className="pt-[72px]">
+      <div className="pt-[48px]">
         <Banner
           imageSrc={facilityBanner}
           title="리베 시설을 소개합니다"
@@ -24,7 +25,7 @@ export default function Facility() {
         />
         <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
         <CardCarousel items={FACILITY_IMAGES[selected]} selected={selected} />
-        <LevelInfo />
+        <LevelInfo selected={selected} setSelected={setSelected} />
       </div>
     </Section>
   );

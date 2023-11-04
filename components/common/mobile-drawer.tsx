@@ -41,8 +41,8 @@ export default function MobileDrawer({
         />
       </SheetTrigger>
 
-      <SheetContent side="right" className="bg-stone-900">
-        <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-stone-50">
+      <SheetContent side="right" className="bg-slate-900">
+        <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-slate-50">
           <li>
             <SheetClose asChild>
               <Link href="/">

@@ -28,13 +28,13 @@ export default function TimeTable({ off }: { off?: number[] }) {
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead className="text-center text-stone-800">일</TableHead>
-          <TableHead className="text-center text-stone-800">월</TableHead>
-          <TableHead className="text-center text-stone-800">화</TableHead>
-          <TableHead className="text-center text-stone-800">수</TableHead>
-          <TableHead className="text-center text-stone-800">목</TableHead>
-          <TableHead className="text-center text-stone-800">금</TableHead>
-          <TableHead className="text-center text-stone-800">토</TableHead>
+          <TableHead className="text-center">일</TableHead>
+          <TableHead className="text-center">월</TableHead>
+          <TableHead className="text-center">화</TableHead>
+          <TableHead className="text-center">수</TableHead>
+          <TableHead className="text-center">목</TableHead>
+          <TableHead className="text-center">금</TableHead>
+          <TableHead className="text-center">토</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>

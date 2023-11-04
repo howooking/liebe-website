@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
 import SingleInfo from "./single-info";
 import { LEVELS_INFO } from "@/constants/facility";
 
-export default function LevelInfo() {
+type LevelInfoProps = {
+  setSelected: Dispatch<SetStateAction<string>>;
+  selected: string;
+};
+
+export default function LevelInfo({ setSelected, selected }: LevelInfoProps) {
   return (
     <motion.div
-      className="px-4"
+      className="px-4 py-4"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.2 }}
+      viewport={{ once: true }}
     >
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl divide-y-[1px] divide-slate-200">
         {Object.keys(LEVELS_INFO).map((level) => (
           <Level
-            title={`${level} 안내`}
+            selected={selected}
+            setSelected={setSelected}
+            level={level}
             defaultOpen={level === "1층"}
             key={level}
           >
@@ -32,23 +40,26 @@ export default function LevelInfo() {
 }
 
 const Level = ({
-  title,
+  selected,
+  level,
   children,
   defaultOpen = false,
 }: {
-  title: string;
+  selected: string;
+  level: string;
   children: JSX.Element;
   defaultOpen?: boolean;
+  setSelected: Dispatch<SetStateAction<string>>;
 }) => {
-  const [open, setOpen] = useState(defaultOpen);
+  useEffect(() => {
+    setOpen(selected === level);
+  }, [level, selected]);
+  const [open, setOpen] = useState(false);
 
   return (
-    <motion.div
-      animate={open ? "open" : "closed"}
-      className="border-b-[1px] border-b-stone-300"
-    >
+    <motion.div animate={open ? "open" : "closed"}>
       <button
-        onClick={() => setOpen((pv) => !pv)}
+        onClick={() => setOpen((prev) => !prev)}
         className="flex w-full items-center justify-between gap-4 py-6"
       >
         <motion.span
@@ -62,7 +73,7 @@ const Level = ({
           }}
           className="bg-primary bg-clip-text text-left text-lg font-bold"
         >
-          {title}
+          {level} 안내
         </motion.span>
         <motion.span
           variants={{

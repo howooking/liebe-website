@@ -18,7 +18,7 @@ export default function Typography() {
         사랑과 케어로 함께하는 <br className="block md:hidden" />
         건강한 반려생활의 길로 안내합니다
       </p>
-      <p className="mt-10 flex animate-bounce items-center gap-2 text-stone-600">
+      <p className="mt-10 flex animate-bounce items-center gap-2 text-slate-600">
         스크롤 아래로
         <BsMouse />
       </p>
