@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col justify-evenly gap-10 p-10 sm:w-1/2">
+    <div className="mx-auto flex w-11/12 flex-col justify-evenly gap-10 py-6 sm:w-1/2 sm:px-6">
       <div>
         <h2 className="mb-4 text-xl font-bold sm:text-2xl">
           리베동물메디컬센터 오시는길
