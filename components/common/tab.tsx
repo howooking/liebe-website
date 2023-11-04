@@ -10,7 +10,7 @@ type TabsProps = {
 
 export default function Tabs({ tabs, selected, setSelected }: TabsProps) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2 bg-stone-900 px-4 py-8">
+    <div className="flex flex-wrap items-center justify-center gap-2 bg-slate-900 px-4 py-8">
       {tabs.map((tab) => (
         <Chip
           text={tab}
@@ -38,7 +38,7 @@ const Chip = ({
       className={`text-xl ${
         selected
           ? "text-white"
-          : "text-stone-300 hover:bg-stone-700 hover:text-stone-200"
+          : "text-slate-300 hover:bg-slate-700 hover:text-slate-200"
       } relative rounded-md px-2.5 py-0.5 text-sm transition-colors`}
     >
       <span className="relative z-10">{text}</span>

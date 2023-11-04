@@ -16,7 +16,7 @@ export default function Staff() {
   const [selected, setSelected] = useState(tabs[0]);
   return (
     <Section id="staff">
-      <div className="pt-[72px]">
+      <div className="pt-[48px]">
         <Banner
           imageSrc={staffBanner}
           title="리베 의료진을 소개합니다"
