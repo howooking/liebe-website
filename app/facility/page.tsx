@@ -4,17 +4,26 @@ import Banner from "@/components/common/banner";
 import Tabs from "@/components/common/tab";
 import { FACILITY_IMAGES } from "@/constants/facility";
 
-import facilityBanner from "@/public/facility/ficility-banner.jpg";
-import { useMemo, useState } from "react";
+import facilityBanner from "@/public/facility/ficility-banner.png";
+import { useEffect, useMemo, useState } from "react";
 import CardCarousel from "./carousel";
 import LevelInfo from "./level-info";
 import Section from "@/components/common/section";
+import Loading from "../loading";
 
 export default function Facility() {
-  const tabs = useMemo(() => Object.keys(FACILITY_IMAGES), []);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  const tabs = useMemo(() => Object.keys(FACILITY_IMAGES), []);
   const [selected, setSelected] = useState(tabs[0]);
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Section id="facility">
       <div className="pt-[48px]">
