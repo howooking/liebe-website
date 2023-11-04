@@ -3,7 +3,7 @@ import Section from "@/components/common/section";
 
 export default function Footer() {
   return (
-    <div className="scroll-snap mb-[48px] bg-stone-900 py-5 text-[11px] text-stone-50 sm:mb-0 sm:py-10 sm:text-sm">
+    <div className="scroll-snap mb-[48px] bg-slate-900 py-5 text-[11px] text-stone-50 sm:mb-0 sm:py-10 sm:text-sm">
       <Container>
         <div className="flex justify-between">
           <div>

@@ -16,8 +16,8 @@ export default function TimeInfo({ front }: { front: boolean }) {
       <Table className="overflow-hidden rounded-lg">
         <TableHeader className="bg-slate-600">
           <TableRow>
-            <TableHead className="text-center text-lg">분류</TableHead>
-            <TableHead className="text-center text-lg">시간</TableHead>
+            <TableHead className="text-center">분류</TableHead>
+            <TableHead className="text-center">시간</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody className="overflow-hidden rounded-lg">

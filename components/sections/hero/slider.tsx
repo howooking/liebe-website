@@ -5,19 +5,19 @@ import Image from "next/image";
 import { SLIDES } from "@/constants/slides";
 import { motion } from "framer-motion";
 import Carousel from "nuka-carousel";
-import { useEffect, useState } from "react";
 import Loading from "@/app/loading";
+import { useEffect, useState } from "react";
 
 export default function Slider() {
-  //   const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(()=>{
-  // setLoading(false)
-  // },[])
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
-  //   if (loading) {
-  //     return <Loading />;
-  //   }
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Carousel
       autoplay

@@ -30,7 +30,7 @@ export default function MobileDrawer({
   }, []);
 
   if (!isClient) {
-    return <Image src={spinner} alt="spinner" width={35} />;
+    return null;
   }
   return (
     <Sheet>
