@@ -23,7 +23,10 @@ export default function Navbar() {
     >
       <Container>
         <div className="flex h-12 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
+          <Link
+            href="/"
+            className="flex items-center gap-2 transition hover:scale-105"
+          >
             <Image src={mainLogo} alt="main logo" width={30} height={30} />
             <h1 className="text-xl font-semibold">
               <span

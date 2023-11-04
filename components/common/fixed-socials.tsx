@@ -5,7 +5,7 @@ import useScroll from "@/hooks/useScroll";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function MobileFixedFooter() {
+export default function FixedSocials() {
   const scrollY = useScroll();
   const path = usePathname();
   const isRoot = path === "/";
@@ -14,7 +14,7 @@ export default function MobileFixedFooter() {
   return (
     <div
       className={
-        "fixed bottom-0 z-50 flex h-12 w-full items-center justify-around border-t text-white"
+        "fixed bottom-0 z-50 flex h-12 w-full items-center justify-around border-t text-white sm:hidden"
       }
       style={{
         color: !isScrollTop || !isRoot ? "black" : "white",

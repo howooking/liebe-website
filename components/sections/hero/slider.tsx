@@ -1,37 +1,46 @@
 "use client";
 
 import Image from "next/image";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
-
-const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 import { SLIDES } from "@/constants/slides";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import Carousel from "nuka-carousel";
+import { useEffect, useState } from "react";
+import Loading from "@/app/loading";
 
 export default function Slider() {
+  //   const [loading, setLoading] = useState(true);
+
+  // useEffect(()=>{
+  // setLoading(false)
+  // },[])
+
+  //   if (loading) {
+  //     return <Loading />;
+  //   }
   return (
-    <AutoplaySlider
-      play
-      interval={6000}
-      className="h-screen w-full overflow-hidden"
+    <Carousel
+      autoplay
+      autoplayInterval={6000}
+      wrapAround
+      pauseOnHover={false}
+      withoutControls
     >
       {SLIDES.map((slide, index) => (
-        <div key={index}>
+        <div key={index} className="relative inset-0 z-40">
           <Image
-            quality={100}
+            key={slide.title}
+            quality={70}
             src={slide.src}
             alt={`slide-${index + 1}`}
             placeholder="blur"
-            fill
-            className="object-cover"
             priority
+            className="h-screen w-full object-cover object-center"
           />
-          <div className="relative h-screen w-[100vw]">
+          <div className="absolute left-0 top-0 z-50 w-screen">
             <motion.div
               key={index}
-              className="absolute flex h-screen w-full flex-col items-center justify-center space-y-10 font-bold text-white"
+              className="absolute flex h-screen w-full flex-col items-center justify-center space-y-10 font-bold text-white/90"
               initial={{ opacity: 0, y: -60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -43,6 +52,6 @@ export default function Slider() {
           </div>
         </div>
       ))}
-    </AutoplaySlider>
+    </Carousel>
   );
 }

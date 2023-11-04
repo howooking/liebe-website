@@ -8,7 +8,7 @@ export default async function Home() {
     <>
       {/* <Hero /> */}
       <Main />
-      <Salute />
+      {/* <Salute /> */}
       <Map />
     </>
   );

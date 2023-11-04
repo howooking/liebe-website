@@ -9,25 +9,30 @@ export const SLIDES = [
     src: s1,
     title: "오직 환자만 생각해온 15년",
     subtitle: "2009년 목동에서 개원하여 2022년 삼전동으로 확장이전",
+    path: "/slider/s1.jpg",
   },
   {
     src: s2,
     title: "리베는 사랑입니다",
     subtitle: "LIEBE는 독일어로 사랑을 뜻합니다",
+    path: "/slider/s2.png",
   },
   {
     src: s3,
     title: "원칙과 최고를 향한 의료서비스",
     subtitle: "리베는 오직 환자만을 생각합니다",
+    path: "/slider/s3.jpg",
   },
   {
     src: s4,
     title: "실력과 전문성을 근본으로 하는",
     subtitle: "우리에게는 가족이기에 매순간 최선을 다합니다",
+    path: "/slider/s4.jpg",
   },
   {
     src: s5,
     title: "More Than Two Species",
     subtitle: "특수동물 또한 소중한 가족입니다",
+    path: "/slider/s5.jpg",
   },
 ];

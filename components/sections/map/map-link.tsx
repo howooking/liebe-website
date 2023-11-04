@@ -1,30 +1,23 @@
+import { MAP_LINKS } from "@/constants/map-links";
 import Link from "next/link";
 
-type MapLinkProps = {
-  title: string;
-  href: string;
-  bgColor: string;
-  textColor: string;
-};
-
-export default function MapLink({
-  title,
-  href,
-  bgColor,
-  textColor,
-}: MapLinkProps) {
+export default function MapLink() {
   return (
-    <Link
-      target="_blank"
-      href={href}
-      style={{
-        backgroundColor: bgColor,
-        color: textColor,
-        border: `2px solid ${textColor}`,
-      }}
-      className="z-20 flex items-center justify-center rounded-md px-2 py-2 text-xs font-bold transition hover:scale-110 md:text-sm"
-    >
-      {title}
-    </Link>
+    <div className="flex  flex-col gap-2">
+      {MAP_LINKS.map((link) => (
+        <Link
+          key={link.title}
+          target="_blank"
+          href={link.href}
+          style={{
+            backgroundColor: link.bgColor,
+            color: link.textColor,
+          }}
+          className="z-20 flex items-center justify-center rounded-md px-2 py-2 text-xs font-bold transition hover:scale-[0.98] md:text-sm"
+        >
+          {link.title}
+        </Link>
+      ))}
+    </div>
   );
 }

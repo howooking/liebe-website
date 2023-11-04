@@ -14,7 +14,10 @@ export default function NavLinks({ isRoot }: { isRoot: boolean }) {
     >
       {SECTIONS.map((section) => (
         <li key={section.label}>
-          <Link href={section.href} className="hover transition">
+          <Link
+            href={section.href}
+            className="block transition hover:scale-105"
+          >
             {section.label}
           </Link>
         </li>

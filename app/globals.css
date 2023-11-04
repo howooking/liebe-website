@@ -64,9 +64,9 @@ html {
   scroll-behavior: smooth !important;
 }
 .scroll-snap {
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0rem;
-}
+} */
