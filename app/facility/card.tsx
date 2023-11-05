@@ -28,7 +28,7 @@ export default function Card({
     >
       <Image
         priority
-        quality={60}
+        quality={50}
         alt={title}
         src={image}
         placeholder="blur"
