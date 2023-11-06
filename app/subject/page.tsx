@@ -6,7 +6,7 @@ import Section from "@/components/common/section";
 import subjectBanner from "@/public/subjects/subject-banner.jpg";
 import TimeInfo from "./time-info";
 import Accordion from "@/app/subject/arccodion";
-import SectionTitle from "@/components/common/sectionTitle";
+
 import { Separator } from "@/components/ui/separator";
 import CallCard from "./call-card";
 
@@ -22,16 +22,16 @@ export default function Subject() {
         <CallCard />
         <Separator className="my-14" />
         <div>
-          <SectionTitle>
+          {/* <SectionTitle>
             진료 <span className="text-primary">시간</span>
-          </SectionTitle>
+          </SectionTitle> */}
           <TimeInfo />
         </div>
         <Separator className="my-14" />
         <div>
-          <SectionTitle>
+          {/* <SectionTitle>
             진료 <span className="text-primary">과목</span>
-          </SectionTitle>
+          </SectionTitle> */}
           <Accordion />
         </div>
       </Container>

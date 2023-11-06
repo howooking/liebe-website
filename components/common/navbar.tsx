@@ -7,7 +7,6 @@ import Container from "@/components/common/container";
 import MobileDrawer from "@/components/common/mobile-drawer";
 import mainLogo from "@/public/main-logo.png";
 import useScroll from "@/hooks/useScroll";
-import { usePathname } from "next/navigation";
 import NavLinks from "./nav-links";
 
 export default function Navbar() {
@@ -19,6 +18,7 @@ export default function Navbar() {
       style={{
         background: scrollY > 50 ? "white" : "transparent",
         transition: "background 500ms ease",
+        borderBottom: scrollY > 50 ? "solid #e2e8f0 1px" : "none",
       }}
     >
       <Container>

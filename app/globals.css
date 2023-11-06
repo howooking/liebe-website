@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,14 +66,7 @@ html {
 .scroll-snap {
   /* scroll-snap-align: center; */
 }
-
+/* 
 ::-webkit-scrollbar {
   width: 0rem;
-}
-
-.highlight {
-  background: linear-gradient(to right, #f08d47, #8eb62f);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
+} */

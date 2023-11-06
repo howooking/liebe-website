@@ -11,7 +11,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      script: ["Nanum Brush Script"],
+      eng: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {
