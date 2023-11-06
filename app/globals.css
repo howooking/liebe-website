@@ -70,3 +70,10 @@ html {
 ::-webkit-scrollbar {
   width: 0rem;
 }
+
+.highlight {
+  background: linear-gradient(to right, #f08d47, #8eb62f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

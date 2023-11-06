@@ -26,16 +26,14 @@ export default function Facility() {
   }
   return (
     <Section id="facility">
-      <div className="pt-[48px]">
-        <Banner
-          imageSrc={facilityBanner}
-          title="리베 시설을 소개합니다"
-          subTitle="최첨단 장비들과 반려가족들을 위한 공간들"
-        />
-        <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
-        <CardCarousel items={FACILITY_IMAGES[selected]} selected={selected} />
-        <LevelInfo selected={selected} setSelected={setSelected} />
-      </div>
+      <Banner
+        imageSrc={facilityBanner}
+        title="리베 시설을 소개합니다"
+        subTitle="최첨단 장비들과 반려가족들을 위한 공간들"
+      />
+      <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
+      <CardCarousel items={FACILITY_IMAGES[selected]} selected={selected} />
+      <LevelInfo selected={selected} setSelected={setSelected} />
     </Section>
   );
 }

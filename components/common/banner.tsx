@@ -12,7 +12,7 @@ export default function Banner({
   subTitle: React.ReactNode;
 }) {
   return (
-    <div className="relative flex h-40 items-center justify-center sm:h-80">
+    <div className="relative flex h-[200px] items-center justify-center sm:h-[400px]">
       <Image
         quality={70}
         fill

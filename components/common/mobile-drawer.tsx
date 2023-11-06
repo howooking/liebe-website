@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import {
@@ -13,16 +12,11 @@ import {
 import DrawOutlineButton from "@/components/ui/draw-outline-button";
 import { SECTIONS } from "@/constants/sections";
 
-import spinner from "@/public/spinner.svg";
 import Link from "next/link";
+import useScroll from "@/hooks/useScroll";
 
-export default function MobileDrawer({
-  isScrollTop,
-  isRoot,
-}: {
-  isScrollTop: boolean;
-  isRoot: boolean;
-}) {
+export default function MobileDrawer({}: {}) {
+  const scrollY = useScroll();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -37,7 +31,10 @@ export default function MobileDrawer({
       <SheetTrigger className="sm:hidden">
         <AiOutlineMenu
           size={24}
-          style={{ color: !isScrollTop || !isRoot ? "black" : "white" }}
+          style={{
+            color: scrollY > 50 ? "#0f172a" : "white",
+            transition: "color 200ms ease",
+          }}
         />
       </SheetTrigger>
 

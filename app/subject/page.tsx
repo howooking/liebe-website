@@ -13,30 +13,28 @@ import CallCard from "./call-card";
 export default function Subject() {
   return (
     <Section id="subject">
-      <div className="pt-[72px]">
-        <Banner
-          imageSrc={subjectBanner}
-          title="병원 진료 안내"
-          subTitle="진료 예약 / 진료 시간 / 진료과목"
-        />
-        <Container>
-          <CallCard />
-          <Separator className="my-14" />
-          <div>
-            <SectionTitle>
-              진료 <span className="text-primary">시간</span>
-            </SectionTitle>
-            <TimeInfo />
-          </div>
-          <Separator className="my-14" />
-          <div>
-            <SectionTitle>
-              진료 <span className="text-primary">과목</span>
-            </SectionTitle>
-            <Accordion />
-          </div>
-        </Container>
-      </div>
+      <Banner
+        imageSrc={subjectBanner}
+        title="병원 진료 안내"
+        subTitle="진료 예약 / 진료 시간 / 진료과목"
+      />
+      <Container>
+        <CallCard />
+        <Separator className="my-14" />
+        <div>
+          <SectionTitle>
+            진료 <span className="text-primary">시간</span>
+          </SectionTitle>
+          <TimeInfo />
+        </div>
+        <Separator className="my-14" />
+        <div>
+          <SectionTitle>
+            진료 <span className="text-primary">과목</span>
+          </SectionTitle>
+          <Accordion />
+        </div>
+      </Container>
     </Section>
   );
 }

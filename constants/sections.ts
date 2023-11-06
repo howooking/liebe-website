@@ -19,4 +19,8 @@ export const SECTIONS = [
     label: "오시는길",
     href: "/#map",
   },
+  {
+    label: "보호자안내서",
+    href: "https://sites.google.com/view/ramginfo",
+  },
 ];

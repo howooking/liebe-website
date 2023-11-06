@@ -40,7 +40,7 @@ export default function Slider() {
           <div className="absolute left-0 top-0 z-50 w-screen">
             <motion.div
               key={index}
-              className="absolute flex h-screen w-full flex-col items-center justify-center space-y-10 font-bold text-white/90"
+              className="absolute flex h-screen w-full flex-col items-center justify-center space-y-10 text-white/90"
               initial={{ opacity: 0, y: -60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}

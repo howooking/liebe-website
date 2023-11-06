@@ -24,7 +24,6 @@ export default function LevelInfo({ setSelected, selected }: LevelInfoProps) {
             selected={selected}
             setSelected={setSelected}
             level={level}
-            defaultOpen={level === "1층"}
             key={level}
           >
             <ul>
@@ -43,7 +42,6 @@ const Level = ({
   selected,
   level,
   children,
-  defaultOpen = false,
 }: {
   selected: string;
   level: string;
@@ -71,7 +69,7 @@ const Level = ({
               color: "rgba(3, 6, 23, 1)",
             },
           }}
-          className="bg-primary bg-clip-text text-left text-lg font-bold"
+          className="bg-primary bg-clip-text text-left text-lg"
         >
           {level} 안내
         </motion.span>

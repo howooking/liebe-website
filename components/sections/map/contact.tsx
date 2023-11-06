@@ -3,14 +3,14 @@ import MapLink from "./map-link";
 import { FaSubway, FaCar } from "react-icons/fa";
 import { RiKakaoTalkFill, RiPhoneFill, RiMailFill } from "react-icons/ri";
 import Link from "next/link";
+import Title from "@/components/common/title";
+import { Separator } from "@/components/ui/separator";
 
 export default function Contact() {
   return (
-    <div className="mx-auto flex w-11/12 flex-col justify-evenly gap-10 py-6 sm:w-1/2 sm:px-6">
+    <div className="mx-auto flex w-11/12 flex-col justify-evenly gap-5 py-6 sm:w-1/2 sm:px-6">
       <div>
-        <h2 className="mb-4 text-xl font-bold sm:text-2xl">
-          리베동물메디컬센터 오시는길
-        </h2>
+        <Title>리베동물병원 오시는길</Title>
         <div className="flex flex-col gap-2">
           <p>서울특별시 송파구 삼전로 56</p>
           <MapLink />
@@ -24,14 +24,14 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
+      <Separator />
       <div>
-        <h2 className="mb-4 text-xl font-bold sm:text-2xl">진료시간 안내</h2>
+        <Title>진료시간 안내</Title>
         <TimeInfo />
       </div>
-
+      <Separator />
       <div>
-        <h2 className="mb-4 text-xl font-bold sm:text-2xl">CONTACT</h2>
+        <Title>CONTACT</Title>
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <RiPhoneFill />

@@ -1,13 +1,10 @@
 import Container from "@/components/common/container";
-import useWindowSize from "@/hooks/useWindowSize";
 import { motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 import Card from "./card";
-
-const BREAKPOINTS = 990;
 
 export default function CardCarousel({
   items,
