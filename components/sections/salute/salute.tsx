@@ -9,7 +9,6 @@ import Message from "@/components/sections/salute/message";
 import Section from "@/components/common/section";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import SectionTitle from "@/components/common/sectionTitle";
 import Container from "@/components/common/container";
 
 export default function Salute() {
@@ -18,7 +17,7 @@ export default function Salute() {
       <div className="bg-stone-50 py-8 lg:py-0">
         <Container>
           <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center">
-            <SectionTitle
+            {/* <SectionTitle
               subTitle={
                 <>
                   반려동물과 반려동물 가족에 대한 편안한 응대와
@@ -28,7 +27,7 @@ export default function Salute() {
               }
             >
               대표원장 <span className="text-primary">인사말</span>
-            </SectionTitle>
+            </SectionTitle> */}
 
             <motion.div
               initial={{ opacity: 0, y: 100 }}

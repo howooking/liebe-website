@@ -22,11 +22,11 @@ export default function TimeTable({ off }: { off?: number[] }) {
   }, [off]);
 
   return (
-    <Table className="w-full">
+    <Table className="mt-3 w-full overflow-hidden rounded-lg">
       <TableCaption className="text-xs">
         * 일정 변동이 있을 수 있습니다.
       </TableCaption>
-      <TableHeader>
+      <TableHeader className="bg-slate-500">
         <TableRow>
           <TableHead className="text-center">일</TableHead>
           <TableHead className="text-center">월</TableHead>
@@ -37,10 +37,13 @@ export default function TimeTable({ off }: { off?: number[] }) {
           <TableHead className="text-center">토</TableHead>
         </TableRow>
       </TableHeader>
-      <TableBody>
+      <TableBody className="bg-slate-100">
         <TableRow>
           {schedules.map((schedule, index) => (
-            <TableCell key={index} className="text-center">
+            <TableCell
+              key={index}
+              className="overflow-hidden  rounded-lg text-center"
+            >
               <Badge
                 variant={schedule === "휴무" ? "destructive" : "outline"}
                 className="px-1 py-0.5 text-xs"

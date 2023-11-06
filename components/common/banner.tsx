@@ -25,9 +25,9 @@ export default function Banner({
       <div className="absolute h-full w-full bg-black/50" />
       <motion.div
         className="z-10 flex flex-col items-center gap-4 text-white"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
         viewport={{ once: true }}
       >
         <h2 className="text-xl font-bold text-primary sm:text-3xl">{title}</h2>
