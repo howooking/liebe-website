@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed z-50 w-full transition"
+      className="fixed z-50 w-full"
       style={{
         background: scrollDown ? "white" : "transparent",
         transition: "background 500ms ease",
