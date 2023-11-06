@@ -13,7 +13,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
-export default function MobileDrawer({}: {}) {
+export default function MobileDrawer({ scrollDown }: { scrollDown: boolean }) {
   const path = usePathname();
   return (
     <Sheet>
@@ -21,7 +21,7 @@ export default function MobileDrawer({}: {}) {
         <AiOutlineMenu
           size={24}
           style={{
-            color: scrollY > 50 ? "#6b7280" : "#fff",
+            color: scrollDown ? "#6b7280" : "#fff",
             transition: "color 200ms ease",
           }}
         />

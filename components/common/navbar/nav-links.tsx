@@ -6,13 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export default function NavLinks() {
+export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
   const path = usePathname();
   return (
     <ul
       className="hidden items-center justify-center gap-4 text-sm md:text-base lg:flex"
       style={{
-        color: scrollY > 50 ? "#6b7280" : "#fff",
+        color: scrollDown ? "#6b7280" : "#fff",
         transition: "color 200ms ease",
       }}
     >

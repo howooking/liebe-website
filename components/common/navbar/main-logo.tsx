@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import mainLogo from "@/public/main-logo.png";
 
-export default function MainLogo() {
+export default function MainLogo({ scrollDown }: { scrollDown: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-2">
       <Image src={mainLogo} alt="main logo" width={30} height={30} />
@@ -10,7 +10,7 @@ export default function MainLogo() {
         <span
           className="group-hover:text-primary"
           style={{
-            color: scrollY > 50 ? "#f08d47" : "#fff",
+            color: scrollDown ? "#f08d47" : "#fff",
             transition: "color 500ms ease",
           }}
         >
@@ -19,7 +19,7 @@ export default function MainLogo() {
         <span
           className="group-hover:text-secondary"
           style={{
-            color: scrollY > 50 ? "#8eb62f" : "#fff",
+            color: scrollDown ? "#8eb62f" : "#fff",
             transition: "color 500ms ease",
           }}
         >
