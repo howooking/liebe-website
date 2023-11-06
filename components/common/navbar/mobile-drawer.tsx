@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import {
@@ -13,26 +10,18 @@ import DrawOutlineButton from "@/components/ui/draw-outline-button";
 import { SECTIONS } from "@/constants/sections";
 
 import Link from "next/link";
-import useScroll from "@/hooks/useScroll";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function MobileDrawer({}: {}) {
-  const scrollY = useScroll();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null;
-  }
+  const path = usePathname();
   return (
     <Sheet>
-      <SheetTrigger className="sm:hidden">
+      <SheetTrigger className="lg:hidden">
         <AiOutlineMenu
           size={24}
           style={{
-            color: scrollY > 50 ? "#0f172a" : "white",
+            color: scrollY > 50 ? "#6b7280" : "#fff",
             transition: "color 200ms ease",
           }}
         />
@@ -54,7 +43,14 @@ export default function MobileDrawer({}: {}) {
               <SheetClose asChild>
                 <Link href={section.href}>
                   <DrawOutlineButton>
-                    <div className="px-4 py-2">{section.label}</div>
+                    <div
+                      className={cn(
+                        path === section.href && "text-primary",
+                        "px-4 py-2",
+                      )}
+                    >
+                      {section.label}
+                    </div>
                   </DrawOutlineButton>
                 </Link>
               </SheetClose>

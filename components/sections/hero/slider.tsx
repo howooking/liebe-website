@@ -1,23 +1,10 @@
-"use client";
-
 import Image from "next/image";
 
 import { SLIDES } from "@/constants/slides";
 import { motion } from "framer-motion";
 import Carousel from "nuka-carousel";
-import Loading from "@/app/loading";
-import { useEffect, useState } from "react";
 
 export default function Slider() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
   return (
     <Carousel
       autoplay
@@ -29,10 +16,9 @@ export default function Slider() {
       {SLIDES.map((slide, index) => (
         <div key={index} className="relative inset-0 z-40">
           <Image
-            key={slide.title}
             quality={70}
             src={slide.src}
-            alt={`slide-${index + 1}`}
+            alt={slide.title}
             placeholder="blur"
             priority
             className="h-screen w-full object-cover object-center"
@@ -41,10 +27,14 @@ export default function Slider() {
             <motion.div
               key={index}
               className="absolute flex h-screen w-full flex-col items-center justify-center space-y-10 text-white/90"
-              initial={{ opacity: 0, y: -60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5 }}
+              initial={{ opacity: 0, y: -40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.5,
+                delay: index === 2 || index === 3 ? 6 : 0.5,
+              }}
               exit={{ opacity: 0 }}
+              viewport={{ once: false }}
             >
               <p className="text-2xl md:text-5xl lg:text-7xl">{slide.title}</p>
               <p className="text-sm md:text-xl lg:text-3xl">{slide.subtitle}</p>

@@ -14,7 +14,7 @@ export default function FixedSocials() {
   return (
     <div
       className={
-        "fixed bottom-0 z-50 flex h-12 w-full items-center justify-around border-t text-white sm:hidden"
+        "fixed bottom-0 z-50 flex h-12 w-full items-center justify-around border-t text-white lg:hidden"
       }
       style={{
         color: !isScrollTop || !isRoot ? "black" : "white",

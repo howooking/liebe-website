@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export default function Section({
   children,
@@ -8,11 +9,14 @@ export default function Section({
   id: string;
 }) {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id={id}
       className="relative scroll-mt-[48px] sm:min-h-[calc(100vh-48px)]"
     >
       {children}
-    </section>
+    </motion.section>
   );
 }
