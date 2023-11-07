@@ -70,3 +70,10 @@ html {
 ::-webkit-scrollbar {
   width: 0rem;
 } */
+
+.clinic-cursor {
+  position: absolute;
+  mask-image: url(".././public/clinic/cursor.svg");
+  background: "black";
+  mask-repeat: no-repeat;
+}
