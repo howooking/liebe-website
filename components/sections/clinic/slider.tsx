@@ -1,12 +1,9 @@
 import { CLINICS } from "@/constants/clinic";
-import useMousePosition from "@/hooks/useMousePosition";
 import useWindowSize from "@/hooks/useWindowSize";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
 import { useCallback, useState } from "react";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Cursor from "./cursor";
 
 export default function Slider() {

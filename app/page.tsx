@@ -5,6 +5,7 @@ import Hero from "@/components/sections/hero/hero";
 import Map from "@/components/sections/map/map";
 import { useEffect, useState } from "react";
 import Loading from "./loading";
+import Testimonial from "@/components/sections/testimonial/testimonial";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -18,8 +19,9 @@ export default function Home() {
   }
   return (
     <>
-      {/* <Hero />
-      <Clinic /> */}
+      <Hero />
+      <Clinic />
+      <Testimonial />
       <Map />
     </>
   );
