@@ -51,6 +51,8 @@ export default function Slider() {
       withoutControls
       slidesToShow={slidesToShow()}
       className="cursor-grab"
+      cellAlign="center"
+      slideIndex={width! < 1280 ? 0 : 1}
     >
       {CLINICS.map((slide, index) => (
         <div

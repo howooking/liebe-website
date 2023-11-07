@@ -7,7 +7,7 @@ import s5 from "@/public/slider/s5.jpg";
 export const SLIDES = [
   {
     src: s1,
-    title: "오직 환자만 생각해온 15년",
+    title: `오직 환자만 생각해온 ${new Date().getFullYear() - 2008}년`,
     subtitle: "2009년 목동에서 개원하여 2022년 삼전동으로 확장이전",
     path: "/slider/s1.jpg",
   },
