@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
-import type { Testimonial } from "./Testimonial.type";
 import Image from "next/image";
+import { Testimonial } from "./testimonial.type";
 
 export default function TestimonialCard({
   img,

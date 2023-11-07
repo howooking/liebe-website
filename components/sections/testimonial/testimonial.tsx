@@ -1,12 +1,4 @@
 import { useState } from "react";
-import {
-  SiAtlassian,
-  SiDribbble,
-  SiGrubhub,
-  SiKaggle,
-  SiSlack,
-  SiNike,
-} from "react-icons/si";
 import Section from "@/components/common/section";
 import SelectButton from "./selectButton";
 import TestimonialCards from "./testimonial-cards";
@@ -30,7 +22,6 @@ export default function Testimonial() {
               </>
             }
           />
-
           <SelectButton
             numTracks={TESTIMONIALS.length}
             setSelected={setSelected}

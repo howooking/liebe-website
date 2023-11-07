@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import TestimonialCard from "./testimonial-card";
-import type { Testimonial } from "./Testimonial.type";
+import { Testimonial } from "./testimonial.type";
 
 export default function TestimonialCards({
   testimonials,

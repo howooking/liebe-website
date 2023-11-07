@@ -11,48 +11,41 @@ export const TESTIMONIALS = [
     description:
       "우리 강아지는 이곳에서 최고의 치료를 받았습니다. 직원들은 항상 따뜻하게 대해 주시고, 신속하고 효과적인 치료를 제공해 주셨어요.",
     name: "똘이 보호자님",
-    title: "",
+    title: "골절 수술",
   },
   {
     img: testimonial2,
     description:
       "우리는 이 동물병원을 신뢰합니다. 그들은 항상 동물의 행복과 건강을 최우선으로 생각하며, 진짜 친구 같은 관계를 형성해 주십니다.",
     name: "백희 보호자님",
-    title: "UX Research, Atlassian",
+    title: "심장병 관리중",
   },
   {
     img: testimonial3,
     description:
       "감사합니다, 이 동물병원은 우리 가족의 일부처럼 다뤄 주셨어요. 그들은 항상 시간을 내주시고, 우리 애완동물을 위해 최선을 다해주셨습니다.",
     name: "라쿤이 보호자님",
-    title: "Staff Engineer, Dribbble",
+    title: "슬개골 수술",
   },
   {
     img: testimonial4,
     description:
       "저희 강아지는 이 동물병원을 사랑합니다! 그들은 언제나 따뜻하고 친절하게 대해 주며, 최상의 치료를 제공해 줍니다.",
-    name: "호우 보호자님",
-    title: "Marketing Manager, GrubHub",
+    name: "멍이 보호자님",
+    title: "신부전 관리중",
   },
   {
     img: testimonial5,
     description:
       "이 동물병원의 전문성은 정말 놀랍습니다. 그들은 항상 최신 기술을 사용하며, 애완동물의 건강을 회복시키기 위해 최선을 다해 노력합니다.",
     name: "망고 보호자님",
-    title: "Engineering Manager, Kaggle",
-  },
-  {
-    img: testimonial5,
-    description:
-      "이 동물병원의 전문성은 정말 놀랍습니다. 그들은 항상 최신 기술을 사용하며, 애완동물의 건강을 회복시키기 위해 최선을 다해 노력합니다.",
-    name: "망고 보호자님",
-    title: "Engineering Manager, Kaggle",
+    title: "쿠싱 관리중",
   },
   {
     img: testimonial6,
     description:
       "동물 치료의 전문가로서, 이 동물병원은 항상 동물들을 최우선으로 생각합니다. 그들에게 우리 애완동물을 맡길 수 있어서 행복합니다.",
     name: "마중이 보호자님",
-    title: "Engineering Manager, Kaggle",
+    title: "당뇨 관리중",
   },
 ];

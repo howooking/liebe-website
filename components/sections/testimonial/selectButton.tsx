@@ -21,7 +21,7 @@ export default function SelectButton({
           >
             {selected === n ? (
               <motion.span
-                className="absolute bottom-0 left-0 top-0 bg-slate-950"
+                className="absolute bottom-0 left-0 top-0 bg-slate-800"
                 initial={{
                   width: "0%",
                 }}
@@ -37,7 +37,7 @@ export default function SelectButton({
               />
             ) : (
               <span
-                className="absolute bottom-0 left-0 top-0 bg-slate-950"
+                className="absolute bottom-0 left-0 top-0 bg-slate-800"
                 style={{
                   width: selected > n ? "100%" : "0%",
                 }}
