@@ -13,6 +13,7 @@ export default function Slider() {
       pauseOnHover={false}
       withoutControls
       dragging={false}
+      swiping={false}
       speed={2000}
     >
       {SLIDES.map((slide, index) => (
@@ -37,7 +38,7 @@ export default function Slider() {
               }}
               viewport={{ once: false }}
             >
-              <div className="relative p-4 text-center tracking-tight text-white sm:space-y-6 md:space-y-8 lg:space-y-10">
+              <div className="relative flex flex-col items-center gap-2 p-4 tracking-tight text-white md:gap-4">
                 <p className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl">
                   {slide.title}
                 </p>
