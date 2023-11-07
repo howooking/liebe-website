@@ -14,7 +14,7 @@ export default function SectionTitle({
   testimonial,
 }: SectionTitleProps) {
   return (
-    <div className="mb-4 space-y-4 pt-10 md:pt-20">
+    <div className="space-y-4 text-center">
       <h2
         className={cn(
           testimonial
@@ -29,7 +29,6 @@ export default function SectionTitle({
           initial={{ scaleX: 0, originX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          viewport={{ once: true }}
         />
       </h2>
       <p

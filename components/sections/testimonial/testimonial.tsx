@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Section from "@/components/common/section";
-import SelectButton from "./selectButton";
+import SelectButton from "./select-button";
 import TestimonialCards from "./testimonial-cards";
 import { TESTIMONIALS } from "@/constants/testimonial";
 import SectionTitle from "@/components/common/section-title";
@@ -10,8 +10,8 @@ export default function Testimonial() {
 
   return (
     <Section id="testimonial">
-      <section className="grid h-screen grid-cols-1 items-center gap-8 overflow-hidden bg-slate-100 px-4 py-24 lg:grid-cols-2 lg:gap-4 lg:px-8">
-        <div className="p-4">
+      <section className="grid h-screen grid-cols-1 items-center gap-8 overflow-hidden bg-slate-100 px-4 py-24 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <div className="lg:space-y-20">
           <SectionTitle
             title="CUSTOMER REVIEWS"
             testimonial

@@ -42,19 +42,18 @@ export default function TestimonialCard({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute left-0 top-0 flex min-h-full w-full cursor-pointer flex-col justify-between p-8 lg:p-12"
+      className="absolute left-0 top-0 flex min-h-full w-full cursor-pointer flex-col justify-between p-8 shadow lg:p-12"
     >
-      <div className="relative mx-auto aspect-square h-1/2 w-1/2 overflow-hidden rounded-full">
+      <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64">
         <Image
+          alt="testimonials"
           src={img}
-          alt={name}
-          placeholder="blur"
           fill
-          className="object-cover"
+          className="rounded-full object-cover"
         />
       </div>
       <p className="my-8 text-lg font-light italic lg:text-xl">
-        &quot;{description}&quot;
+        &#34;{description}&#34;
       </p>
       <div>
         <span className="block text-lg font-semibold">{name}</span>

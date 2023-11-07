@@ -12,7 +12,7 @@ export default function TestimonialCards({
   setSelected: Dispatch<SetStateAction<number>>;
 }) {
   return (
-    <div className="relative h-[450px] p-4 shadow-xl lg:h-[500px]">
+    <div className="relative h-[450px] p-4 lg:h-[500px]">
       {testimonials.map((t, i) => {
         return (
           <TestimonialCard

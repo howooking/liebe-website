@@ -15,7 +15,7 @@ export default function Section({
       transition={{ duration: 1 }}
       viewport={{ once: false }}
       id={id}
-      className="relative scroll-mt-[48px] sm:min-h-[calc(100vh-48px)]"
+      className="scroll-mt-[48px]"
     >
       {children}
     </motion.section>

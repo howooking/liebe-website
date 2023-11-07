@@ -16,7 +16,6 @@ export default function title({ children }: TitleProps) {
         initial={{ scaleX: 0, originX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        viewport={{ once: true }}
       />
     </h2>
   );
