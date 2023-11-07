@@ -4,12 +4,11 @@ import { SOCIALS } from "@/constants/socials";
 import useScroll from "@/hooks/useScroll";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useMemo } from "react";
 
 export default function FixedSocials() {
   const scrollY = useScroll();
-  const path = usePathname();
-  const isRoot = path === "/";
-  const isScrollTop = scrollY === 0;
+  const scrollDown = useMemo(() => scrollY > 50, [scrollY]);
 
   return (
     <div
@@ -17,8 +16,9 @@ export default function FixedSocials() {
         "fixed bottom-0 z-50 flex h-12 w-full items-center justify-around border-t text-white lg:hidden"
       }
       style={{
-        color: !isScrollTop || !isRoot ? "black" : "white",
-        background: !isScrollTop || !isRoot ? "white" : "transparent",
+        color: scrollDown ? "#1f2937" : "#fff",
+        background: scrollDown ? "white" : "transparent",
+        transition: "background 500ms ease",
       }}
     >
       {SOCIALS.map((social) => (
