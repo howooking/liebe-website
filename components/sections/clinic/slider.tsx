@@ -108,11 +108,7 @@ export default function Slider() {
           </div>
         ))}
       </Carousel>
-      <Cursor
-        isHovered={isHovered}
-        isGrabbed={isGrabbed}
-        setIsGrabbed={setIsGrabbed}
-      />
+      <Cursor isHovered={isHovered} />
     </div>
   );
 }
