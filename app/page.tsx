@@ -18,8 +18,8 @@ export default function Home() {
   }
   return (
     <>
-      <Hero />
-      <Clinic />
+      {/* <Hero />
+      <Clinic /> */}
       <Map />
     </>
   );

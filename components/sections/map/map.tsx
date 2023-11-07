@@ -5,7 +5,7 @@ import Contact from "./contact";
 export default function Map() {
   return (
     <Section id="map">
-      <div className="flex flex-col sm:flex-row">
+      <div className="flex flex-col md:flex-row">
         <GoogleMap />
         <Contact />
       </div>
