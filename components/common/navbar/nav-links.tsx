@@ -12,7 +12,7 @@ export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
     <ul
       className="hidden items-center justify-center gap-4 text-sm md:text-base lg:flex"
       style={{
-        color: scrollDown ? "#1e293b" : "#fff",
+        color: scrollDown ? "#0f172a" : "#fff",
         transition: "color 200ms ease",
       }}
     >

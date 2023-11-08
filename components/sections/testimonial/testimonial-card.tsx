@@ -18,8 +18,8 @@ export default function TestimonialCard({
 }) {
   const scale = position <= selected ? 1 : 1 + 0.015 * (position - selected);
   const offset = position <= selected ? 0 : 95 + (position - selected) * 3;
-  const background = position % 2 ? "#1e293b" : "white";
-  const color = position % 2 ? "white" : "#1e293b";
+  const background = position % 2 ? "#0f172a" : "white";
+  const color = position % 2 ? "white" : "#0f172a";
 
   return (
     <motion.div

@@ -97,7 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn("font-sans text-slate-800 antialiased", font.className)}
+        className={cn("font-sans text-slate-900 antialiased", font.className)}
       >
         <Navbar />
         {children}

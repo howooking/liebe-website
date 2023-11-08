@@ -6,7 +6,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import DrawOutlineButton from "@/components/ui/draw-outline-button";
 import { SECTIONS } from "@/constants/sections";
 
 import Link from "next/link";
@@ -27,8 +26,8 @@ export default function MobileDrawer({ scrollDown }: { scrollDown: boolean }) {
         />
       </SheetTrigger>
 
-      <SheetContent side="right" className="bg-slate-800">
-        <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-slate-50">
+      <SheetContent side="right" className="bg-slate-900">
+        <ul className="flex h-full flex-col items-center justify-center gap-5 text-2xl text-white">
           <li>
             <SheetClose asChild>
               <Link href="/">
