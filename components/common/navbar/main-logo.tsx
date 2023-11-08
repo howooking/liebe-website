@@ -5,7 +5,7 @@ import mainLogo from "@/public/main-logo.png";
 export default function MainLogo({ scrollDown }: { scrollDown: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-2">
-      <Image src={mainLogo} alt="main logo" width={30} height={30} />
+      <Image src={mainLogo} alt="main logo" width={30} className="h-auto" />
       <h1 className="text-xl font-semibold">
         <span
           className="group-hover:text-primary"

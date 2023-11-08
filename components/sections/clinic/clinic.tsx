@@ -5,7 +5,7 @@ import SectionTitle from "@/components/common/section-title";
 export default function Clinic() {
   return (
     <Section id="clinic">
-      <div className="flex h-screen flex-col justify-center">
+      <div className="flex h-screen flex-col justify-center gap-10">
         <div className="text-center">
           <SectionTitle
             title="LIEBE CLINIC"

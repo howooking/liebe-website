@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Carousel from "nuka-carousel";
 import { useCallback, useState } from "react";
-import Cursor from "./cursor";
 
 export default function Slider() {
   const { width } = useWindowSize();
@@ -51,19 +50,7 @@ export default function Slider() {
 
   return (
     <div
-      onMouseEnter={() => {
-        setIsHovered(true);
-      }}
-      onMouseLeave={() => {
-        setIsHovered(false);
-      }}
-      className={cn(
-        isHovered
-          ? isGrabbed
-            ? "cursor-grabbing"
-            : "cursor-grab"
-          : "cursor-auto",
-      )}
+      className={cn(isGrabbed ? "cursor-grabbing" : "cursor-grab")}
       onMouseDown={() => setIsGrabbed(true)}
       onMouseUp={() => setIsGrabbed(false)}
     >
@@ -72,7 +59,6 @@ export default function Slider() {
         slidesToShow={slidesToShow()}
         cellAlign="center"
         slideIndex={width! < 1280 ? 0 : 1}
-        className="my-10"
       >
         {CLINICS.map((slide, index) => (
           <div key={index} className={cn("relative", getImageSize())}>
@@ -105,7 +91,6 @@ export default function Slider() {
           </div>
         ))}
       </Carousel>
-      <Cursor isHovered={isHovered} />
     </div>
   );
 }
