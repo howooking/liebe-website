@@ -27,14 +27,19 @@ export default function MobileDrawer({ scrollDown }: { scrollDown: boolean }) {
         />
       </SheetTrigger>
 
-      <SheetContent side="right" className="bg-slate-900">
+      <SheetContent side="right" className="bg-slate-800">
         <ul className="flex h-full flex-col items-center justify-center gap-5 text-3xl font-bold text-slate-50">
           <li>
             <SheetClose asChild>
               <Link href="/">
-                <DrawOutlineButton>
-                  <div className="px-4 py-2">홈으로</div>
-                </DrawOutlineButton>
+                <div
+                  className={cn(
+                    path === "/" && "text-primary",
+                    "px-4 py-2 transition-colors hover:text-primary",
+                  )}
+                >
+                  홈으로
+                </div>
               </Link>
             </SheetClose>
           </li>
@@ -42,16 +47,14 @@ export default function MobileDrawer({ scrollDown }: { scrollDown: boolean }) {
             <li key={section.label}>
               <SheetClose asChild>
                 <Link href={section.href}>
-                  <DrawOutlineButton>
-                    <div
-                      className={cn(
-                        path === section.href && "text-primary",
-                        "px-4 py-2",
-                      )}
-                    >
-                      {section.label}
-                    </div>
-                  </DrawOutlineButton>
+                  <div
+                    className={cn(
+                      path === section.href && "text-primary",
+                      "px-4 py-2 transition-colors hover:text-primary",
+                    )}
+                  >
+                    {section.label}
+                  </div>
                 </Link>
               </SheetClose>
             </li>

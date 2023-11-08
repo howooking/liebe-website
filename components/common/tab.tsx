@@ -10,7 +10,7 @@ type TabsProps = {
 
 export default function Tabs({ tabs, selected, setSelected }: TabsProps) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2 bg-slate-900 px-4 py-4">
+    <div className="flex flex-wrap items-center justify-center gap-2 bg-slate-800 px-4 py-4">
       {tabs.map((tab) => (
         <Chip
           text={tab}

@@ -12,24 +12,22 @@ export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
     <ul
       className="hidden items-center justify-center gap-4 text-sm md:text-base lg:flex"
       style={{
-        color: scrollDown ? "#6b7280" : "#fff",
+        color: scrollDown ? "#1e293b" : "#fff",
         transition: "color 200ms ease",
       }}
     >
       {SECTIONS.map((section) => (
         <li key={section.label}>
-          <DrawOutlineButton>
-            <Link
-              target={section.label === "보호자안내서" ? "_blank" : "_self"}
-              href={section.href}
-              className={cn(
-                path === section.href && "text-primary",
-                "px-2 py-[2px] transition hover:text-primary",
-              )}
-            >
-              {section.label}
-            </Link>
-          </DrawOutlineButton>
+          <Link
+            target={section.label === "보호자안내서" ? "_blank" : "_self"}
+            href={section.href}
+            className={cn(
+              path === section.href && "text-primary",
+              "px-2 py-1 transition hover:text-primary",
+            )}
+          >
+            {section.label}
+          </Link>
         </li>
       ))}
     </ul>
