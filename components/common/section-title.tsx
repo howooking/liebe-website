@@ -24,7 +24,9 @@ export default function SectionTitle({
           transition={{ duration: 0.8, delay: 1.2 }}
         />
       </h2>
-      <p className="text-slate-500">{subtitle}</p>
+      <p className="text-sm text-slate-500 sm:text-base md:text-xl">
+        {subtitle}
+      </p>
     </div>
   );
 }
