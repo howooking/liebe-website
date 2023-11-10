@@ -4,6 +4,7 @@ import SelectButton from "./select-button";
 import TestimonialCards from "./testimonial-cards";
 import { TESTIMONIALS } from "@/constants/testimonial";
 import SectionTitle from "@/components/common/section-title";
+import Container from "@/components/common/container";
 
 export default function Testimonial() {
   const [selected, setSelected] = useState(0);

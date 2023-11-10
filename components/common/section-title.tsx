@@ -15,14 +15,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <div className="text-center">
-      <h2
-        className={cn(
-          testimonial
-            ? "text-2xl sm:text-4xl md:text-4xl lg:text-5xl"
-            : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
-          "relative inline font-eng tracking-tighter",
-        )}
-      >
+      <h2 className="relative inline font-eng text-2xl tracking-tight sm:text-3xl md:text-4xl">
         {title}
         <motion.div
           className="absolute bottom-0 left-0 h-1/2 w-full bg-primary/20"

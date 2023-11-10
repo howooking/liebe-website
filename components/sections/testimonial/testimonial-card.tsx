@@ -51,13 +51,14 @@ export default function TestimonialCard({
           src={img}
           fill
           className="rounded-full object-cover"
+          sizes='(max-width: 345px) 50vw, (max-width: 1024px) 25vw, 20vw"'
         />
       </div>
-      <p className="text-lg my-8 font-light italic lg:text-xl">
+      <p className="my-8 text-base font-light italic lg:text-xl">
         &#34;{description}&#34;
       </p>
       <div>
-        <span className="text-lg block font-semibold">{name}</span>
+        <span className="block text-base font-semibold">{name}</span>
         <span className="block text-sm">{title}</span>
       </div>
     </motion.div>
