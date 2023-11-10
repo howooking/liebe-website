@@ -1,14 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import mainLogo from "@/public/main-logo.png";
+import useWindowSize from "@/hooks/useWindowSize";
 
-export default function MainLogo({ scrollDown }: { scrollDown: boolean }) {
+export default function MainLogo({
+  scrollDown,
+  width,
+}: {
+  scrollDown: boolean;
+  width?: number;
+}) {
   return (
-    <Link href="/" className="flex items-center gap-2">
-      <Image src={mainLogo} alt="main logo" width={30} className="h-auto" />
-      <h1 className="text-xl font-semibold">
+    <Link
+      href="/"
+      className="flex items-center gap-2 transition hover:scale-[0.98]"
+    >
+      <Image
+        src={mainLogo}
+        alt="main logo"
+        width={width! > 640 ? 30 : 20}
+        className="h-auto"
+      />
+      <h1 className="text-base font-semibold sm:text-xl">
         <span
-          className="group-hover:text-primary"
           style={{
             color: scrollDown ? "#f08d47" : "#fff",
             transition: "color 500ms ease",
@@ -17,7 +31,6 @@ export default function MainLogo({ scrollDown }: { scrollDown: boolean }) {
           리베
         </span>
         <span
-          className="group-hover:text-secondary"
           style={{
             color: scrollDown ? "#8eb62f" : "#fff",
             transition: "color 500ms ease",

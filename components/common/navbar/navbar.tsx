@@ -8,10 +8,12 @@ import NavLinks from "./nav-links";
 import MainLogo from "./main-logo";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Navbar() {
   const scrollY = useScroll();
   const scrollDown = useMemo(() => scrollY > 50, [scrollY]);
+  const { width } = useWindowSize();
 
   return (
     <header
@@ -25,14 +27,14 @@ export default function Navbar() {
       <Container>
         <motion.div
           className="flex h-12 items-center justify-between"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
-          <MainLogo scrollDown={scrollDown} />
+          <MainLogo scrollDown={scrollDown} width={width} />
           <NavLinks scrollDown={scrollDown} />
-          <MobileDrawer scrollDown={scrollDown} />
+          <MobileDrawer scrollDown={scrollDown} width={width} />
         </motion.div>
       </Container>
     </header>

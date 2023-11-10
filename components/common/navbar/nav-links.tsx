@@ -23,7 +23,7 @@ export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
             href={section.href}
             className={cn(
               path === section.href && "text-primary",
-              "px-2 py-1 transition hover:text-primary",
+              "px-2 py-1 text-base transition hover:opacity-50",
             )}
           >
             {section.label}

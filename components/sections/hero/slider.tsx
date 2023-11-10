@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 import { SLIDES } from "@/constants/slides";
-import { motion } from "framer-motion";
 import Carousel from "nuka-carousel";
+import Copy from "./copy";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Slider() {
+  const { width } = useWindowSize();
   return (
     <Carousel
       autoplay
@@ -14,7 +16,7 @@ export default function Slider() {
       withoutControls
       dragging={false}
       swiping={false}
-      speed={2000}
+      speed={width! < 640 ? 1000 : 2000}
     >
       {SLIDES.map((slide, index) => (
         <div key={index} className="relative inset-0 z-40">
@@ -26,29 +28,7 @@ export default function Slider() {
             priority
             className="h-screen w-full object-cover object-center"
           />
-          <div className="absolute left-0 top-0 z-50 w-screen">
-            <motion.div
-              key={index}
-              className="flex h-screen w-full flex-col items-center justify-center "
-              initial={{ opacity: 0, y: -40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1.5,
-                delay: index === 2 || index === 3 ? 5.5 : 0.5,
-              }}
-              viewport={{ once: false }}
-            >
-              <div className="relative flex flex-col items-center gap-2 p-4 tracking-tight text-white md:gap-4">
-                <p className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  {slide.title}
-                </p>
-                <p className="text-sm sm:text-xl lg:text-3xl">
-                  {slide.subtitle}
-                </p>
-                <div className="absolute inset-0 -z-10 bg-black/50 blur-3xl" />
-              </div>
-            </motion.div>
-          </div>
+          <Copy title={slide.title} subtitle={slide.subtitle} />
         </div>
       ))}
     </Carousel>

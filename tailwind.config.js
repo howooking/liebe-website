@@ -10,6 +10,15 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    fontSize: {
+      sm: "0.750rem",
+      base: "1rem", // 일반 글, 네브링크
+      xl: "1.333rem", // 메인로고
+      "2xl": "1.777rem",
+      "3xl": "2.369rem",
+      "4xl": "3.158rem",
+      "5xl": "4.210rem", // 헤딩
+    },
     fontFamily: {
       eng: ["Roboto", "sans-serif"],
     },

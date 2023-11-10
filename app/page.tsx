@@ -21,8 +21,8 @@ export default function Home() {
     <>
       <Hero />
       <Clinic />
-      <Testimonial />
-      <Map />
+      {/* <Testimonial /> */}
+      {/* <Map /> */}
     </>
   );
 }

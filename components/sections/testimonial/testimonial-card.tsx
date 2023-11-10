@@ -46,17 +46,18 @@ export default function TestimonialCard({
     >
       <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64">
         <Image
+          placeholder="blur"
           alt="testimonials"
           src={img}
           fill
           className="rounded-full object-cover"
         />
       </div>
-      <p className="my-8 text-lg font-light italic lg:text-xl">
+      <p className="text-lg my-8 font-light italic lg:text-xl">
         &#34;{description}&#34;
       </p>
       <div>
-        <span className="block text-lg font-semibold">{name}</span>
+        <span className="text-lg block font-semibold">{name}</span>
         <span className="block text-sm">{title}</span>
       </div>
     </motion.div>

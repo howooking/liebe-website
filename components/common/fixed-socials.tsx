@@ -29,7 +29,7 @@ export default function FixedSocials() {
           href={social.href}
           key={social.label}
           target="_blank"
-          className="flex items-center gap-2 p-2 transition hover:scale-105"
+          className="flex items-center gap-1 p-2"
         >
           <social.icon size={social.size} />
           <p className="hidden sm:block">{social.desc}</p>

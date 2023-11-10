@@ -13,10 +13,10 @@ export default function TestimonialCards({
 }) {
   return (
     <div className="relative h-[450px] p-4 lg:h-[500px]">
-      {testimonials.map((t, i) => {
+      {testimonials.map((testimonial, i) => {
         return (
           <TestimonialCard
-            {...t}
+            {...testimonial}
             key={i}
             position={i}
             selected={selected}

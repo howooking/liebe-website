@@ -9,7 +9,7 @@ export const SOCIALS = [
     href: "https://blog.naver.com/cypet",
     icon: SiNaver,
     desc: "네이버블로그",
-    size: 20,
+    size: 16,
     color: "#03C75A",
   },
   {
@@ -17,7 +17,7 @@ export const SOCIALS = [
     href: "https://www.instagram.com/liebeamc/",
     icon: BiLogoInstagramAlt,
     desc: "인스타그램",
-    size: 36,
+    size: 26,
     color: "#03C75A",
   },
   {
@@ -25,7 +25,7 @@ export const SOCIALS = [
     href: "https://pf.kakao.com/_uwdNT",
     desc: "카카오톡상담",
     icon: RiKakaoTalkFill,
-    size: 32,
+    size: 26,
     color: "#FAE200",
   },
   {
@@ -33,7 +33,7 @@ export const SOCIALS = [
     href: "tel:+0269537502",
     icon: AiFillPhone,
     desc: "02.6953.7502",
-    size: 32,
+    size: 26,
     color: "#03C75A",
   },
 ];
