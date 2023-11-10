@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export default function TimeInfo({ detail }: { detail?: boolean }) {
   const mappedInfos = detail ? TIME_INFOS : TIME_INFOS.slice(0, 5);
   return (
-    <Table className="mt-2 overflow-hidden rounded-lg text-sm lg:text-base">
+    <Table className="mt-2 overflow-hidden rounded-lg text-sm md:text-base">
       <TableHeader className="bg-slate-600">
         <TableRow>
           <TableHead className="text-center">분류</TableHead>
