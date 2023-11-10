@@ -14,12 +14,12 @@ export default function SectionTitle({
   testimonial,
 }: SectionTitleProps) {
   return (
-    <div className="space-y-4 text-center">
+    <div className="text-center">
       <h2
         className={cn(
           testimonial
-            ? "text-3xl sm:text-5xl md:text-6xl lg:text-5xl"
-            : "text-3xl sm:text-5xl md:text-6xl lg:text-7xl",
+            ? "text-2xl sm:text-4xl md:text-4xl lg:text-5xl"
+            : "text-2xl sm:text-3xl md:text-4xl lg:text-5xl",
           "relative inline font-eng tracking-tighter",
         )}
       >
@@ -34,8 +34,8 @@ export default function SectionTitle({
       <p
         className={cn(
           testimonial
-            ? "text-xs sm:text-base lg:text-lg"
-            : "text-xs sm:text-base lg:text-lg",
+            ? "lg:text-lg text-sm sm:text-base"
+            : "lg:text-lg text-sm sm:text-base",
           "text-slate-500",
         )}
       >
