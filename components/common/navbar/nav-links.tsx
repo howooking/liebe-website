@@ -1,10 +1,11 @@
-import DrawOutlineButton from "@/components/ui/draw-outline-button";
+"use client";
+
 import { SECTIONS } from "@/constants/sections";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import NavLink from "./nav-link";
 
 export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
   const path = usePathname();
@@ -17,18 +18,7 @@ export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
       }}
     >
       {SECTIONS.map((section) => (
-        <li key={section.label}>
-          <Link
-            target={section.label === "보호자안내서" ? "_blank" : "_self"}
-            href={section.href}
-            className={cn(
-              path === section.href && "text-primary",
-              "px-2 py-1 text-base transition hover:opacity-50",
-            )}
-          >
-            {section.label}
-          </Link>
-        </li>
+        <NavLink key={section.href} section={section} path={path} />
       ))}
     </ul>
   );

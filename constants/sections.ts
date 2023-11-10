@@ -1,5 +1,9 @@
 export const SECTIONS = [
   {
+    label: "홈으로",
+    href: "/",
+  },
+  {
     label: "진료안내",
     href: "/info",
   },

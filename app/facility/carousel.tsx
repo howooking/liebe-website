@@ -77,7 +77,7 @@ export default function CardCarousel({
             animate={{
               x: CAN_SHIFT_LEFT ? "0%" : "-100%",
             }}
-            className="absolute left-0 top-[55%] z-30 rounded-r-xl bg-primary/50 p-3 pl-2 text-xl text-white backdrop-blur-sm transition-[padding] hover:pl-3 lg:text-4xl"
+            className="absolute left-0 top-[55%] z-30 rounded-r-xl bg-primary/20 p-3 pl-2 text-xl text-white backdrop-blur-sm transition-[padding] hover:pl-3 lg:text-4xl"
             onClick={shiftLeft}
           >
             <FiChevronLeft />

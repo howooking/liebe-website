@@ -13,6 +13,7 @@ import { SECTIONS } from "@/constants/sections";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import MobileDrawerLink from "./mobile-drawer-ink";
 
 export default function MobileDrawer({
   scrollDown,
@@ -34,37 +35,14 @@ export default function MobileDrawer({
         />
       </SheetTrigger>
 
-      <SheetContent side="right" className="bg-slate-900">
-        <ul className="flex h-full flex-col items-center justify-center gap-4 text-xl text-white">
-          <li>
-            <SheetClose asChild>
-              <Link href="/">
-                <div
-                  className={cn(
-                    path === "/" && "text-primary",
-                    "transition hover:opacity-50",
-                  )}
-                >
-                  홈으로
-                </div>
-              </Link>
-            </SheetClose>
-          </li>
+      <SheetContent side="right">
+        <ul className="flex h-full flex-col items-center justify-center gap-4 text-xl">
           {SECTIONS.map((section) => (
-            <li key={section.label}>
-              <SheetClose asChild>
-                <Link href={section.href}>
-                  <div
-                    className={cn(
-                      path === section.href && "text-primary",
-                      "transition hover:opacity-50",
-                    )}
-                  >
-                    {section.label}
-                  </div>
-                </Link>
-              </SheetClose>
-            </li>
+            <MobileDrawerLink
+              key={section.href}
+              path={path}
+              section={section}
+            />
           ))}
         </ul>
       </SheetContent>

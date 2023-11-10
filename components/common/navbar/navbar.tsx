@@ -26,7 +26,7 @@ export default function Navbar() {
     >
       <Container>
         <motion.div
-          className="flex h-12 items-center justify-between"
+          className="flex h-12 items-center justify-between px-2 sm:px-0"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
