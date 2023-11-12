@@ -2,7 +2,7 @@ import Container from "@/components/common/container";
 
 export default function Footer() {
   return (
-    <div className="mb-[48px] bg-slate-900 px-2 py-4 text-sm text-slate-300 sm:text-base lg:mb-0">
+    <div className="mb-[48px] bg-slate-900 px-2 py-4 text-[10px] text-slate-300 sm:text-base lg:mb-0">
       <Container>
         <div className="flex justify-between">
           <div>

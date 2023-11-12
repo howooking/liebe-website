@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/common/navbar/navbar";
 import FixedSocials from "@/components/common/fixed-socials";
 import Footer from "@/components/sections/footer/footer";
+import FloatingSocials from "@/components/common/floating-socials";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -96,10 +97,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={cn("text-slate-900 antialiased", font.className)}>
+      <body
+        className={cn("relative text-slate-900 antialiased", font.className)}
+      >
         <Navbar />
         {children}
         <Footer />
+        <FloatingSocials />
         <FixedSocials />
       </body>
     </html>

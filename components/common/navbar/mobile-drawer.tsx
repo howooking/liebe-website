@@ -2,26 +2,21 @@
 
 import { AiOutlineMenu } from "react-icons/ai";
 
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SECTIONS } from "@/constants/sections";
 
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import MobileDrawerLink from "./mobile-drawer-ink";
 
-export default function MobileDrawer({
-  scrollDown,
-  width,
-}: {
-  scrollDown: boolean;
+type MobileDrawerProps = {
+  isScrollTop: boolean;
   width?: number;
-}) {
+};
+
+export default function MobileDrawer({
+  isScrollTop,
+  width,
+}: MobileDrawerProps) {
   const path = usePathname();
   return (
     <Sheet>
@@ -29,7 +24,7 @@ export default function MobileDrawer({
         <AiOutlineMenu
           size={width! > 640 ? 24 : 18}
           style={{
-            color: scrollDown ? "#6b7280" : "#fff",
+            color: isScrollTop ? "#fff" : "#6b7280",
             transition: "color 200ms ease",
           }}
         />

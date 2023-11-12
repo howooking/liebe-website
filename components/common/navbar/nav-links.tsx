@@ -6,14 +6,19 @@ import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 import NavLink from "./nav-link";
+import FloatingSocials from "../floating-socials";
 
-export default function NavLinks({ scrollDown }: { scrollDown: boolean }) {
+type NavLinksProps = {
+  isScrollTop: boolean;
+};
+
+export default function NavLinks({ isScrollTop }: NavLinksProps) {
   const path = usePathname();
   return (
     <ul
       className="hidden items-center justify-center gap-4 text-sm md:text-base lg:flex"
       style={{
-        color: scrollDown ? "#0f172a" : "#fff",
+        color: isScrollTop ? "#fff" : "#0f172a",
         transition: "color 200ms ease",
       }}
     >
