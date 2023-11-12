@@ -23,10 +23,10 @@ export default function NavLink({ section, path }: NavLinkProps) {
         {section.label === "오시는길" || section.label === "진료과목" ? (
           <a
             href={section.href}
-            // className={cn(
-            //   `/${hash}` === section.href && "text-primary",
-            //   "relative",
-            // )}
+            className={cn(
+              // `/${hash}` === section.href && "text-primary",
+              "relative",
+            )}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
