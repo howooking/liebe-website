@@ -23,7 +23,7 @@ export default function MobileDrawerLink({
       <SheetClose asChild>
         <Link
           href={section.href}
-          className={cn(path === section.href && "text-primary", "relative")}
+          className="relative"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >

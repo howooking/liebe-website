@@ -7,7 +7,6 @@ import useScroll from "@/hooks/useScroll";
 import NavLinks from "./nav-links";
 import MainLogo from "./main-logo";
 import { useMemo } from "react";
-import { motion } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Navbar() {
@@ -25,17 +24,11 @@ export default function Navbar() {
       }}
     >
       <Container>
-        <motion.div
-          className="flex h-12 items-center justify-between px-2 sm:px-0"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
+        <div className="flex h-12 items-center justify-between px-2 sm:px-0">
           <MainLogo scrollDown={scrollDown} width={width} />
           <NavLinks scrollDown={scrollDown} />
           <MobileDrawer scrollDown={scrollDown} width={width} />
-        </motion.div>
+        </div>
       </Container>
     </header>
   );

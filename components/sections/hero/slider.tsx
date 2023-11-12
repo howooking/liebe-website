@@ -6,9 +6,21 @@ import { SLIDES } from "@/constants/slides";
 import Carousel from "nuka-carousel";
 import Copy from "./copy";
 import useWindowSize from "@/hooks/useWindowSize";
+import { useEffect, useState } from "react";
+import Loading from "@/app/loading";
 
 export default function Slider() {
+  const [loading, setLoading] = useState(true);
+
   const { width } = useWindowSize();
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Carousel
       autoplay

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import mainLogo from "@/public/main-logo.png";
-import useWindowSize from "@/hooks/useWindowSize";
+import logo from "@/public/logo.png";
+import logoFilled from "@/public/logo-filled.png";
 
 export default function MainLogo({
   scrollDown,
@@ -16,7 +16,7 @@ export default function MainLogo({
       className="flex items-center gap-2 transition hover:scale-[0.98]"
     >
       <Image
-        src={mainLogo}
+        src={scrollDown ? logoFilled : logo}
         alt="main logo"
         width={width! > 640 ? 30 : 20}
         className="h-auto"
