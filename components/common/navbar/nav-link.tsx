@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 type NavLinkProps = {
   section: {
@@ -23,10 +23,10 @@ export default function NavLink({ section, path }: NavLinkProps) {
         {section.label === "오시는길" || section.label === "진료과목" ? (
           <a
             href={section.href}
-            className={cn(
-              `/${location.hash}` === section.href && "text-primary",
-              "relative",
-            )}
+            // className={cn(
+            //   `/${hash}` === section.href && "text-primary",
+            //   "relative",
+            // )}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
