@@ -19,7 +19,7 @@ export default function Copy({ subtitle, title }: CopyProps) {
         // viewport={{ once: false }}
       >
         <div className="relative flex flex-col items-center text-white">
-          <p className="text-xl sm:text-3xl lg:text-5xl">{title}</p>
+          <p className="text-xl font-bold sm:text-3xl lg:text-5xl">{title}</p>
           <p className="text-sm sm:text-xl lg:text-2xl">{subtitle}</p>
           <div className="absolute inset-0 -z-10 bg-black/50 blur-3xl" />
         </div>
