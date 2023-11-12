@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Section from "@/components/common/section";
 import SelectButton from "./select-button";

@@ -1,3 +1,5 @@
+"use client";
+
 import { CLINICS } from "@/constants/clinic";
 import useWindowSize from "@/hooks/useWindowSize";
 import { cn } from "@/lib/utils";
