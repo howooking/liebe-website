@@ -14,7 +14,7 @@ export default function Banner({
   subTitle: React.ReactNode;
 }) {
   return (
-    <div className="relative flex h-[200px] items-center justify-center sm:h-[400px]">
+    <div className="relative flex h-[300px] items-center justify-center sm:h-[400px]">
       <Image
         quality={70}
         fill
@@ -33,7 +33,7 @@ export default function Banner({
         viewport={{ once: true }}
       >
         <h2 className="text-xl font-bold text-primary sm:text-3xl">{title}</h2>
-        <div className="text-sm sm:text-base">{subTitle}</div>
+        <p className="text-sm sm:text-base">{subTitle}</p>
       </motion.div>
     </div>
   );

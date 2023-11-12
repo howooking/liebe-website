@@ -24,7 +24,7 @@ export default function MobileDrawer({
         <AiOutlineMenu
           size={width! > 640 ? 24 : 18}
           style={{
-            color: isScrollTop ? "#fff" : "#6b7280",
+            color: isScrollTop ? "#fff" : "#0f172a",
             transition: "color 200ms ease",
           }}
         />

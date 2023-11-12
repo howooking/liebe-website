@@ -25,7 +25,7 @@ export default function FloatingSocials() {
         <Button
           size="icon"
           onClick={() => setOpen((pv) => !pv)}
-          className="hidden items-center gap-2 rounded-full bg-orange-500 px-3 py-2 text-white shadow-2xl transition-colors hover:bg-orange-500 lg:flex"
+          className="hidden items-center gap-2 rounded-full bg-orange-500 px-3 py-2 text-white shadow-2xl transition hover:bg-orange-600 lg:flex"
         >
           <motion.span variants={iconVariants}>
             {open ? <AiOutlineMinus size={20} /> : <AiOutlinePlus size={20} />}
