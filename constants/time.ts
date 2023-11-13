@@ -1,5 +1,5 @@
 export const TIME_INFOS = [
-  { label: "주가진료", time: "오전 10시 ~ 오후 8시" },
+  { label: "주간진료", time: "오전 10시 ~ 오후 8시" },
   { label: "야간진료", time: "오후 8시 ~ 자정" },
   { label: "심야응급", time: "자정 ~ 오전 10시" },
   { label: "면회시간", time: "오전 10시 ~ 오후 9시" },
