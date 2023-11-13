@@ -18,11 +18,11 @@ export default function Navbar() {
       style={{
         background: isScrollTop ? "transparent" : "white",
         transition: "background 500ms ease",
-        borderBottom: isScrollTop ? "none" : "solid #e2e8f0 1px",
+        // borderBottom: isScrollTop ? "none" : "solid #e2e8f0 1px",
       }}
     >
       <Container>
-        <div className="flex h-12 items-center justify-between px-2 sm:px-0">
+        <div className="flex h-12 items-center justify-between">
           <MainLogo isScrollTop={isScrollTop} width={width} />
           <NavLinks isScrollTop={isScrollTop} />
           <MobileDrawer isScrollTop={isScrollTop} width={width} />

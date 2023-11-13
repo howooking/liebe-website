@@ -1,28 +1,26 @@
 "use client";
 
-import { AiOutlineMenu } from "react-icons/ai";
+import { HiOutlineMenu } from "react-icons/hi";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SECTIONS } from "@/constants/sections";
 
 import { usePathname } from "next/navigation";
 import MobileDrawerLink from "./mobile-drawer-ink";
+import IconButton from "../icon-button";
 
 type MobileDrawerProps = {
   isScrollTop: boolean;
   width?: number;
 };
 
-export default function MobileDrawer({
-  isScrollTop,
-  width,
-}: MobileDrawerProps) {
+export default function MobileDrawer({ isScrollTop }: MobileDrawerProps) {
   const path = usePathname();
   return (
     <Sheet>
       <SheetTrigger className="lg:hidden">
-        <AiOutlineMenu
-          size={width! > 640 ? 24 : 18}
+        <IconButton
+          Icon={HiOutlineMenu}
           style={{
             color: isScrollTop ? "#fff" : "#0f172a",
             transition: "color 200ms ease",
@@ -31,12 +29,12 @@ export default function MobileDrawer({
       </SheetTrigger>
 
       <SheetContent side="right">
-        <ul className="flex h-full flex-col items-center justify-center gap-4 text-xl">
+        <ul className="flex h-full flex-col items-center justify-center gap-6 text-xl">
           {SECTIONS.map((section) => (
             <MobileDrawerLink
-              key={section.href}
               path={path}
               section={section}
+              key={section.href}
             />
           ))}
         </ul>

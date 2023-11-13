@@ -13,15 +13,17 @@ export default function MainLogo({
   return (
     <Link
       href="/"
-      className="flex items-center gap-2 transition hover:scale-[0.98]"
+      className="flex items-center gap-1 transition hover:scale-[0.98]"
     >
-      <Image
-        src={isScrollTop ? logo : logoFilled}
-        alt="main logo"
-        width={width! > 640 ? 30 : 20}
-        className="h-auto"
-      />
-      <h1 className="text-base font-semibold sm:text-xl">
+      <div className="py-3 pl-3">
+        <Image
+          src={isScrollTop ? logo : logoFilled}
+          alt="main logo"
+          height={24}
+          className="h-6 w-auto"
+        />
+      </div>
+      <h1 className="text-xl font-semibold">
         <span
           style={{
             color: isScrollTop ? "#fff" : "#f08d47",

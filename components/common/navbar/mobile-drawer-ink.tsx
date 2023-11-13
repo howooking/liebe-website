@@ -19,7 +19,7 @@ export default function MobileDrawerLink({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <li key={section.label}>
+    <li>
       <SheetClose asChild>
         {section.label === "오시는길" || section.label === "진료과목" ? (
           <a
