@@ -1,8 +1,6 @@
-import YouTube, { YouTubeProps } from "react-youtube";
 import Section from "@/components/common/section";
 import Video from "./video";
 import Container from "@/components/common/container";
-import SectionTitle from "@/components/common/section-title";
 import Title from "@/components/common/title";
 
 export default function VideosSection() {

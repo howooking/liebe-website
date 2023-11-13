@@ -5,7 +5,7 @@ export const SECTIONS = [
   },
   {
     label: "진료안내",
-    href: "/info",
+    href: "/info/time",
   },
   {
     label: "진료과목",

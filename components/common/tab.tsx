@@ -1,5 +1,8 @@
 "use client";
+
+import { INFO_TABS } from "@/app/info/layout";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 
 type TabsProps = {
@@ -13,10 +16,10 @@ export default function Tabs({ tabs, selected, setSelected }: TabsProps) {
     <div className="flex flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 px-4 py-4">
       {tabs.map((tab) => (
         <Chip
+          key={tab}
           text={tab}
           selected={selected === tab}
           setSelected={setSelected}
-          key={tab}
         />
       ))}
     </div>
@@ -33,7 +36,8 @@ const Chip = ({
   setSelected: Dispatch<SetStateAction<string>>;
 }) => {
   return (
-    <button
+    <Link
+      href={`/info/${INFO_TABS[text]}`}
       onClick={() => setSelected(text)}
       className={`${
         selected
@@ -49,6 +53,6 @@ const Chip = ({
           className="absolute inset-0 z-0 rounded-md bg-gradient-to-r from-orange-600 to-amber-600"
         ></motion.span>
       )}
-    </button>
+    </Link>
   );
 };
