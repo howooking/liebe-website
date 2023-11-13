@@ -2,7 +2,7 @@ import Section from "@/components/common/section";
 import Slider from "./slider";
 import SectionTitle from "@/components/common/section-title";
 
-export default function Clinic() {
+export default function ClinicSection() {
   return (
     <Section id="clinic">
       <div className="flex h-screen flex-col justify-center gap-10">

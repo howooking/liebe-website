@@ -1,7 +1,8 @@
-import Clinic from "@/components/sections/clinic/clinic";
-import Hero from "@/components/sections/hero/hero";
-import Map from "@/components/sections/map/map";
-import Testimonial from "@/components/sections/testimonial/testimonial";
+import ClinicSection from "@/components/sections/clinic/clinic-section";
+import HeroSection from "@/components/sections/hero/hero-section";
+import MapSection from "@/components/sections/map/map-section";
+import TestimonialSection from "@/components/sections/testimonial/testimonial-section";
+import VideosSection from "@/components/sections/videoes/videos-section";
 
 export default function Home() {
   // const [loading, setLoading] = useState(true);
@@ -15,10 +16,11 @@ export default function Home() {
   // }
   return (
     <>
-      <Hero />
-      <Clinic />
-      <Testimonial />
-      <Map />
+      <HeroSection />
+      <ClinicSection />
+      <TestimonialSection />
+      <MapSection />
+      <VideosSection />
     </>
   );
 }

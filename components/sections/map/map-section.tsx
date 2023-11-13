@@ -2,7 +2,7 @@ import Section from "@/components/common/section";
 import GoogleMap from "./google-map";
 import Contact from "./contact";
 
-export default function Map() {
+export default function MapSection() {
   return (
     <Section id="map">
       <div className="flex flex-col md:flex-row">

@@ -6,7 +6,7 @@ type TitleProps = {
   children: React.ReactNode;
 };
 
-export default function title({ children }: TitleProps) {
+export default function Title({ children }: TitleProps) {
   return (
     <h2 className="relative inline text-base font-bold md:text-xl">
       {children}

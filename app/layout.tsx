@@ -6,8 +6,8 @@ import { Noto_Sans_KR } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/common/navbar/navbar";
 import FixedSocials from "@/components/common/fixed-socials";
-import Footer from "@/components/sections/footer/footer";
 import FloatingSocials from "@/components/common/floating-socials";
+import FooterSection from "@/components/sections/footer/footer-section";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -102,7 +102,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <Footer />
+        <FooterSection />
         <FloatingSocials />
         <FixedSocials />
       </body>
