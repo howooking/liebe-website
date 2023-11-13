@@ -1,11 +1,11 @@
 import Title from "@/components/common/title";
 import InfoCard from "./time-card";
 import Container from "@/components/common/container";
-import { AiFillSchedule } from "react-icons/ai";
 import { FaBriefcaseMedical } from "react-icons/fa";
 import { FaTruckMedical } from "react-icons/fa6";
 import { MdLunchDining } from "react-icons/md";
 import { Badge } from "@/components/ui/badge";
+import Progress from "./progress";
 
 export default function TimeTab() {
   return (
@@ -56,6 +56,7 @@ export default function TimeTab() {
           </InfoCard>
         </div>
       </Container>
+      <Progress />
     </div>
   );
 }

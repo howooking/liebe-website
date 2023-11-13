@@ -1,6 +1,6 @@
 "use client";
 
-import { INFO_TABS } from "@/app/info/layout";
+import { INFO_TABS } from "@/constants/info-page";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
