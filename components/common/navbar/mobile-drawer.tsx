@@ -29,7 +29,7 @@ export default function MobileDrawer({ isScrollTop }: MobileDrawerProps) {
       </SheetTrigger>
 
       <SheetContent side="right">
-        <ul className="flex h-full flex-col items-center justify-center gap-6 text-xl">
+        <ul className="flex h-full flex-col items-center justify-center text-xl">
           {SECTIONS.map((section) => (
             <MobileDrawerLink
               path={path}

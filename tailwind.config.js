@@ -19,9 +19,7 @@ module.exports = {
       "4xl": "3.158rem",
       "5xl": "4.210rem", // 헤딩
     },
-    fontFamily: {
-      eng: ["Roboto", "sans-serif"],
-    },
+
     extend: {
       colors: {
         border: "hsl(var(--border))",

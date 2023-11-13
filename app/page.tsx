@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      {/* <ClinicSection />
+      <ClinicSection />
       <TestimonialSection />
       <MapSection />
-      <VideosSection /> */}
+      <VideosSection />
     </>
   );
 }

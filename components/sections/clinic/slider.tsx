@@ -52,7 +52,7 @@ export default function Slider() {
 
   return (
     <div
-      className={cn(isGrabbed ? "cursor-grabbing" : "cursor-grab")}
+      className={cn(isGrabbed ? "cursor-grabbing" : "cursor-grab", "w-1/2")}
       onMouseDown={() => setIsGrabbed(true)}
       onMouseUp={() => setIsGrabbed(false)}
     >
