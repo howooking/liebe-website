@@ -34,7 +34,7 @@ export default function Slider() {
             quality={70}
             className="h-[100dvh] object-cover"
           />
-          <Copy subtitle={slide.title} title={slide.title} />
+          <Copy subtitle={slide.subtitle} title={slide.title} />
         </SwiperSlide>
       ))}
     </Swiper>

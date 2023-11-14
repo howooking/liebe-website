@@ -62,11 +62,16 @@ export default function ClinicSwiper() {
         >
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 * index }}
             viewport={{ once: false }}
           >
-            <Image src={clinic.imgSrc} alt={clinic.title} placeholder="blur" />
+            <Image
+              src={clinic.imgSrc}
+              alt={clinic.title}
+              placeholder="blur"
+              priority
+            />
             <SwiperCardCover clinic={clinic} />
           </motion.div>
         </SwiperSlide>
