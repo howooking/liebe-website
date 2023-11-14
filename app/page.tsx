@@ -22,7 +22,7 @@ export default function Home() {
       <ClinicSection />
       <TestimonialSection />
       <MapSection />
-      {/* <VideosSection /> */}
+      <VideosSection />
     </>
   );
 }
