@@ -15,12 +15,12 @@ export default function TestimonialSection() {
     <Section>
       <div className="bg-stone-100">
         <Container>
-          <div className="grid grid-cols-1 items-center gap-8 overflow-hidden px-3 py-12 sm:py-24 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          <div className="grid grid-cols-1 items-center gap-8 overflow-hidden px-3 py-12 pb-14 sm:py-24 sm:pb-36 lg:grid-cols-2 lg:gap-16 lg:px-8">
             <div className="lg:space-y-20">
               <SectionTitle
                 title="CUSTOMER REVIEWS"
                 subtitle={
-                  <div className="leading-4 tracking-tight">
+                  <div>
                     리베는 반려동물의 건강은 최우선으로합니다.
                     <br /> 수많은 고객분들이 리베와 함께 여정을 나아가고
                     있습니다.

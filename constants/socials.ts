@@ -1,7 +1,6 @@
 import { RiKakaoTalkFill } from "react-icons/ri";
 import { SiNaver } from "react-icons/si";
 import { BiLogoInstagramAlt } from "react-icons/bi";
-import { AiFillPhone } from "react-icons/ai";
 import { RiPhoneFill } from "react-icons/ri";
 
 export const SOCIALS = [

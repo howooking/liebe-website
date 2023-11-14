@@ -1,12 +1,10 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 type SectionTitleProps = {
   title: React.ReactNode;
   subtitle?: React.ReactNode;
-  testimonial?: boolean;
 };
 export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
   return (
@@ -21,9 +19,9 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
           viewport={{ once: true }}
         />
       </h2>
-      <p className="text-sm text-slate-500 sm:text-base md:text-xl">
+      <div className="text-sm text-slate-500 sm:text-base md:text-xl">
         {subtitle}
-      </p>
+      </div>
     </div>
   );
 }

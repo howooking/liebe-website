@@ -1,6 +1,7 @@
 import TimeInfo from "@/app/subject/time-info";
 import MapLink from "./map-link";
 import { FaSubway, FaCar } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 import { RiKakaoTalkFill, RiPhoneFill, RiMailFill } from "react-icons/ri";
 import Link from "next/link";
 import Title from "@/components/common/title";
@@ -8,13 +9,15 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Contact() {
   return (
-    <div className="mx-auto flex w-full flex-col justify-evenly gap-4 p-4 md:w-2/3">
-      <div>
+    <div className="mx-auto flex w-full flex-col justify-evenly gap-6 md:w-2/3">
+      <div className="space-y-4">
         <Title>리베동물병원 오시는길</Title>
-        <div className="flex flex-col gap-1 text-sm md:text-base">
-          <p>서울특별시 송파구 삼전로 56</p>
+        <div className="flex flex-col gap-2 text-sm md:text-base">
           <MapLink />
-          <div>
+          <div className="space-y-2">
+            <div className="flex items-center gap-1">
+              <FaLocationDot /> 서울특별시 송파구 삼전로 56
+            </div>
             <div className="flex items-center gap-1">
               <FaCar /> 병원건물 1층 주차장 이용
             </div>
@@ -24,15 +27,19 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
       <Separator />
-      <div>
+
+      <div className="space-y-4">
         <Title>진료시간 안내</Title>
         <TimeInfo />
       </div>
+
       <Separator />
-      <div>
+
+      <div className="space-y-4">
         <Title>CONTACT</Title>
-        <div className="flex flex-col gap-1 text-sm md:text-base">
+        <div className="space-y-2 text-sm md:text-base">
           <div className="flex items-center gap-1">
             <RiPhoneFill />
             <Link href="tel:+0269537502">02.6953.7502</Link>
