@@ -18,7 +18,7 @@ export default function TestimonialCard({
 }) {
   const scale = position <= selected ? 1 : 1 + 0.015 * (position - selected);
   const offset = position <= selected ? 0 : 95 + (position - selected) * 3;
-  const background = position % 2 ? "#0f172a" : "white";
+  const background = position % 2 ? "#1c1917" : "white";
   const color = position % 2 ? "white" : "#0f172a";
 
   return (
@@ -54,10 +54,10 @@ export default function TestimonialCard({
           sizes='(max-width: 345px) 50vw, (max-width: 1024px) 25vw, 20vw"'
         />
       </div>
-      <p className="my-8 text-base font-light italic lg:text-xl">
+      <p className="my-8 text-base font-light italic leading-7 lg:text-xl">
         &#34;{description}&#34;
       </p>
-      <div>
+      <div className="space-y-1">
         <span className="block text-base font-semibold">{name}</span>
         <span className="block text-sm">{title}</span>
       </div>

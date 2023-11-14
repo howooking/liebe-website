@@ -37,7 +37,7 @@ export default function SelectButton({
               />
             ) : (
               <span
-                className="absolute bottom-0 left-0 top-0 bg-slate-900"
+                className="absolute bottom-0 left-0 top-0 bg-stone-900"
                 style={{
                   width: selected > n ? "100%" : "0%",
                 }}
