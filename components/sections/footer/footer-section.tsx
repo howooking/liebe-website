@@ -1,23 +1,29 @@
 import Container from "@/components/common/container";
+import MainLogo from "@/components/common/navbar/main-logo";
 
 export default function FooterSection() {
   return (
-    <div className="mb-[48px] bg-slate-900 px-2 py-4 text-[10px] text-slate-300 sm:text-base lg:mb-0">
+    <div className="mb-[48px] bg-slate-900 py-6 text-[10px] text-white sm:text-base lg:mb-0 lg:py-12">
       <Container>
-        <div className="flex justify-between">
-          <div>
-            <p>서울특별시 송파구 삼전로 56</p>
-            <p>liebeamc2@daum.net</p>
-            <p>
-              Copyright (c) 2014 <br className="md:hidden" /> 리베동물메디컬센터
-              <br className="md:hidden" />
-              All Rights Reserved.
-            </p>
+        <div className="flex flex-col justify-between gap-6 px-3 text-center lg:flex-row lg:text-left">
+          <div className="order-2 space-y-2 sm:space-y-4 lg:order-1 lg:flex-1">
+            <p>주소 : 서울특별시 송파구 삼전로 56</p>
+            <p>전화번호 : 02.6953.7502</p>
           </div>
-          <div className="flex flex-col justify-between text-end">
-            <p>02.6953.7502</p>
-            <p>사업자등록번호 5303601377</p>
-            <p>대표 김홍석</p>
+
+          <div className="order-1 space-y-2 text-center sm:space-y-4 lg:order-2 lg:flex-1">
+            <div className="flex justify-center">
+              <MainLogo footer />
+            </div>
+            <div className="text-sm lg:pt-0">
+              Copyright ⓒ 2014 리베동물메디컬센터 <br className="sm:hidden" />
+              All Rights Reserved.
+            </div>
+          </div>
+
+          <div className="order-3 space-y-2 text-center sm:space-y-4 lg:flex-1 lg:text-right">
+            <p>사업자등록번호 : 530-36-01377</p>
+            <p>대표 : 김홍석</p>
           </div>
         </div>
       </Container>

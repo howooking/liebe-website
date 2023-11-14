@@ -5,7 +5,7 @@ import Container from "@/components/common/container";
 export default function VideosSection() {
   return (
     <Section id="video">
-      <div className="bg-stone-100 py-12">
+      <div className="bg-stone-100 py-6 sm:py-12">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {VIDEOS.map((video) => (

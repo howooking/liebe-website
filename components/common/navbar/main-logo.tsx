@@ -1,23 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/logo.png";
+import logoWhite from "@/public/logo.png";
 import logoFilled from "@/public/logo-filled.png";
+import { cn } from "@/lib/utils";
 
-export default function MainLogo({
-  isScrollTop,
-  width,
-}: {
-  isScrollTop: boolean;
-  width?: number;
-}) {
+type MainLogoProps = { isScrollTop?: boolean; footer?: boolean };
+
+export default function MainLogo({ isScrollTop, footer }: MainLogoProps) {
   return (
-    <Link
-      href="/"
-      className="flex items-center gap-1 transition hover:scale-[0.98]"
-    >
-      <div className="py-3 pl-3">
+    <Link href="/" className="flex items-center gap-1">
+      <div className={cn(footer ? "p-0" : "py-3 pl-3")}>
         <Image
-          src={isScrollTop ? logo : logoFilled}
+          src={isScrollTop || footer ? logoWhite : logoFilled}
           alt="main logo"
           height={24}
           className="h-6 w-auto"
@@ -26,7 +20,7 @@ export default function MainLogo({
       <h1 className="text-xl font-semibold">
         <span
           style={{
-            color: isScrollTop ? "#fff" : "#f08d47",
+            color: isScrollTop || footer ? "#fff" : "#f08d47",
             transition: "color 500ms ease",
           }}
         >
@@ -34,7 +28,7 @@ export default function MainLogo({
         </span>
         <span
           style={{
-            color: isScrollTop ? "#fff" : "#8eb62f",
+            color: isScrollTop || footer ? "#fff" : "#8eb62f",
             transition: "color 500ms ease",
           }}
         >
