@@ -2,6 +2,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { SiNaver } from "react-icons/si";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { AiFillPhone } from "react-icons/ai";
+import { RiPhoneFill } from "react-icons/ri";
 
 export const SOCIALS = [
   {
@@ -31,7 +32,7 @@ export const SOCIALS = [
   {
     label: "phone",
     href: "tel:+0269537502",
-    icon: AiFillPhone,
+    icon: RiPhoneFill,
     desc: "02.6953.7502",
     size: 26,
     color: "#03C75A",

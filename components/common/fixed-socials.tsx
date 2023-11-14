@@ -5,6 +5,7 @@ import useScroll from "@/hooks/useScroll";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
+import IconButton from "./icon-button";
 
 export default function FixedSocials() {
   const scrollY = useScroll();
@@ -16,7 +17,7 @@ export default function FixedSocials() {
   return (
     <div
       className={
-        "fixed bottom-0 z-50 flex h-12 w-full items-center justify-around border-t text-white lg:hidden"
+        "fixed bottom-0 z-50 flex w-full items-center justify-around border-t text-white lg:hidden"
       }
       style={{
         color: scrollDown || !isRoot ? "#1f2937" : "#fff",
@@ -29,9 +30,9 @@ export default function FixedSocials() {
           href={social.href}
           key={social.label}
           target="_blank"
-          className="flex items-center gap-1 p-2"
+          className="flex items-center"
         >
-          <social.icon size={social.size} />
+          <IconButton Icon={social.icon} naver={social.label === "naver"} />
           <p className="hidden sm:block">{social.desc}</p>
         </Link>
       ))}

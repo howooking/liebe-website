@@ -3,13 +3,14 @@ import { IconType } from "react-icons";
 
 type IconButtonProps = {
   Icon: IconType;
-  style: CSSProperties;
+  style?: CSSProperties;
+  naver?: boolean;
 };
 
-export default function IconButton({ Icon, style }: IconButtonProps) {
+export default function IconButton({ Icon, style, naver }: IconButtonProps) {
   return (
     <div className="p-3">
-      <Icon size={24} style={style} />
+      <Icon size={naver ? 16 : 24} style={style} />
     </div>
   );
 }
