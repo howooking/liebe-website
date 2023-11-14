@@ -3,16 +3,17 @@
 import Image from "next/image";
 
 import { SLIDES } from "@/constants/slides";
-import Carousel from "nuka-carousel";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+
 import Copy from "./copy";
-import useWindowSize from "@/hooks/useWindowSize";
 import { useEffect, useState } from "react";
 import Loading from "@/app/loading";
 
 export default function Slider() {
   const [loading, setLoading] = useState(true);
-
-  const { width } = useWindowSize();
 
   useEffect(() => {
     setLoading(false);
@@ -22,29 +23,20 @@ export default function Slider() {
     return <Loading />;
   }
   return (
-    <Carousel
-      autoplay
-      autoplayInterval={7000}
-      wrapAround
-      pauseOnHover={false}
-      withoutControls
-      dragging={false}
-      swiping={false}
-      speed={width! < 640 ? 1000 : 2000}
-    >
-      {SLIDES.map((slide, index) => (
-        <div key={index} className="relative inset-0 z-40">
+    <Swiper modules={[Autoplay]} autoplay={{ delay: 6000 }}>
+      {SLIDES.map((slide) => (
+        <SwiperSlide key={slide.title}>
           <Image
-            quality={70}
             src={slide.src}
             alt={slide.title}
             placeholder="blur"
             priority
-            className="h-screen w-full object-cover object-center"
+            quality={70}
+            className="h-[100dvh] object-cover"
           />
-          <Copy title={slide.title} subtitle={slide.subtitle} />
-        </div>
+          <Copy subtitle={slide.title} title={slide.title} />
+        </SwiperSlide>
       ))}
-    </Carousel>
+    </Swiper>
   );
 }

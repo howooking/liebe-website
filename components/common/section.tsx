@@ -16,7 +16,7 @@ export default function Section({
       transition={{ duration: 1 }}
       viewport={{ once: false }}
       id={id}
-      className="scroll-mt-[48px]"
+      className="relative scroll-mt-[48px] overflow-hidden"
     >
       {children}
     </motion.section>

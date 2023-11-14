@@ -1,11 +1,12 @@
 import Section from "@/components/common/section";
 import Slider from "./slider";
-import FloatingSocials from "@/components/common/floating-socials";
+import ScrollDown from "./scroll-down";
 
 export default function HeroSection() {
   return (
     <Section id="home">
       <Slider />
+      <ScrollDown />
     </Section>
   );
 }

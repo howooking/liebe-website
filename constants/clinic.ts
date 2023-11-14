@@ -13,8 +13,20 @@ import internal from "@/public/clinic/internal.jpg";
 import surgery from "@/public/clinic/surgery.jpg";
 import skin from "@/public/clinic/skin.jpg";
 import radio from "@/public/clinic/radio.jpg";
+import oriental from "@/public/clinic/oriental.jpg";
+import { IconType } from "react-icons";
+import { StaticImageData } from "next/image";
 
-export const CLINICS = [
+export type Clinic = {
+  id: number;
+  title: string;
+  Icon: IconType;
+  imgSrc: StaticImageData;
+  tags: (string | undefined)[];
+  description: string;
+};
+
+export const CLINICS: Clinic[] = [
   {
     id: 1,
     title: "내과클리닉",
@@ -82,9 +94,9 @@ export const CLINICS = [
   },
   {
     id: 8,
-    title: "한방침구클리닛",
+    title: "한방침구클리닉",
     Icon: BiSolidLeaf,
-    imgSrc: opt,
+    imgSrc: oriental,
     tags: ["침술", "전침술", "한방"],
     description:
       "치과는 동물의 구강 및 치아 건강을 관리하는 분야입니다. 치석 제거, 치근 수술 등을 포함하며, 올바른 구강 관리를 통해 동물의 전반적인 건강을 증진시킵니다. 안과는 동물의 눈 질환을 진단하고 치료하는 분야입니다. 녹내장, 백내장 등 다양한 눈 질환을 다루며, 필요에 따라 수술적 접근법도 사용합니다.",

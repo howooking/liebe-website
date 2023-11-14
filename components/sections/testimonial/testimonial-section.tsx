@@ -16,7 +16,6 @@ export default function TestimonialSection() {
         <div className="lg:space-y-20">
           <SectionTitle
             title="CUSTOMER REVIEWS"
-            testimonial
             subtitle={
               <>
                 리베는 고객의 행복과 반려동물의 건강은 최우선으로합니다.
