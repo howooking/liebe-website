@@ -2,6 +2,7 @@ import Section from "@/components/common/section";
 import GoogleMap from "./google-map";
 import Contact from "./contact";
 import Container from "@/components/common/container";
+import Circles2 from "@/components/common/circles2";
 
 export default function MapSection() {
   return (
@@ -12,6 +13,7 @@ export default function MapSection() {
           <Contact />
         </div>
       </Container>
+      <Circles2 />
     </Section>
   );
 }

@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         subTitle="진료시간 및 예약안내"
       />
       <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
-      {children}
+      <div className="bg-stone-100">{children}</div>
     </Section>
   );
 }

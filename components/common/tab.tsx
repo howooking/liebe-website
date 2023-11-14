@@ -13,7 +13,7 @@ type TabsProps = {
 
 export default function Tabs({ tabs, selected, setSelected }: TabsProps) {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 px-4 py-4">
+    <div className="flex h-12 flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 px-4">
       {tabs.map((tab) => (
         <Chip
           key={tab}
@@ -43,7 +43,7 @@ const Chip = ({
         selected
           ? "text-white"
           : "text-slate-300 hover:bg-slate-900 hover:text-slate-200"
-      } relative rounded-md px-2.5 py-0.5 text-sm transition-colors`}
+      } relative rounded-md px-1.5 py-1 text-sm transition-colors`}
     >
       <span className="relative z-10 text-sm sm:text-base">{text}</span>
       {selected && (
@@ -51,7 +51,7 @@ const Chip = ({
           layoutId="pill-tab"
           transition={{ type: "spring", duration: 0.5 }}
           className="absolute inset-0 z-0 rounded-md bg-gradient-to-r from-orange-600 to-amber-600"
-        ></motion.span>
+        />
       )}
     </Link>
   );
