@@ -5,12 +5,10 @@ import MobileDrawer from "@/components/common/navbar/mobile-drawer";
 
 import NavLinks from "./nav-links";
 import MainLogo from "./main-logo";
-import useWindowSize from "@/hooks/useWindowSize";
 import useScrollPosition from "@/hooks/useScrollPosition";
 
 export default function Navbar() {
   const { isScrollTop } = useScrollPosition();
-  const { width } = useWindowSize();
 
   return (
     <header
@@ -23,9 +21,9 @@ export default function Navbar() {
     >
       <Container>
         <div className="flex h-12 items-center justify-between">
-          <MainLogo isScrollTop={isScrollTop} width={width} />
+          <MainLogo isScrollTop={isScrollTop} />
           <NavLinks isScrollTop={isScrollTop} />
-          <MobileDrawer isScrollTop={isScrollTop} width={width} />
+          <MobileDrawer isScrollTop={isScrollTop} />
         </div>
       </Container>
     </header>

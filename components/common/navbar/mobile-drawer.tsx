@@ -11,7 +11,6 @@ import IconButton from "../icon-button";
 
 type MobileDrawerProps = {
   isScrollTop: boolean;
-  width?: number;
 };
 
 export default function MobileDrawer({ isScrollTop }: MobileDrawerProps) {
