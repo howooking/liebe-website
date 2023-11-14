@@ -5,6 +5,7 @@ import { FaRegEye } from "react-icons/fa";
 import { PiBirdFill } from "react-icons/pi";
 import { BsFillEarFill } from "react-icons/bs";
 import { BiSolidLeaf } from "react-icons/bi";
+import { FaYinYang } from "react-icons/fa6";
 
 import cat from "@/public/clinic/cat.jpg";
 import opt from "@/public/clinic/opt.jpg";
@@ -95,7 +96,7 @@ export const CLINICS: Clinic[] = [
   {
     id: 8,
     title: "한방침구클리닉",
-    Icon: BiSolidLeaf,
+    Icon: FaYinYang,
     imgSrc: oriental,
     tags: ["침술", "전침술", "한방"],
     description:
