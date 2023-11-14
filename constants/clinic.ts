@@ -32,7 +32,7 @@ export const CLINICS: Clinic[] = [
     title: "내과클리닉",
     Icon: FaStethoscope,
     imgSrc: internal,
-    tags: ["심혈관", "호르몬질환", "구토/설사"],
+    tags: ["심혈관", "호르몬질환", "노령성질환"],
     description:
       "내과는 동물의 내부 기관에 대한 질병을 다루는 분야입니다. 심장, 폐, 간, 신장 등 주요 장기의 질환 및 내분비 장애를 포함합니다. 예방과 치료를 위해 정확한 진단과 적절한 치료법을 제공합니다.",
   },
@@ -41,7 +41,7 @@ export const CLINICS: Clinic[] = [
     title: "외과클리닉",
     Icon: RiSurgicalMaskFill,
     imgSrc: surgery,
-    tags: ["슬개골", "골절", "십자인대"],
+    tags: ["슬개골", "십자인대", "디스크"],
     description:
       "외과는 동물의 질병이나 손상을 수술로 치료하는 분야입니다. 골절, 종양 제거, 안과 수술 등 다양한 수술을 포함합니다. 또한 통증 관리와 수술 후 회복 과정도 중요하게 취급하여 동물의 건강을 증진시킵니다.",
   },
@@ -69,7 +69,7 @@ export const CLINICS: Clinic[] = [
     title: "영상진단클리닉",
     Icon: GiRadioactive,
     imgSrc: radio,
-    tags: ["X-RAY", "초음파", "CT", "MRI"],
+    tags: ["초음파", "CT", "MRI"],
     description:
       "영상의학과는 동물의 질병 진단에 필요한 영상 자료를 생성하고 해석하는 분야입니다. X-레이, 초음파, CT, MRI 등 다양한 영상 기술을 사용하여 정확한 진단 정보를 제공합니다. 이 정보는 수술 계획 및 치료 전략 결정에 중요한 역할을 합니다.",
   },

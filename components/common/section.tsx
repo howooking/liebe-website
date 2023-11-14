@@ -7,7 +7,7 @@ export default function Section({
   id,
 }: {
   children: React.ReactNode;
-  id: string;
+  id?: string;
 }) {
   return (
     <motion.section

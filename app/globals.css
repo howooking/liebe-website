@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #f08d47;
+  --secondary-color: #8eb62f;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -71,3 +75,20 @@ html {
 ::-webkit-scrollbar {
   width: 0rem;
 } */
+
+/* clinic swiper */
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  transform: scale(1.2);
+}
+.swiper-button-next:active::after,
+.swiper-button-prev:active::after {
+  transform: scale(0.9);
+}

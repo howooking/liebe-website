@@ -1,15 +1,14 @@
 "use client";
 
 import { SOCIALS } from "@/constants/socials";
-import useScroll from "@/hooks/useScroll";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import IconButton from "./icon-button";
+import useScrollPosition from "@/hooks/useScrollPosition";
 
 export default function FixedSocials() {
-  const scrollY = useScroll();
-  const scrollDown = useMemo(() => scrollY > 50, [scrollY]);
+  const { isScrollTop } = useScrollPosition();
 
   const path = usePathname();
   const isRoot = useMemo(() => path === "/", [path]);
@@ -20,8 +19,8 @@ export default function FixedSocials() {
         "fixed bottom-0 z-50 flex w-full items-center justify-around border-t text-white lg:hidden"
       }
       style={{
-        color: scrollDown || !isRoot ? "#1f2937" : "#fff",
-        background: scrollDown || !isRoot ? "white" : "transparent",
+        color: isScrollTop || !isRoot ? "#fff" : "#1f2937",
+        background: isScrollTop || !isRoot ? "transparent" : "white",
         transition: "background 500ms ease",
       }}
     >
