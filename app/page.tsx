@@ -6,15 +6,7 @@ import ValueSection from "@/components/sections/value/value-section";
 import VideosSection from "@/components/sections/videoes/videos-section";
 
 export default function Home() {
-  // const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setLoading(false);
-  // }, []);
-
-  // if (loading) {
-  //   return <Loading />;
-  // }
   return (
     <>
       <HeroSection />

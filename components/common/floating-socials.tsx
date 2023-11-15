@@ -32,7 +32,7 @@ export default function FloatingSocials() {
           </motion.span>
         </Button>
 
-        <motion.ul
+        <motion.div
           initial={wrapperVariants.closed}
           variants={wrapperVariants}
           style={{ originY: "bottom", translateX: "-50%" }}
@@ -48,7 +48,7 @@ export default function FloatingSocials() {
               key={social.label}
             />
           ))}
-        </motion.ul>
+        </motion.div>
       </motion.div>
     </div>
   );
@@ -69,7 +69,7 @@ const Option = ({
 }) => {
   return (
     <Link href={href} target="_blank">
-      <motion.li
+      <motion.div
         variants={itemVariants}
         onClick={() => setOpen(false)}
         className="text-xs flex w-full cursor-pointer items-center gap-2 whitespace-nowrap rounded-md p-2 font-medium text-slate-900 transition-colors hover:bg-orange-100 hover:text-orange-500"
@@ -81,7 +81,7 @@ const Option = ({
           />
         </motion.span>
         <p>{text}</p>
-      </motion.li>
+      </motion.div>
     </Link>
   );
 };

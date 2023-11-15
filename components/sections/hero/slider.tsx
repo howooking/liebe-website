@@ -1,15 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 import { SLIDES } from "@/constants/slides";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay } from "swiper/modules";
-
 import Copy from "./copy";
-import { useEffect, useState } from "react";
 import Loading from "@/app/loading";
 
 export default function Slider() {
@@ -31,7 +29,7 @@ export default function Slider() {
             alt={slide.title}
             placeholder="blur"
             priority
-            quality={70}
+            quality={50}
             className="h-[100dvh] object-cover"
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />

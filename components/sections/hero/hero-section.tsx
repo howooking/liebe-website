@@ -4,7 +4,7 @@ import ScrollDown from "./scroll-down";
 
 export default function HeroSection() {
   return (
-    <Section id="home">
+    <Section>
       <Slider />
       <ScrollDown />
     </Section>

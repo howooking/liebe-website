@@ -5,6 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { RiKakaoTalkFill, RiPhoneFill, RiMailFill } from "react-icons/ri";
 import Link from "next/link";
 import Title from "@/components/common/title";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   return (
