@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Testimonial } from "./testimonial.type";
+import { FaStar } from "react-icons/fa6";
 
 export default function TestimonialCard({
   img,
@@ -54,7 +55,15 @@ export default function TestimonialCard({
           sizes='(max-width: 345px) 50vw, (max-width: 1024px) 25vw, 20vw"'
         />
       </div>
+
       <p className="my-8 text-base font-light italic leading-7 lg:text-xl">
+        <div className="mb-2 flex justify-center">
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+        </div>
         &#34;{description}&#34;
       </p>
       <div className="space-y-1">

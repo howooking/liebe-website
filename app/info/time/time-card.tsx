@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { IconType } from "react-icons";
 
 type InfoCardType = {
@@ -32,7 +33,11 @@ export default function TimeCard({
       </CardHeader>
       <CardContent className="flex-1">{children}</CardContent>
 
-      <CardFooter className="text-sm text-slate-500">{footer}</CardFooter>
+      <CardFooter
+        className={cn("text-sm text-slate-500", !!footer ? "" : "hidden")}
+      >
+        {footer}
+      </CardFooter>
     </Card>
   );
 }
