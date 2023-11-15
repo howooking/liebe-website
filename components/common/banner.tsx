@@ -33,7 +33,7 @@ export default function Banner({
         viewport={{ once: true }}
       >
         <h2 className="text-xl font-bold text-primary sm:text-3xl">{title}</h2>
-        <p className="text-sm sm:text-base">{subTitle}</p>
+        <div className="text-sm sm:text-base">{subTitle}</div>
       </motion.div>
     </div>
   );

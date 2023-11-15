@@ -4,12 +4,12 @@ import Tabs from "@/components/common/tab";
 import { STAFFS } from "@/constants/staff";
 import { useMemo, useState } from "react";
 
-import Container from "@/components/common/container";
 import StaffCard from "./staff-card";
 import Banner from "@/components/common/banner";
 
 import staffBanner from "@/public/staff/staff-banner.jpg";
 import Section from "@/components/common/section";
+import Container2 from "@/components/common/container2";
 
 export default function Staff() {
   const tabs = useMemo(() => Object.keys(STAFFS), []);
@@ -26,14 +26,24 @@ export default function Staff() {
           </div>
         }
       />
-      <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
-      <Container>
+      <Tabs
+        tabs={tabs}
+        selected={selected}
+        setSelected={setSelected}
+        info={false}
+      />
+      <Container2>
         <ul className="grid-col-1 my-8 grid gap-8 md:grid-cols-2">
-          {STAFFS[selected].map((staff) => (
-            <StaffCard key={staff.name} staff={staff} selected={selected} />
+          {STAFFS[selected].map((staff, index) => (
+            <StaffCard
+              key={staff.name}
+              staff={staff}
+              selected={selected}
+              index={index}
+            />
           ))}
         </ul>
-      </Container>
+      </Container2>
     </Section>
   );
 }

@@ -8,50 +8,46 @@ import { motion } from "framer-motion";
 type StaffCardProps = {
   staff: Staff;
   selected: string;
+  index: number;
 };
 
-export default function StaffCard({ staff, selected }: StaffCardProps) {
+export default function StaffCard({ staff, selected, index }: StaffCardProps) {
   return (
     <motion.li
       key={staff.name}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 1, delay: 0.3 * index }}
       viewport={{ once: true }}
     >
-      <Card className="p-4 sm:p-8">
-        <div className="flex flex-col-reverse items-center justify-between md:flex-row md:items-start">
-          <div className="flex flex-col items-center gap-4 md:items-start">
-            <div>
-              <span className="md:3xl text-xl font-bold sm:text-2xl">
-                {staff.name}
-              </span>
-              <span className="md:2xl ml-1 text-lg font-thin sm:text-xl">
-                {staff.title}
-              </span>
+      <Card className="p-6">
+        <div className="flex flex-col-reverse  items-center justify-between gap-2 md:flex-row md:items-start">
+          <div className="flex flex-col items-center  gap-4 md:items-start">
+            <div className="space-x-1">
+              <span className="text-xl font-bold">{staff.name}</span>
+              <span className="font-thin">{staff.title}</span>
             </div>
 
             <ul className="my-4">
               {staff.history.map((his) => (
-                <li key={his} className="text-xs md:text-sm">
-                  - {his}
-                </li>
+                <li key={his}>- {his}</li>
               ))}
             </ul>
           </div>
 
-          <div className="relative h-[250px] w-[250px]">
-            <Image
-              src={staff.image}
-              alt={staff.name}
-              placeholder="blur"
-              className="rounded-full"
-              fill
-              sizes="(min-width: 1380px) 250px, (min-width: 1040px) calc(20.31vw - 26px), (min-width: 780px) calc(24.58vw - 59px), 250px"
-            />
-          </div>
+          <Image
+            src={staff.image}
+            alt={staff.name}
+            width={200}
+            height={200}
+            placeholder="blur"
+            className="rounded-full"
+            sizes="(min-width: 1380px) 250px, (min-width: 1040px) calc(20.31vw - 26px), (min-width: 780px) calc(24.58vw - 59px), 250px"
+          />
         </div>
-        <div>{selected === "수의사" && <TimeTable off={staff.off} />}</div>
+        <div>
+          {selected === "수의사" ? <TimeTable off={staff.off} /> : null}
+        </div>
       </Card>
     </motion.li>
   );

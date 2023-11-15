@@ -8,14 +8,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 import { useMemo } from "react";
 
 export default function TimeTable({ off }: { off?: number[] }) {
   const schedules = useMemo(() => {
-    let arr = new Array(7).fill("근무");
+    let arr = new Array(7).fill("");
     off?.forEach((index) => {
       if (index < arr.length) {
-        arr[index] = "휴무";
+        arr[index] = "휴";
       }
     });
     return arr;
@@ -26,30 +27,46 @@ export default function TimeTable({ off }: { off?: number[] }) {
       <TableCaption className="text-xs">
         * 일정 변동이 있을 수 있습니다.
       </TableCaption>
-      <TableHeader className="bg-slate-500">
+      <TableHeader>
         <TableRow>
-          <TableHead className="text-center">일</TableHead>
-          <TableHead className="text-center">월</TableHead>
-          <TableHead className="text-center">화</TableHead>
-          <TableHead className="text-center">수</TableHead>
-          <TableHead className="text-center">목</TableHead>
-          <TableHead className="text-center">금</TableHead>
-          <TableHead className="text-center">토</TableHead>
+          <TableHead className="border-r text-center text-slate-900 ">
+            일
+          </TableHead>
+          <TableHead className="border-r text-center text-slate-900 ">
+            월
+          </TableHead>
+          <TableHead className="border-r text-center text-slate-900 ">
+            화
+          </TableHead>
+          <TableHead className="border-r text-center text-slate-900 ">
+            수
+          </TableHead>
+          <TableHead className="border-r text-center text-slate-900 ">
+            목
+          </TableHead>
+          <TableHead className="border-r text-center text-slate-900 ">
+            금
+          </TableHead>
+          <TableHead className="text-center text-slate-900 ">토</TableHead>
         </TableRow>
       </TableHeader>
-      <TableBody className="bg-slate-100">
+      <TableBody>
         <TableRow>
           {schedules.map((schedule, index) => (
             <TableCell
               key={index}
-              className="overflow-hidden  rounded-lg text-center"
+              className={cn(
+                "overflow-hidden  rounded-lg text-center",
+                index === 6 ? "" : "border-r",
+              )}
             >
-              <Badge
-                variant={schedule === "휴무" ? "destructive" : "outline"}
-                className="px-1 py-0.5 text-xs"
+              <div
+                className={cn(
+                  schedule === "휴" ? "font-bold text-rose-500" : "hidden",
+                )}
               >
                 {schedule}
-              </Badge>
+              </div>
             </TableCell>
           ))}
         </TableRow>

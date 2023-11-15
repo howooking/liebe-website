@@ -17,7 +17,7 @@ export default function Tabs({ tabs, selected, setSelected, info }: TabsProps) {
     <div className="flex h-12 flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 px-4">
       {tabs.map((tab) => (
         <Chip
-          info
+          info={info}
           key={tab}
           text={tab}
           selected={selected === tab}
