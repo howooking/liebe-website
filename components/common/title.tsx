@@ -8,7 +8,7 @@ type TitleProps = {
 
 export default function Title({ children }: TitleProps) {
   return (
-    <h2 className="relative inline text-base font-semibold md:text-xl">
+    <h2 className="relative inline text-xl font-semibold md:text-2xl">
       {children}
       <motion.span
         className="absolute bottom-1 left-0 h-1/3 w-full bg-primary/20"
