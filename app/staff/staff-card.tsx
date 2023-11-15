@@ -17,7 +17,7 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
       key={staff.name}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.3 * index }}
+      transition={{ duration: 1, delay: 0.3 }}
       viewport={{ once: true }}
     >
       <Card className="p-6">
@@ -25,7 +25,7 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
           <div className="flex flex-col items-center  gap-4 md:items-start">
             <div className="space-x-1">
               <span className="text-xl font-bold">{staff.name}</span>
-              <span className="font-thin">{staff.title}</span>
+              <span className="text-xl font-thin">{staff.title}</span>
             </div>
 
             <ul className="my-4">
