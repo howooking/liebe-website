@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export default function TimeInfo({ detail }: { detail?: boolean }) {
   const mappedInfos = detail ? TIME_INFOS : TIME_INFOS.slice(0, 4);
   return (
-    <Table className="overflow-hidden rounded-md text-sm md:text-base">
+    <Table className="overflow-hidden rounded-md">
       <TableHeader className="bg-slate-100">
         <TableRow>
           <TableHead className="h-auto p-2 text-center text-slate-900">

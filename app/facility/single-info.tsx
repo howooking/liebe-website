@@ -8,7 +8,7 @@ export default function SingleInfo({ kor, eng }: SingleInfoProps) {
         <BsDot />
         {kor}
       </p>
-      <p className="text-xs sm:text-sm">{eng}</p>
+      <p className="hidden sm:block">{eng}</p>
     </li>
   );
 }

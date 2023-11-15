@@ -5,14 +5,13 @@ import { FaLocationDot } from "react-icons/fa6";
 import { RiKakaoTalkFill, RiPhoneFill, RiMailFill } from "react-icons/ri";
 import Link from "next/link";
 import Title from "@/components/common/title";
-import { Separator } from "@/components/ui/separator";
 
 export default function Contact() {
   return (
-    <div className="relative z-10 flex flex-col justify-evenly gap-6 md:w-2/3 md:gap-12">
+    <div className="relative z-10 flex flex-col justify-evenly gap-12 md:w-2/3">
       <div className="space-y-4">
         <Title>리베동물병원 오시는길</Title>
-        <div className="flex flex-col gap-2 text-sm md:text-base">
+        <div className="flex flex-col gap-2">
           <MapLink />
           <div className="space-y-2">
             <div className="flex items-center gap-1">
@@ -35,7 +34,7 @@ export default function Contact() {
 
       <div className="space-y-4">
         <Title>CONTACT</Title>
-        <div className="space-y-2 text-sm md:text-base">
+        <div className="space-y-2">
           <div className="flex items-center gap-1">
             <RiPhoneFill />
             <Link href="tel:+0269537502">02.6953.7502</Link>

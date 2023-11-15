@@ -15,7 +15,7 @@ export default function TestimonialSection() {
     <Section>
       <div className="bg-stone-100">
         <Container>
-          <div className="grid grid-cols-1 items-center gap-8 overflow-hidden py-12 sm:py-24 sm:pb-32 lg:grid-cols-2 lg:gap-24 ">
+          <div className="grid grid-cols-1 items-center gap-8 overflow-hidden pb-20 pt-12 sm:pb-40 sm:pt-24 lg:grid-cols-2 lg:gap-24 ">
             <div>
               <SectionTitle
                 title="CUSTOMER REVIEWS"

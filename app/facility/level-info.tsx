@@ -12,7 +12,6 @@ type LevelInfoProps = {
 export default function LevelInfo({ setSelected, selected }: LevelInfoProps) {
   return (
     <motion.div
-      className="px-4 py-4"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.2 }}
@@ -26,7 +25,7 @@ export default function LevelInfo({ setSelected, selected }: LevelInfoProps) {
             level={level}
             key={level}
           >
-            <ul>
+            <ul className="flex flex-col gap-2">
               {LEVELS_INFO[level].map((info) => (
                 <SingleInfo kor={info.kor} eng={info.eng} key={info.kor} />
               ))}
@@ -63,13 +62,13 @@ const Level = ({
         <motion.span
           variants={{
             open: {
-              color: "rgba(3, 6, 23, 0)",
+              color: "rgba(15, 23, 42, 0)",
             },
             closed: {
-              color: "rgba(3, 6, 23, 1)",
+              color: "rgba(15, 23, 42, 1)",
             },
           }}
-          className="bg-primary bg-clip-text text-left text-lg"
+          className="text-lg bg-primary bg-clip-text text-left font-semibold"
         >
           {level} 안내
         </motion.span>
@@ -94,7 +93,7 @@ const Level = ({
           height: open ? "fit-content" : "0px",
           marginBottom: open ? "24px" : "0px",
         }}
-        className="overflow-hidden text-slate-600"
+        className="overflow-hidden"
       >
         {children}
       </motion.div>
