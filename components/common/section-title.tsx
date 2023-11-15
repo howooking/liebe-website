@@ -8,7 +8,7 @@ type SectionTitleProps = {
 };
 export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
   return (
-    <div className="relative z-10 mb-6 space-y-2 text-center sm:mb-12 sm:space-y-4">
+    <div className="relative z-10 mb-6 space-y-3 text-center sm:mb-12 sm:space-y-6">
       <h2 className="relative inline text-2xl tracking-tight sm:text-3xl md:text-4xl">
         {title}
         <motion.div

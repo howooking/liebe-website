@@ -3,7 +3,7 @@ import MainLogo from "@/components/common/navbar/main-logo";
 
 export default function FooterSection() {
   return (
-    <div className="mb-[48px] bg-slate-900 py-6 text-[10px] text-white sm:text-base lg:mb-0 lg:py-12">
+    <div className="mb-[48px] bg-slate-900 py-6 text-sm text-white lg:mb-0 lg:py-12 lg:text-base">
       <Container>
         <div className="flex flex-col justify-between gap-6 px-3 text-center lg:flex-row lg:text-left">
           <div className="order-2 space-y-2 sm:space-y-4 lg:order-1 lg:flex-1">
@@ -15,7 +15,7 @@ export default function FooterSection() {
             <div className="flex justify-center">
               <MainLogo footer />
             </div>
-            <div className="text-sm lg:pt-0">
+            <div className="text-sm">
               Copyright ⓒ 2014 리베동물메디컬센터 <br className="sm:hidden" />
               All Rights Reserved.
             </div>

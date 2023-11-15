@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "@/components/common/container";
 import MobileDrawer from "@/components/common/navbar/mobile-drawer";
 
 import NavLinks from "./nav-links";

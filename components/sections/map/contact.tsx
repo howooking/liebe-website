@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Contact() {
   return (
-    <div className="relative z-10 mx-auto flex w-full flex-col justify-evenly gap-6 md:w-2/3">
+    <div className="relative z-10 flex flex-col justify-evenly gap-6 md:w-2/3 md:gap-12">
       <div className="space-y-4">
         <Title>리베동물병원 오시는길</Title>
         <div className="flex flex-col gap-2 text-sm md:text-base">
@@ -28,14 +28,10 @@ export default function Contact() {
         </div>
       </div>
 
-      <Separator />
-
       <div className="space-y-4">
         <Title>진료시간 안내</Title>
         <TimeInfo />
       </div>
-
-      <Separator />
 
       <div className="space-y-4">
         <Title>CONTACT</Title>

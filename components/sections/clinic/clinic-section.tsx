@@ -8,7 +8,7 @@ export default function ClinicSection() {
   return (
     <Section id="clinic">
       <Container>
-        <div className="px-3 py-12 sm:py-24">
+        <div className="py-12 sm:py-24">
           <div className="text-center">
             <SectionTitle
               title="LIEBE CLINIC"
