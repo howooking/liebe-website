@@ -1,22 +1,15 @@
 "use client";
 
-// Import Swiper React components
-
 import { Navigation, Scrollbar } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 
 import Image, { StaticImageData } from "next/image";
-
-import { motion } from "framer-motion";
-import useWindowSize from "@/hooks/useWindowSize";
-import { useCallback } from "react";
-import SwiperCardCover from "@/components/sections/clinic/swiper-card-cover";
+import Cover from "./cover";
 
 export default function FacilitySwiper({
   items,
@@ -44,6 +37,7 @@ export default function FacilitySwiper({
             placeholder="blur"
             priority
           />
+          <Cover title={item.title} />
         </SwiperSlide>
       ))}
     </Swiper>
