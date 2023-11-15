@@ -56,7 +56,7 @@ export default function TestimonialCard({
         />
       </div>
 
-      <p className="my-8 text-base font-light italic leading-7 lg:text-xl">
+      <div className="my-8 text-base font-light italic leading-7 lg:text-xl">
         <div className="mb-2 flex justify-center">
           <FaStar />
           <FaStar />
@@ -65,7 +65,7 @@ export default function TestimonialCard({
           <FaStar />
         </div>
         &#34;{description}&#34;
-      </p>
+      </div>
       <div className="space-y-1">
         <span className="block text-base font-semibold">{name}</span>
         <span className="block text-sm">{title}</span>
