@@ -1,5 +1,6 @@
 "use client";
 
+import Container from "@/components/common/container";
 import MobileDrawer from "@/components/common/navbar/mobile-drawer";
 
 import NavLinks from "./nav-links";
@@ -18,7 +19,7 @@ export default function Navbar() {
         // borderBottom: isScrollTop ? "none" : "solid #e2e8f0 1px",
       }}
     >
-      <div className="flex h-12 items-center justify-between">
+      <div className="mx-auto flex h-12 max-w-[1440px] items-center justify-between">
         <MainLogo isScrollTop={isScrollTop} />
         <NavLinks isScrollTop={isScrollTop} />
         <MobileDrawer isScrollTop={isScrollTop} />
