@@ -32,18 +32,20 @@ export default function Staff() {
         setSelected={setSelected}
         info={false}
       />
-      <Container2>
-        <ul className="grid-col-1 my-8 grid gap-8 md:grid-cols-2">
-          {STAFFS[selected].map((staff, index) => (
-            <StaffCard
-              key={staff.name}
-              staff={staff}
-              selected={selected}
-              index={index}
-            />
-          ))}
-        </ul>
-      </Container2>
+      <div className="bg-stone-100">
+        <Container2>
+          <ul className="grid-col-1 grid gap-8 py-8 md:grid-cols-2">
+            {STAFFS[selected].map((staff, index) => (
+              <StaffCard
+                key={staff.name}
+                staff={staff}
+                selected={selected}
+                index={index}
+              />
+            ))}
+          </ul>
+        </Container2>
+      </div>
     </Section>
   );
 }
