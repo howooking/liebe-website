@@ -3,23 +3,29 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 
-import { cn } from "@/lib/utils";
 import Navbar from "@/components/common/navbar/navbar";
-import FixedSocials from "@/components/common/fixed-socials";
-import FloatingSocials from "@/components/common/floating-socials";
 import FooterSection from "@/components/sections/footer/footer-section";
+import FloatingSocials from "@/components/common/floating-socials";
+import FixedSocials from "@/components/common/fixed-socials";
+
+import { cn } from "@/lib/utils";
+import { baseUrl } from "@/constants/base-url";
 
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
-// TODO : SEO
 export const metadata: Metadata = {
   title: "리베동물메디컬센터",
-  description: "리베동물병원 리베동물메디컬센터 24시동물병원",
+  description:
+    "잠실 삼전동 24시동물병원 동물병원 리베동물병원 리베동물메디컬센터",
+  alternates: {
+    canonical: baseUrl,
+  },
   keywords: [
     "리베동물병원",
     "동물병원",
-    "동물의료센터",
     "서울24시동물병원",
+    "잠실동물병원",
+    "삼전동동물병원",
     "24시동물병원",
     "강아지암",
     "강아지암센터",
@@ -86,7 +92,6 @@ export const metadata: Metadata = {
     "강아지재활",
     "강아지재활센터",
     "강아지수중재활",
-    "강아지수중런닝머신",
   ],
 };
 

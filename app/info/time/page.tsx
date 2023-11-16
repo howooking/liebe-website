@@ -1,14 +1,15 @@
 "use client";
 
-import Title from "@/components/common/title";
-import TimeCard from "./time-card";
+import { motion } from "framer-motion";
 import { FaBriefcaseMedical } from "react-icons/fa";
 import { FaTruckMedical } from "react-icons/fa6";
 import { MdLunchDining } from "react-icons/md";
-import { Badge } from "@/components/ui/badge";
-import Procedure from "./procedure";
+
 import Container2 from "@/components/common/container2";
-import { motion } from "framer-motion";
+import Title from "@/components/common/title";
+import { Badge } from "@/components/ui/badge";
+import TimeCard from "./time-card";
+import Procedure from "./procedure";
 
 export default function TimeTab() {
   return (

@@ -1,8 +1,10 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import TimeTable from "./time-table";
-import type { Staff } from "@/constants/staff";
 import { motion } from "framer-motion";
+
+import { Card } from "@/components/ui/card";
+import TimeTable from "./time-table";
+
+import type { Staff } from "@/constants/staff";
 
 type StaffCardProps = {
   staff: Staff;

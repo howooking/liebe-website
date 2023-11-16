@@ -1,15 +1,14 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import { Navigation, Scrollbar } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 
-import Image, { StaticImageData } from "next/image";
 import Cover from "./cover";
+
 import useWindowSize from "@/hooks/useWindowSize";
 
 export default function FacilitySwiper({

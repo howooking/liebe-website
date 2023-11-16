@@ -1,11 +1,12 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { FaBowlFood, FaCamera, FaEye, FaDog, FaCheck } from "react-icons/fa6";
+
 import Container2 from "@/components/common/container2";
 import Title from "@/components/common/title";
-import { motion } from "framer-motion";
-import TimeCard from "../time/time-card";
 import Highlight from "@/components/common/highlight";
-import { FaBowlFood, FaCamera, FaEye, FaDog, FaCheck } from "react-icons/fa6";
+import TimeCard from "../time/time-card";
 
 export default function VisitTab() {
   return (

@@ -1,8 +1,9 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
 import { motion } from "framer-motion";
-import SingleInfo from "./single-info";
+import { FiChevronDown } from "react-icons/fi";
+
 import { LEVELS_INFO } from "@/constants/facility";
+import SingleInfo from "./single-info";
 
 type LevelInfoProps = {
   setSelected: Dispatch<SetStateAction<string>>;

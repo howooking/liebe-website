@@ -1,8 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import Title from "@/components/common/title";
 import ProcedureCard from "./procedure-card";
-import { motion } from "framer-motion";
 
 export default function Procedure() {
   return (

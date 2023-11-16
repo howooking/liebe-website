@@ -1,4 +1,5 @@
-import { Badge } from "@/components/ui/badge";
+import { useMemo } from "react";
+
 import {
   Table,
   TableBody,
@@ -8,8 +9,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
 import { cn } from "@/lib/utils";
-import { useMemo } from "react";
 
 export default function TimeTable({ off }: { off?: number[] }) {
   const schedules = useMemo(() => {

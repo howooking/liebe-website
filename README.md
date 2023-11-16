@@ -9,3 +9,5 @@ TODO
 - 서울 수의사회
 - 액션버튼
 - 시설 사진 비율 조절
+- 배포 후에 구글 verification id
+- 배포 도메인 주소 변경시 baseurl변경하기

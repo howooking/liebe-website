@@ -1,15 +1,14 @@
 "use client";
 
-import Tabs from "@/components/common/tab";
-import { STAFFS } from "@/constants/staff";
 import { useMemo, useState } from "react";
-
-import StaffCard from "./staff-card";
+import Tabs from "@/components/common/tab";
 import Banner from "@/components/common/banner";
-
-import staffBanner from "@/public/staff/staff-banner.jpg";
 import Section from "@/components/common/section";
 import Container2 from "@/components/common/container2";
+import StaffCard from "./staff-card";
+
+import { STAFFS } from "@/constants/staff";
+import staffBanner from "@/public/staff/staff-banner.jpg";
 
 export default function Staff() {
   const tabs = useMemo(() => Object.keys(STAFFS), []);

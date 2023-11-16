@@ -1,15 +1,16 @@
 "use client";
 
-import Banner from "@/components/common/banner";
-import Tabs from "@/components/common/tab";
-import { FACILITY_IMAGES } from "@/constants/facility";
-
-import facilityBanner from "@/public/facility/ficility-banner.png";
 import { useMemo, useState } from "react";
-import LevelInfo from "./level-info";
-import Section from "@/components/common/section";
+
+import Banner from "@/components/common/banner";
+import facilityBanner from "@/public/facility/ficility-banner.png";
+import Tabs from "@/components/common/tab";
 import Container2 from "@/components/common/container2";
+import Section from "@/components/common/section";
 import FacilitySwiper from "./facility-swiper";
+import LevelInfo from "./level-info";
+
+import { FACILITY_IMAGES } from "@/constants/facility";
 
 export default function Facility() {
   const tabs = useMemo(() => Object.keys(FACILITY_IMAGES), []);

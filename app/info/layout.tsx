@@ -1,12 +1,14 @@
 "use client";
 
+import React, { useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
+
 import Banner from "@/components/common/banner";
 import Section from "@/components/common/section";
 import Tabs from "@/components/common/tab";
-import React, { useMemo, useState } from "react";
+
 import infoBanner from "@/public/info/info-banner.jpg";
 import { INFO_TABS } from "@/constants/info-page";
-import { usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const tabs = useMemo(() => Object.keys(INFO_TABS), []);
