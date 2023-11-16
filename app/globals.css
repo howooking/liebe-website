@@ -5,6 +5,7 @@
 
 :root {
   --primary-color: #f08d47;
+  --primary-fade: #efa46f;
   --secondary-color: #8eb62f;
 }
 @layer base {
@@ -76,7 +77,7 @@ html {
   width: 0rem;
 } */
 
-/* clinic swiper */
+/* SWIPER */
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -91,4 +92,14 @@ html {
 .swiper-button-next:active::after,
 .swiper-button-prev:active::after {
   transform: scale(0.9);
+}
+
+.swiper-scrollbar-drag {
+  background-color: var(--primary-color) !important;
+}
+.swiper-scrollbar-drag:hover {
+  background-color: var(--primary-fade) !important;
+}
+.swiper-scrollbar-drag:active {
+  background-color: var(--primary-fade) !important;
 }
