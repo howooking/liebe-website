@@ -23,6 +23,7 @@ export default function FacilitySwiper({
 
   return (
     <Swiper
+      key={selected}
       modules={[Navigation, Scrollbar]}
       spaceBetween={24}
       navigation={width! <= 640 ? false : true}
@@ -39,7 +40,7 @@ export default function FacilitySwiper({
             alt={item.title}
             placeholder="blur"
             priority
-            sizes="50vw"
+            sizes="80vw"
           />
           <Cover title={item.title} />
         </SwiperSlide>
