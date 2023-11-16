@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import TimeTable from "./time-table";
 import type { Staff } from "@/constants/staff";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 type StaffCardProps = {
@@ -28,7 +27,7 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
               <span className="text-xl font-thin">{staff.title}</span>
             </div>
 
-            <ul className="my-4">
+            <ul className="my-2 leading-6">
               {staff.history.map((his) => (
                 <li key={his}>- {his}</li>
               ))}
@@ -42,7 +41,7 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
             height={200}
             placeholder="blur"
             className="rounded-full"
-            sizes="(min-width: 1380px) 250px, (min-width: 1040px) calc(20.31vw - 26px), (min-width: 780px) calc(24.58vw - 59px), 250px"
+            sizes="(min-width: 1020px) 200px, (min-width: 780px) calc(20.91vw - 9px), 200px"
           />
         </div>
         <div>

@@ -40,7 +40,7 @@ export default function FacilitySwiper({
             alt={item.title}
             placeholder="blur"
             priority
-            sizes="80vw"
+            sizes="(min-width: 1080px) 1000px, (min-width: 460px) 94vw, (min-width: 360px) calc(75vw + 66px), calc(50vw + 126px)"
           />
           <Cover title={item.title} />
         </SwiperSlide>
