@@ -1,11 +1,11 @@
-import TimeInfo from "@/app/subject/time-info";
-import MapLink from "./map-link";
+import Link from "next/link";
 import { FaSubway, FaCar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiKakaoTalkFill, RiPhoneFill, RiMailFill } from "react-icons/ri";
-import Link from "next/link";
+
 import Title from "@/components/common/title";
-import { Button } from "@/components/ui/button";
+import MapLink from "./map-link";
+import TimeInfo from "./time-info";
 
 export default function Contact() {
   return (
