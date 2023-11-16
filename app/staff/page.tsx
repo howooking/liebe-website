@@ -7,7 +7,7 @@ import Section from "@/components/common/section";
 import Container2 from "@/components/common/container2";
 import StaffCard from "./staff-card";
 
-import { STAFFS } from "@/constants/staff";
+import { STAFFS } from "@/constants/staffs";
 import staffBanner from "@/public/staff/staff-banner.jpg";
 
 export default function Staff() {

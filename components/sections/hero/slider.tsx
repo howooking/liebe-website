@@ -14,7 +14,7 @@ export default function Slider() {
       {SLIDES.map((slide) => (
         <SwiperSlide key={slide.title}>
           <Image
-            src={slide.src}
+            src={slide.image}
             alt={slide.title}
             placeholder="blur"
             priority

@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 
-import { LEVELS_INFO } from "@/constants/facility";
+import { LEVELS_INFO } from "@/constants/facilities";
 import SingleInfo from "./single-info";
 
 type LevelInfoProps = {

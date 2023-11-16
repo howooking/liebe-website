@@ -1,11 +1,12 @@
 import { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Testimonial } from "./testimonial.type";
 import { FaStar } from "react-icons/fa6";
 
+import type { Testimonial } from "@/constants/testimonials";
+
 export default function TestimonialCard({
-  img,
+  image: img,
   description,
   name,
   title,
@@ -47,7 +48,7 @@ export default function TestimonialCard({
     >
       <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64">
         <Image
-          quality={30}
+          quality={90}
           priority
           placeholder="blur"
           alt="testimonials"

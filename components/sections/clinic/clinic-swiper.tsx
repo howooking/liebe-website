@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 
-import { CLINICS } from "@/constants/clinic";
+import { CLINICS } from "@/constants/clinics";
 import Image from "next/image";
 import SwiperCardCover from "./swiper-card-cover";
 import { motion } from "framer-motion";
@@ -96,7 +96,7 @@ export default function ClinicSwiper() {
           >
             <Image
               quality={50}
-              src={clinic.imgSrc}
+              src={clinic.image}
               alt={clinic.title}
               placeholder="blur"
               priority

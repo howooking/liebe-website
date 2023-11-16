@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import TimeTable from "./time-table";
 
-import type { Staff } from "@/constants/staff";
+import type { Staff } from "@/constants/staffs";
 
 type StaffCardProps = {
   staff: Staff;

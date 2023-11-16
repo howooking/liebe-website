@@ -6,7 +6,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { IconType } from "react-icons";
+
+import type { IconType } from "react-icons";
 
 type InfoCardType = {
   title: string;

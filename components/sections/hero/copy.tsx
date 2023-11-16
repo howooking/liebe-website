@@ -21,7 +21,9 @@ export default function Copy({ subtitle, title }: CopyProps) {
       >
         <div className="relative flex flex-col items-center gap-2 text-white sm:gap-4 lg:gap-6">
           <p className="text-xl font-bold sm:text-3xl lg:text-5xl">{title}</p>
-          <p className="text-base sm:text-xl lg:text-3xl">{subtitle}</p>
+          <p className="text-base tracking-tight sm:text-xl lg:text-3xl">
+            {subtitle}
+          </p>
         </div>
       </motion.div>
     </div>

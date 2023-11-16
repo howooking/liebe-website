@@ -1,4 +1,4 @@
-import type { Clinic } from "@/constants/clinic";
+import type { Clinic } from "@/constants/clinics";
 
 type SwiperCardCoverType = {
   clinic: Clinic;

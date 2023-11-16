@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 import {
   Table,
   TableBody,
@@ -7,11 +9,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { TIME_INFOS } from "@/constants/time";
-import { cn } from "@/lib/utils";
+import { TIME_INFOS } from "@/constants/time-infos";
 
-export default function TimeInfo({ detail }: { detail?: boolean }) {
-  const mappedInfos = detail ? TIME_INFOS : TIME_INFOS.slice(0, 4);
+export default function TimeInfo() {
   return (
     <Table className="overflow-hidden rounded-md">
       <TableHeader className="bg-slate-100">
@@ -25,7 +25,7 @@ export default function TimeInfo({ detail }: { detail?: boolean }) {
         </TableRow>
       </TableHeader>
       <TableBody className="overflow-hidden rounded-md">
-        {mappedInfos.map((info, index) => (
+        {TIME_INFOS.map((info, index) => (
           <TableRow
             className={cn(
               index % 2 === 1 ? "bg-slate-50" : "bg-white",

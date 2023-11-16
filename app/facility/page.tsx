@@ -10,10 +10,10 @@ import Section from "@/components/common/section";
 import FacilitySwiper from "./facility-swiper";
 import LevelInfo from "./level-info";
 
-import { FACILITY_IMAGES } from "@/constants/facility";
+import { FACILIES } from "@/constants/facilities";
 
 export default function Facility() {
-  const tabs = useMemo(() => Object.keys(FACILITY_IMAGES), []);
+  const tabs = useMemo(() => Object.keys(FACILIES), []);
   const [selected, setSelected] = useState(tabs[0]);
 
   return (
@@ -27,10 +27,7 @@ export default function Facility() {
       <div className="bg-stone-100">
         <Container2>
           <div className="py-12">
-            <FacilitySwiper
-              items={FACILITY_IMAGES[selected]}
-              selected={selected}
-            />
+            <FacilitySwiper items={FACILIES[selected]} selected={selected} />
             <LevelInfo selected={selected} setSelected={setSelected} />
           </div>
         </Container2>
