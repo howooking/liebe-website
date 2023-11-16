@@ -47,7 +47,7 @@ export default function TestimonialCard({
     >
       <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64">
         <Image
-          quality={50}
+          quality={30}
           priority
           placeholder="blur"
           alt="testimonials"

@@ -1,27 +1,10 @@
-type VideoType = { src: string };
+"use client";
 
-export default function Video({ src }: VideoType) {
-  return (
-    <div
-      style={{
-        position: "relative",
-        paddingBottom: "56.25%",
-        height: 0,
-        overflow: "hidden",
-      }}
-    >
-      <iframe
-        src={src}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-        }}
-      ></iframe>
-    </div>
-  );
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+
+type VideoType = { videoId: string; title: string };
+
+export default function Video({ title, videoId }: VideoType) {
+  return <LiteYouTubeEmbed id={videoId} title={title} />;
 }
