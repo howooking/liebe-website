@@ -10,6 +10,7 @@ import "swiper/css/scrollbar";
 
 import Image, { StaticImageData } from "next/image";
 import Cover from "./cover";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function FacilitySwiper({
   items,
@@ -18,14 +19,16 @@ export default function FacilitySwiper({
   items: { image: StaticImageData; title: string }[];
   selected: string;
 }) {
+  const { width } = useWindowSize();
+
   return (
     <Swiper
       modules={[Navigation, Scrollbar]}
       spaceBetween={24}
-      navigation
+      navigation={width! <= 640 ? false : true}
       scrollbar={{ draggable: true }}
     >
-      {items.map((item, index) => (
+      {items.map((item) => (
         <SwiperSlide
           key={item.title}
           className="hover:cursor-grab active:cursor-grabbing"
