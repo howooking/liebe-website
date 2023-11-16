@@ -6,7 +6,7 @@ import { FaBowlFood, FaCamera, FaEye, FaDog, FaCheck } from "react-icons/fa6";
 import Container2 from "@/components/common/container2";
 import Title from "@/components/common/title";
 import Highlight from "@/components/common/highlight";
-import TimeCard from "../time/time-card";
+import TimeCard from "./time-card";
 
 export default function VisitTab() {
   return (

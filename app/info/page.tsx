@@ -9,18 +9,12 @@ import Tabs from "@/components/common/tab";
 
 import infoBanner from "@/public/info/info-banner.jpg";
 import { INFO_TABS } from "@/constants/info-page";
+import TimeTab from "./time-tab";
+import VisitTab from "./visit-tab";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function InfoPage() {
   const tabs = useMemo(() => Object.keys(INFO_TABS), []);
-  const path = usePathname();
-  const key = useMemo(
-    () =>
-      Object.keys(INFO_TABS).find(
-        (key) => INFO_TABS[key] === path.split("/")[2],
-      ),
-    [path],
-  );
-  const [selected, setSelected] = useState(key ?? "진료시간");
+  const [selected, setSelected] = useState(tabs[0]);
 
   return (
     <Section id="info">
@@ -29,8 +23,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         title="진료 안내"
         subTitle="진료시간 및 면회 안내"
       />
-      <Tabs tabs={tabs} selected={selected} setSelected={setSelected} info />
-      <div className="bg-stone-100">{children}</div>
+      <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
+      <div className="bg-stone-100">
+        {selected === "진료시간" ? <TimeTab /> : <VisitTab />}
+      </div>
     </Section>
   );
 }

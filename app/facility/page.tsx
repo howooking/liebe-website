@@ -12,7 +12,7 @@ import LevelInfo from "./level-info";
 
 import { FACILIES } from "@/constants/facilities";
 
-export default function Facility() {
+export default function FacilityPage() {
   const tabs = useMemo(() => Object.keys(FACILIES), []);
   const [selected, setSelected] = useState(tabs[0]);
 

@@ -20,13 +20,7 @@ export default function ProcedureCard({
       <div className="absolute flex h-12 w-12 items-center justify-center rounded-tl-[2px] bg-primary/80 text-xl font-bold text-white ">
         {index}
       </div>
-      <Image
-        src={image}
-        alt={`${title} image`}
-        placeholder="blur"
-        quality={1}
-        sizes="(min-width: 1100px) 316px, (min-width: 780px) calc(27vw + 24px), calc(100vw - 25px)"
-      />
+      <Image src={image} alt={`${title} image`} placeholder="blur" />
       <CardHeader className="p-0">
         <CardTitle className="pt-6 text-center text-base font-semibold md:text-xl">
           {title}

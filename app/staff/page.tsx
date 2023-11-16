@@ -10,7 +10,7 @@ import StaffCard from "./staff-card";
 import { STAFFS } from "@/constants/staffs";
 import staffBanner from "@/public/staff/staff-banner.jpg";
 
-export default function Staff() {
+export default function StaffPage() {
   const tabs = useMemo(() => Object.keys(STAFFS), []);
   const [selected, setSelected] = useState(tabs[0]);
   return (
@@ -25,12 +25,7 @@ export default function Staff() {
           </div>
         }
       />
-      <Tabs
-        tabs={tabs}
-        selected={selected}
-        setSelected={setSelected}
-        info={false}
-      />
+      <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
       <div className="bg-stone-100">
         <Container2>
           <ul className="grid-col-1 grid gap-6 py-12 md:grid-cols-2">

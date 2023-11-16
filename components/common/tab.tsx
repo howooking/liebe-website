@@ -9,15 +9,13 @@ type TabsProps = {
   tabs: string[];
   selected: string;
   setSelected: Dispatch<SetStateAction<string>>;
-  info?: boolean;
 };
 
-export default function Tabs({ tabs, selected, setSelected, info }: TabsProps) {
+export default function Tabs({ tabs, selected, setSelected }: TabsProps) {
   return (
     <div className="flex h-12 flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 px-4">
       {tabs.map((tab) => (
         <Chip
-          info={info}
           key={tab}
           text={tab}
           selected={selected === tab}
@@ -32,17 +30,14 @@ const Chip = ({
   text,
   selected,
   setSelected,
-  info,
 }: {
   text: string;
   selected: boolean;
   setSelected: Dispatch<SetStateAction<string>>;
-  info?: boolean;
 }) => {
   const router = useRouter();
   const handleClickTab = () => {
     setSelected(text);
-    info ? router.push(`/info/${INFO_TABS[text]}`) : null;
   };
   return (
     <div
