@@ -23,6 +23,7 @@ export default function Banner({
         src={imageSrc}
         className="object-cover"
         sizes="100vw"
+        priority
       />
       <div className="absolute h-full w-full bg-black/50" />
       <motion.div

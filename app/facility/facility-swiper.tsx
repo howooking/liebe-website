@@ -36,6 +36,7 @@ export default function FacilitySwiper({
             alt={item.title}
             placeholder="blur"
             priority
+            sizes="50vw"
           />
           <Cover title={item.title} />
         </SwiperSlide>
