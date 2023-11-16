@@ -14,6 +14,7 @@ import { baseUrl } from "@/constants/base-url";
 const font = Noto_Sans_KR({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "리베동물메디컬센터",
   description:
     "잠실 삼전동 24시동물병원 동물병원 리베동물병원 리베동물메디컬센터",

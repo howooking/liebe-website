@@ -13,11 +13,11 @@ export default function ValueSection() {
       <Section>
         <Container>
           <div className="py-12 lg:py-24">
-            <ul className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-24">
+            <ul className="grid grid-cols-1 justify-center gap-12 lg:grid-cols-3 lg:gap-24">
               {VALUES.map((value, index) => (
                 <motion.li
                   key={index}
-                  className="space-y-2 xl:space-y-4"
+                  className="space-y-2 lg:space-y-4"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: (index + 1) * 0.2 }}
@@ -31,9 +31,7 @@ export default function ValueSection() {
                       {value.title}
                     </h3>
                   </div>
-                  <div className="break-keep text-sm leading-5 xl:text-base">
-                    {value.subtitle}
-                  </div>
+                  <div className="break-keep leading-5">{value.subtitle}</div>
                 </motion.li>
               ))}
             </ul>

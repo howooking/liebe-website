@@ -19,7 +19,7 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
           viewport={{ once: true }}
         />
       </h2>
-      <div className="text-sm text-slate-500 sm:text-base md:text-xl">
+      <div className="text-base leading-6 tracking-tighter text-slate-500 md:text-xl">
         {subtitle}
       </div>
     </div>
