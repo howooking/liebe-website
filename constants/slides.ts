@@ -1,8 +1,9 @@
 import s1 from "@/public/slider/s1.jpg";
-import s2 from "@/public/slider/s2.png";
+import s2 from "@/public/slider/s2.jpg";
 import s3 from "@/public/slider/s3.jpg";
 import s4 from "@/public/slider/s4.jpg";
 import s5 from "@/public/slider/s5.jpg";
+import s6 from "@/public/slider/s6.jpg";
 
 export const SLIDES = [
   {
@@ -29,5 +30,10 @@ export const SLIDES = [
     image: s5,
     title: "More Than Two Species",
     subtitle: "특수동물 또한 소중한 가족입니다",
+  },
+  {
+    image: s6,
+    title: "섬세하고 따뜻한 손길로",
+    subtitle: "작은 생명이 다치지 않도록",
   },
 ];

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import { usePathname } from "next/navigation";
 
 import Banner from "@/components/common/banner";
 import Section from "@/components/common/section";

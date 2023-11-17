@@ -18,7 +18,6 @@ export default function Slider() {
             alt={slide.title}
             placeholder="blur"
             priority
-            quality={50}
             className="h-[100dvh] object-cover"
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />
