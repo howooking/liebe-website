@@ -95,7 +95,6 @@ export default function ClinicSwiper() {
             viewport={{ once: true }}
           >
             <Image
-              quality={50}
               src={clinic.image}
               alt={clinic.title}
               placeholder="blur"
