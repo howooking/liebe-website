@@ -34,7 +34,7 @@ export default function FacilitySwiper({
           className="hover:cursor-grab active:cursor-grabbing"
         >
           <Image
-            quality={50}
+            quality={100}
             src={item.image}
             alt={item.title}
             placeholder="blur"

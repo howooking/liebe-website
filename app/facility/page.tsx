@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 import Banner from "@/components/common/banner";
-import facilityBanner from "@/public/facility/ficility-banner.png";
+import facilityBanner from "@/public/facility/facility-banner.jpg";
 import Tabs from "@/components/common/tab";
 import Container2 from "@/components/common/container2";
 import Section from "@/components/common/section";

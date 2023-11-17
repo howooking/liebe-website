@@ -11,6 +11,8 @@ import first6 from "@/public/facility/first6.jpg";
 import first7 from "@/public/facility/first7.jpg";
 import first8 from "@/public/facility/first8.jpg";
 import first9 from "@/public/facility/first9.jpg";
+import first10 from "@/public/facility/first10.jpg";
+import first11 from "@/public/facility/first11.jpg";
 import second1 from "@/public/facility/second1.jpg";
 import second2 from "@/public/facility/second2.jpg";
 import second3 from "@/public/facility/second3.jpg";
@@ -24,13 +26,14 @@ import second10 from "@/public/facility/second10.jpg";
 import second11 from "@/public/facility/second11.jpg";
 import second12 from "@/public/facility/second12.jpg";
 import second13 from "@/public/facility/second13.jpg";
-import third1 from "@/public/facility/third1.png";
-import third2 from "@/public/facility/third2.png";
-import third3 from "@/public/facility/third3.png";
-import third4 from "@/public/facility/third4.png";
-import third5 from "@/public/facility/third5.png";
-import third6 from "@/public/facility/third6.png";
-import third7 from "@/public/facility/third7.png";
+import second14 from "@/public/facility/second14.jpg";
+import second15 from "@/public/facility/second15.jpg";
+import second16 from "@/public/facility/second16.jpg";
+import second17 from "@/public/facility/second17.jpg";
+import third1 from "@/public/facility/third1.jpg";
+import third2 from "@/public/facility/third2.jpg";
+import third3 from "@/public/facility/third3.jpg";
+import third4 from "@/public/facility/third4.jpg";
 import forth1 from "@/public/facility/forth1.jpg";
 import forth2 from "@/public/facility/forth2.jpg";
 import forth3 from "@/public/facility/forth3.jpg";
@@ -104,6 +107,14 @@ export const FACILIES: FacilityImages = {
       title: "엘레베이터",
       image: first9,
     },
+    {
+      title: "엘레베이터",
+      image: first10,
+    },
+    {
+      title: "엘레베이터",
+      image: first11,
+    },
   ],
   "2층": [
     {
@@ -158,35 +169,39 @@ export const FACILIES: FacilityImages = {
       title: "x-ray촬영실",
       image: second13,
     },
+    {
+      title: "x-ray촬영실",
+      image: second14,
+    },
+    {
+      title: "x-ray촬영실",
+      image: second15,
+    },
+    {
+      title: "x-ray촬영실",
+      image: second16,
+    },
+    {
+      title: "x-ray촬영실",
+      image: second17,
+    },
   ],
   "3층": [
     {
-      title: "CT실1",
+      title: "CT실 & MRI실",
       image: third1,
     },
     {
-      title: "CT실2",
+      title: "CT실1",
       image: third2,
     },
     {
-      title: "CT실3",
+      title: "CT실2",
       image: third3,
     },
     {
-      title: "영상분석실",
+      title: "MRI실",
       image: third4,
-    },
-    {
-      title: "MRI실1",
-      image: third5,
-    },
-    {
-      title: "MRI실2",
-      image: third6,
-    },
-    {
-      title: "CT실 & MRI실",
-      image: third7,
     },
   ],
   "4층": [
