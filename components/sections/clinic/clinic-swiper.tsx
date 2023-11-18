@@ -95,8 +95,10 @@ export default function ClinicSwiper() {
             viewport={{ once: true }}
           >
             <Image
+              quality={100}
               src={clinic.image}
               alt={clinic.title}
+              className="overflow-hidden rounded-3xl"
               placeholder="blur"
               priority
             />

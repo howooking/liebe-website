@@ -6,7 +6,7 @@ type SwiperCardCoverType = {
 
 export default function SwiperCardCover({ clinic }: SwiperCardCoverType) {
   return (
-    <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-gradient-to-t from-black/50 via-black/10 to-black/0 p-6 text-white">
+    <div className="absolute inset-0 flex flex-col justify-end gap-2 rounded-3xl bg-gradient-to-t from-black/50 via-black/10 to-black/0 p-6 text-white">
       <div className="flex items-center gap-1 text-base sm:text-xl">
         <clinic.Icon />
         <p>{clinic.title}</p>
