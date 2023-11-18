@@ -69,16 +69,22 @@ html {
   scroll-behavior: smooth !important;
   line-height: 1;
 }
-.scroll-snap {
-  /* scroll-snap-align: center; */
-}
-/* 
+
+/* scrollbar */
 ::-webkit-scrollbar {
-  width: 0rem;
-} */
+  width: 0.4rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-fade);
+}
 
 /* SWIPER */
-
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: var(--primary-color);
