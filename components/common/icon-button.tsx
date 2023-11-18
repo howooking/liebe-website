@@ -9,8 +9,8 @@ type IconButtonProps = {
 
 export default function IconButton({ Icon, style, naver }: IconButtonProps) {
   return (
-    <div className="p-3">
+    <button className="p-3">
       <Icon size={naver ? 16 : 24} style={style} />
-    </div>
+    </button>
   );
 }

@@ -27,9 +27,9 @@ export default function ValueSection() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/80 text-white">
                       <value.Icon size={24} />
                     </div>
-                    <h3 className="text-base font-semibold xl:text-xl">
+                    <div className="text-base font-semibold xl:text-xl">
                       {value.title}
-                    </h3>
+                    </div>
                   </div>
                   <div className="break-keep leading-5">{value.subtitle}</div>
                 </motion.li>

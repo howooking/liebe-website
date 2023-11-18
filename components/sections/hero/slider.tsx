@@ -11,14 +11,14 @@ import Copy from "./copy";
 export default function Slider() {
   return (
     <Swiper modules={[Autoplay]} autoplay={{ delay: 6000 }}>
-      {SLIDES.map((slide) => (
+      {SLIDES.map((slide, index) => (
         <SwiperSlide key={slide.title}>
           <Image
             src={slide.image}
             alt={slide.title}
             placeholder="blur"
-            priority
             className="h-[100dvh] object-cover"
+            priority={index === 0}
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />
         </SwiperSlide>

@@ -46,17 +46,13 @@ export default function TestimonialCard({
       onClick={() => setSelected(position)}
       className="absolute left-0 top-0 flex min-h-full w-full cursor-pointer flex-col justify-between p-8 shadow lg:p-12"
     >
-      <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64">
-        <Image
-          quality={100}
-          priority
-          placeholder="blur"
-          alt="testimonials"
-          src={img}
-          fill
-          className="rounded-full object-cover"
-        />
-      </div>
+      <Image
+        quality={100}
+        placeholder="blur"
+        alt="testimonials"
+        src={img}
+        className="mx-auto h-40 w-40 rounded-full object-cover sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64"
+      />
 
       <div className="my-8 text-base font-light italic leading-7 lg:text-xl">
         <div className="mb-2 flex justify-center">
