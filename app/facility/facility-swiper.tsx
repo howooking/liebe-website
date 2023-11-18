@@ -15,7 +15,7 @@ export default function FacilitySwiper({
   items,
   selected,
 }: {
-  items: { image: StaticImageData; title: string }[];
+  items: { image: StaticImageData; title: string; id: number }[];
   selected: string;
 }) {
   const { width } = useWindowSize();
@@ -30,7 +30,7 @@ export default function FacilitySwiper({
     >
       {items.map((item) => (
         <SwiperSlide
-          key={item.title}
+          key={`${item.title}-${item.id}`}
           className="hover:cursor-grab active:cursor-grabbing"
         >
           <Image
@@ -39,7 +39,7 @@ export default function FacilitySwiper({
             alt={item.title}
             placeholder="blur"
             priority
-            sizes="(min-width: 1080px) 1000px, (min-width: 460px) 94vw, (min-width: 360px) calc(75vw + 66px), calc(50vw + 126px)"
+            className="rounded-2xl"
           />
           <Cover title={item.title} />
         </SwiperSlide>

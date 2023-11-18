@@ -47,6 +47,7 @@ type FacilityImages = {
   [key: string]: LEVEL[];
 };
 export type LEVEL = {
+  id: number;
   title: string;
   image: StaticImageData;
 };
@@ -54,178 +55,223 @@ export type LEVEL = {
 export const FACILIES: FacilityImages = {
   외관: [
     {
-      title: "병원외관1",
+      id: 1,
+      title: "외관",
       image: outter1,
     },
     {
-      title: "병원외관2",
+      id: 2,
+      title: "외관",
       image: outter2,
     },
     {
-      title: "병원외관3",
+      id: 3,
+      title: "외관",
       image: outter3,
     },
     {
-      title: "병원외관4",
+      id: 4,
+      title: "외관",
       image: outter4,
     },
   ],
   "1층": [
     {
-      title: "안내데스크1",
+      id: 1,
+      title: "데스크",
       image: first1,
     },
     {
-      title: "안내데스크2",
+      id: 2,
+      title: "데스크",
       image: first2,
     },
     {
+      id: 3,
       title: "펫용품",
       image: first3,
     },
     {
-      title: "로비1",
+      id: 4,
+
+      title: "펫용품",
       image: first4,
     },
     {
-      title: "대기장소1",
+      id: 5,
+
+      title: "대기장소",
       image: first5,
     },
     {
-      title: "대기장소2",
+      id: 6,
+
+      title: "대기장소",
       image: first6,
     },
     {
-      title: "미용대기장소",
+      id: 7,
+      title: "미용 대기장소",
       image: first7,
     },
     {
+      id: 8,
       title: "미용실",
       image: first8,
     },
     {
-      title: "엘레베이터",
+      id: 9,
+      title: "미용 후 찰칵",
       image: first9,
     },
     {
-      title: "엘레베이터",
+      id: 10,
+      title: "화장실",
       image: first10,
     },
     {
+      id: 11,
       title: "엘레베이터",
       image: first11,
     },
   ],
   "2층": [
     {
-      title: "처치실 및 입원실",
+      id: 1,
+      title: "처치 및 입원실",
       image: second1,
     },
     {
+      id: 2,
       title: "입원실",
       image: second2,
     },
     {
+      id: 3,
       title: "격리입원실",
       image: second3,
     },
     {
-      title: "입원장",
+      id: 4,
+      title: "입원실",
       image: second4,
     },
     {
-      title: "특수동물 입원장",
+      id: 5,
+      title: "특수동물 입원실",
       image: second5,
     },
     {
+      id: 6,
       title: "고양이 진료대기실",
       image: second6,
     },
     {
+      id: 7,
       title: "고양이 진료실",
       image: second7,
     },
     {
-      title: "면회실",
+      id: 8,
+      title: "고양이 처치실",
       image: second8,
     },
     {
-      title: "면회실 내부",
+      id: 9,
+      title: "진료실",
       image: second9,
     },
     {
-      title: "약제실1",
+      id: 10,
+      title: "진료실",
       image: second10,
     },
     {
-      title: "약제실2",
+      id: 11,
+      title: "대기장소",
       image: second11,
     },
     {
-      title: "임상병리실",
+      id: 12,
+      title: "면회실",
       image: second12,
     },
     {
-      title: "x-ray촬영실",
+      id: 13,
+      title: "면회실 내부",
       image: second13,
     },
     {
-      title: "x-ray촬영실",
+      id: 14,
+      title: "X-ray실",
       image: second14,
     },
     {
-      title: "x-ray촬영실",
+      id: 15,
+      title: "초음파실",
       image: second15,
     },
     {
-      title: "x-ray촬영실",
+      id: 16,
+      title: "임상병리실",
       image: second16,
     },
     {
-      title: "x-ray촬영실",
+      id: 17,
+      title: "약제실",
       image: second17,
     },
   ],
   "3층": [
     {
+      id: 1,
       title: "CT실 & MRI실",
       image: third1,
     },
     {
-      title: "CT실1",
+      id: 2,
+      title: "CT실",
       image: third2,
     },
     {
-      title: "CT실2",
+      id: 3,
+      title: "CT실",
       image: third3,
     },
     {
+      id: 4,
       title: "MRI실",
       image: third4,
     },
   ],
   "4층": [
     {
-      title: "제1 수술실1",
+      id: 1,
+      title: "제1수술실",
       image: forth1,
     },
     {
-      title: "제1 수술실2",
+      id: 2,
+      title: "제1수술실",
       image: forth2,
     },
     {
-      title: "제1 수술실3",
+      id: 3,
+      title: "제1수술실",
       image: forth3,
     },
     {
+      id: 4,
       title: "수술준비실",
       image: forth4,
     },
     {
-      title: "제2 수술실",
+      id: 5,
+      title: "제2수술실",
       image: forth5,
     },
     {
+      id: 6,
       title: "산소발생기",
       image: forth6,
     },
