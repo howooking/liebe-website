@@ -38,8 +38,9 @@ export default function FacilitySwiper({
             src={item.image}
             alt={item.title}
             placeholder="blur"
-            priority={item.id === 1}
+            priority
             className="rounded-md"
+            sizes="(max-width: 1024px) calc(100vw - 24px), 1000px"
           />
           <Cover title={item.title} />
         </SwiperSlide>
