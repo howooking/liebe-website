@@ -44,7 +44,7 @@ export default function TestimonialCard({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute left-0 top-0 flex min-h-full w-full cursor-pointer flex-col justify-between p-8 shadow lg:p-12"
+      className="absolute left-0 top-0 flex min-h-full w-full cursor-pointer flex-col justify-between rounded-md p-8 shadow lg:p-12"
     >
       <Image
         quality={100}

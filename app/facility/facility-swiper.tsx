@@ -39,7 +39,7 @@ export default function FacilitySwiper({
             alt={item.title}
             placeholder="blur"
             priority
-            className="rounded-2xl"
+            className="rounded-md"
           />
           <Cover title={item.title} />
         </SwiperSlide>

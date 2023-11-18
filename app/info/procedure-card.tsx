@@ -17,10 +17,16 @@ export default function ProcedureCard({
 }: ProcedureCardProps) {
   return (
     <Card>
-      <div className="absolute flex h-12 w-12 items-center justify-center rounded-tl-[2px] bg-primary/80 text-xl font-bold text-white ">
+      <div className="absolute flex h-12 w-12 items-center justify-center rounded-tl-md bg-primary/80 text-xl font-bold text-white">
         {index}
       </div>
-      <Image src={image} alt={`${title} image`} placeholder="blur" />
+      <Image
+        src={image}
+        alt={`${title} image`}
+        placeholder="blur"
+        quality={100}
+        className="overflow-hidden rounded-t-md"
+      />
       <CardHeader className="p-0">
         <CardTitle className="pt-6 text-center text-base font-semibold md:text-xl">
           {title}

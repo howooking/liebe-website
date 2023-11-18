@@ -98,7 +98,7 @@ export default function ClinicSwiper() {
               quality={100}
               src={clinic.image}
               alt={clinic.title}
-              className="overflow-hidden rounded-2xl"
+              className="overflow-hidden rounded-md"
               placeholder="blur"
               priority={index <= 3}
               sizes="(max-width: 640px) 85vw, (max-width: 768px) 43vw, 30vw"

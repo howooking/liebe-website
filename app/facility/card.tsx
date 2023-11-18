@@ -17,7 +17,7 @@ export default function Card({
 }: ItemType) {
   return (
     <div
-      className="relative shrink-0 overflow-hidden rounded-2xl  shadow-md"
+      className="relative shrink-0 overflow-hidden rounded-md  shadow-md"
       style={{
         width: CARD_WIDTH,
         height: CARD_HEIGHT,
@@ -36,7 +36,7 @@ export default function Card({
         className="object-cover object-center"
         sizes="(min-width: 1000px) 800px, 300px"
       />
-      <div className="absolute inset-0 z-20 rounded-2xl bg-gradient-to-b from-black/40 via-black/20 to-black/0 p-4 text-sm text-white sm:text-base">
+      <div className="absolute inset-0 z-20 rounded-md bg-gradient-to-b from-black/40 via-black/20 to-black/0 p-4 text-sm text-white sm:text-base">
         <p className="font-bold">{title}</p>
       </div>
     </div>
