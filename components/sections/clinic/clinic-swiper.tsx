@@ -98,9 +98,10 @@ export default function ClinicSwiper() {
               quality={100}
               src={clinic.image}
               alt={clinic.title}
-              className="overflow-hidden rounded-3xl"
+              className="overflow-hidden rounded-2xl"
               placeholder="blur"
-              priority
+              priority={index <= 3}
+              sizes="(max-width: 640px) 85vw, (max-width: 768px) 43vw, 30vw"
             />
             <SwiperCardCover clinic={clinic} />
           </motion.div>
