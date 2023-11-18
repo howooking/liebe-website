@@ -15,7 +15,7 @@ export default function SelectButton({
       {Array.from(Array(numTracks).keys()).map((n, index) => {
         return (
           <button
-            id="al"
+            id={`al-${index}`}
             aria-label={`testiminal card ${index}`}
             key={n}
             onClick={() => setSelected(n)}

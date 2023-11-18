@@ -23,6 +23,8 @@ export default function FloatingSocials() {
     >
       <motion.div animate={open ? "open" : "closed"}>
         <Button
+          id="al"
+          aria-label="floating button to show link to sns"
           size="icon"
           onClick={() => setOpen((pv) => !pv)}
           className="hidden items-center gap-2 rounded-full bg-orange-500 px-3 py-2 text-white shadow-2xl transition hover:bg-orange-600 lg:flex"
