@@ -12,9 +12,11 @@ export default function SelectButton({
 }) {
   return (
     <div className="mt-8 flex gap-1">
-      {Array.from(Array(numTracks).keys()).map((n) => {
+      {Array.from(Array(numTracks).keys()).map((n, index) => {
         return (
           <button
+            id="al"
+            aria-label={`testiminal card ${index}`}
             key={n}
             onClick={() => setSelected(n)}
             className="relative h-1.5 w-full bg-slate-300"

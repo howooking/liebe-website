@@ -18,7 +18,7 @@ export default function Slider() {
             alt={slide.title}
             placeholder="blur"
             className="h-[100dvh] object-cover"
-            priority={index === 0}
+            priority={index <= 1}
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />
         </SwiperSlide>
