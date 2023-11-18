@@ -38,7 +38,7 @@ export default function FacilitySwiper({
             src={item.image}
             alt={item.title}
             placeholder="blur"
-            priority
+            priority={item.id === 1}
             className="rounded-md"
           />
           <Cover title={item.title} />
