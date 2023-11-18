@@ -14,7 +14,7 @@ import Procedure from "./procedure";
 export default function TimeTab() {
   return (
     <Container2>
-      <section className="pt-12">
+      <section className="pt-24">
         <div className="text-center">
           <Title>진료시간 안내</Title>
         </div>

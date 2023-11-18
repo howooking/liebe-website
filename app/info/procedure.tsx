@@ -9,7 +9,7 @@ import { PROCEDURES } from "@/constants/procedures";
 
 export default function Procedure() {
   return (
-    <section className="py-12">
+    <section className="py-24">
       <div className="text-center">
         <Title>진료절차 안내</Title>
       </div>

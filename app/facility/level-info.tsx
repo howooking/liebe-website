@@ -18,7 +18,7 @@ export default function LevelInfo({ setSelected, selected }: LevelInfoProps) {
       transition={{ duration: 1, delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <div className="mx-auto max-w-3xl divide-y-[1px] divide-slate-200">
+      <div className="mx-auto mt-6 max-w-3xl divide-y-[1px] divide-slate-200">
         {Object.keys(LEVELS_INFO).map((level) => (
           <Level
             selected={selected}

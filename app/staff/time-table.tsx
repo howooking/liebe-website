@@ -26,7 +26,7 @@ export default function TimeTable({ off }: { off?: number[] }) {
   return (
     <Table className="mt-3 w-full overflow-hidden rounded-lg">
       <TableCaption className="text-xs">
-        * 일정 변동이 있을 수 있습니다.
+        * 진료일정은 사정에 따라 변경 될 수 있습니다.
       </TableCaption>
       <TableHeader>
         <TableRow>
