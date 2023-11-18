@@ -18,9 +18,6 @@ export const metadata: Metadata = {
   title: "리베동물메디컬센터",
   description:
     "잠실 삼전동 24시동물병원 동물병원 리베동물병원 리베동물메디컬센터",
-  alternates: {
-    canonical: baseUrl,
-  },
   keywords: [
     "리베동물병원",
     "동물병원",

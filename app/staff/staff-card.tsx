@@ -37,13 +37,11 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
           </div>
 
           <Image
+            quality={100}
             src={staff.image}
             alt={staff.name}
-            width={200}
-            height={200}
             placeholder="blur"
-            className="rounded-full"
-            sizes="(min-width: 1020px) 200px, (min-width: 780px) calc(20.91vw - 9px), 200px"
+            className="h-[200px] w-[200px] rounded-full"
           />
         </div>
         <div>

@@ -1,5 +1,6 @@
 import v1 from "@/public/staff/v1.jpg";
 import v2 from "@/public/staff/v2.jpg";
+import v3 from "@/public/staff/v3.jpg";
 import v4 from "@/public/staff/v4.jpg";
 import n1 from "@/public/staff/n1.jpg";
 import n2 from "@/public/staff/n2.jpg";
@@ -10,7 +11,6 @@ import m1 from "@/public/staff/m1.jpg";
 import m2 from "@/public/staff/m2.jpg";
 import m3 from "@/public/staff/m3.jpg";
 import m4 from "@/public/staff/m4.jpg";
-import m5 from "@/public/staff/m5.jpg";
 import { StaticImageData } from "next/image";
 
 type Staffs = {
@@ -53,7 +53,7 @@ export const STAFFS: Staffs = {
     {
       name: "박철",
       title: "원장",
-      image: v1,
+      image: v3,
       history: [
         "충북대학교수의학과졸업",
         "충북대학교 내과 대학원 석사",
@@ -138,7 +138,7 @@ export const STAFFS: Staffs = {
     {
       name: "김윤희",
       title: "미용실장",
-      image: m5,
+      image: m4,
       history: ["충북대학교수의학과졸업", "충북대학교 내과 대학원 석사"],
     },
   ],
