@@ -1,4 +1,4 @@
-import { GiCat, GiRadioactive, GiTurtle } from "react-icons/gi";
+import { GiCat, GiRadioactive } from "react-icons/gi";
 import { FaStethoscope } from "react-icons/fa";
 import { RiSurgicalMaskFill } from "react-icons/ri";
 import { FaRegEye } from "react-icons/fa";

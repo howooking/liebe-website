@@ -48,14 +48,13 @@ export default function TestimonialCard({
     >
       <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48 md:h-52 md:w-52 lg:h-64 lg:w-64">
         <Image
-          quality={90}
+          quality={100}
           priority
           placeholder="blur"
           alt="testimonials"
           src={img}
           fill
           className="rounded-full object-cover"
-          sizes="(min-width: 1040px) 256px, (min-width: 780px) 208px, (min-width: 640px) 192px, 160px"
         />
       </div>
 

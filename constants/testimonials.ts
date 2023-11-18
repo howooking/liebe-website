@@ -1,4 +1,4 @@
-import testimonial1 from "@/public/testimonial/testimonial1.avif";
+import testimonial1 from "@/public/testimonial/testimonial1.jpg";
 import testimonial2 from "@/public/testimonial/testimonial2.jpg";
 import testimonial3 from "@/public/testimonial/testimonial3.jpg";
 import testimonial4 from "@/public/testimonial/testimonial4.jpg";
