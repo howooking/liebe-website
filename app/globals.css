@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #f08d47;
-  --primary-fade: #efa46f;
+  --primary-color: #f97316;
+  --primary-fade: #ff984e;
   --secondary-color: #8eb62f;
 }
 @layer base {
