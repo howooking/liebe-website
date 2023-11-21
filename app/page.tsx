@@ -4,6 +4,7 @@ import ClinicSection from "@/components/sections/clinic/clinic-section";
 import TestimonialSection from "@/components/sections/testimonial/testimonial-section";
 import MapSection from "@/components/sections/map/map-section";
 import VideosSection from "@/components/sections/videoes/videos-section";
+import QnaSection from "@/components/sections/qna/qna-section";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TestimonialSection />
       <MapSection />
       <VideosSection />
+      <QnaSection />
     </>
   );
 }
