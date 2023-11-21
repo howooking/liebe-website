@@ -1,9 +1,9 @@
 "use client";
 
+import NavLinks from "./nav-links";
+import MainLogo from "../main-logo";
 import MobileDrawer from "@/components/common/navbar/mobile-drawer";
 
-import NavLinks from "./nav-links";
-import MainLogo from "./main-logo";
 import useScrollPosition from "@/hooks/useScrollPosition";
 
 export default function Navbar() {

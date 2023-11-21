@@ -1,5 +1,5 @@
 import Container from "@/components/common/container";
-import MainLogo from "@/components/common/navbar/main-logo";
+import MainLogo from "@/components/common/main-logo";
 
 export default function FooterSection() {
   return (

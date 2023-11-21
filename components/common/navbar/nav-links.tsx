@@ -1,29 +1,22 @@
-"use client";
-
-import { SECTIONS } from "@/constants/sections";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-
-import { usePathname } from "next/navigation";
 import NavLink from "./nav-link";
-import FloatingSocials from "../floating-socials";
+
+import { NAV_LINKS } from "@/constants/sections";
 
 type NavLinksProps = {
   isScrollTop: boolean;
 };
 
 export default function NavLinks({ isScrollTop }: NavLinksProps) {
-  const path = usePathname();
   return (
     <ul
       className="mr-3 hidden items-center justify-center gap-6 lg:flex"
       style={{
         color: isScrollTop ? "#fff" : "#0f172a",
-        transition: "color 200ms ease",
+        transition: "color 200ms ease-in-out",
       }}
     >
-      {SECTIONS.map((section) => (
-        <NavLink key={section.href} section={section} path={path} />
+      {NAV_LINKS.map((navLink) => (
+        <NavLink key={navLink.href} section={navLink} />
       ))}
     </ul>
   );

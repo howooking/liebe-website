@@ -1,4 +1,4 @@
-export const SECTIONS = [
+export const NAV_LINKS = [
   {
     label: "홈으로",
     href: "/",

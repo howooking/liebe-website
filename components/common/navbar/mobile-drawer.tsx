@@ -1,11 +1,7 @@
-"use client";
-
 import { HiOutlineMenu } from "react-icons/hi";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { SECTIONS } from "@/constants/sections";
-
-import { usePathname } from "next/navigation";
+import { NAV_LINKS } from "@/constants/sections";
 import MobileDrawerLink from "./mobile-drawer-ink";
 import IconButton from "../icon-button";
 
@@ -14,7 +10,6 @@ type MobileDrawerProps = {
 };
 
 export default function MobileDrawer({ isScrollTop }: MobileDrawerProps) {
-  const path = usePathname();
   return (
     <Sheet>
       <SheetTrigger className="lg:hidden">
