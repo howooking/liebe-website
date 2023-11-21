@@ -48,7 +48,7 @@ html {
   line-height: 1;
 }
 
-/* scrollbar */
+/* SCROLL BAR */
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
