@@ -4,7 +4,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/common/navbar/navbar";
 import FooterSection from "@/components/sections/footer/footer-section";
-import FloatingSocials from "@/components/common/floating-socials";
+import FloatingPlusButton from "@/components/floating-social-button/floating-plus-button";
 import FixedSocials from "@/components/common/fixed-socials";
 
 import { cn } from "@/lib/utils";
@@ -89,7 +89,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <FooterSection />
-        <FloatingSocials />
+        <FloatingPlusButton />
         <FixedSocials />
       </body>
     </html>
