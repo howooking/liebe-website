@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Section from "@/components/common/section";
 import SectionTitle from "@/components/common/section-title";
 import { QNAS } from "@/constants/qna";
+import Circles from "@/components/common/circles";
 
 export default function QnaSection() {
   return (
@@ -26,6 +27,7 @@ export default function QnaSection() {
           ))}
         </div>
       </motion.div>
+      <Circles />
     </Section>
   );
 }

@@ -11,7 +11,7 @@ import Copy from "./copy";
 export default function Slider() {
   return (
     <Swiper modules={[Autoplay]} autoplay={{ delay: 6000 }}>
-      {SLIDES.map((slide, index) => (
+      {SLIDES.map((slide) => (
         <SwiperSlide key={slide.title}>
           <Image
             src={slide.image}
