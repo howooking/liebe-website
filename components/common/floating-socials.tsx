@@ -18,7 +18,7 @@ export default function FloatingSocials() {
       className="fixed bottom-10 right-10 z-50"
       style={{
         opacity: isScrollBottom ? 0 : 100,
-        transition: "opacity 500ms ease",
+        transition: "opacity 500ms ease-in-out",
       }}
     >
       <motion.div animate={open ? "open" : "closed"}>

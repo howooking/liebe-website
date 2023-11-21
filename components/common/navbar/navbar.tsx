@@ -14,15 +14,15 @@ export default function Navbar() {
       className="fixed z-50 w-full"
       style={{
         background: isScrollTop ? "transparent" : "white",
-        transition: "background 500ms ease",
-        // borderBottom: isScrollTop ? "none" : "solid #e2e8f0 1px",
+        transition: "background 500ms ease-in-out",
+        boxShadow: isScrollTop ? "none" : "0px 2px 4px rgba(0, 0, 0, 0.2)",
       }}
     >
-      <div className="mx-auto flex h-12 max-w-[1440px] items-center justify-between">
+      <nav className="mx-auto flex h-12 max-w-[1440px] items-center justify-between">
         <MainLogo isScrollTop={isScrollTop} />
         <NavLinks isScrollTop={isScrollTop} />
         <MobileDrawer isScrollTop={isScrollTop} />
-      </div>
+      </nav>
     </header>
   );
 }

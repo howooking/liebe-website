@@ -21,7 +21,7 @@ export default function FixedSocials() {
       style={{
         color: isScrollTop && isRoot ? "#fff" : "#1f2937",
         background: isScrollTop && isRoot ? "transparent" : "white",
-        transition: "background 500ms ease",
+        transition: "background 500ms ease-in-out",
       }}
     >
       {SOCIALS.map((social) => (

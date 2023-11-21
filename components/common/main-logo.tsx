@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoWhite from "@/public/logo.png";
-import logoFilled from "@/public/logo-filled.png";
+
 import { cn } from "@/lib/utils";
 
-type MainLogoProps = { isScrollTop?: boolean; footer?: boolean };
+import logoWhite from "@/public/logo.png";
+import logoFilled from "@/public/logo-filled.png";
+
+type MainLogoProps = { isScrollTop: boolean; footer?: boolean };
 
 export default function MainLogo({ isScrollTop, footer }: MainLogoProps) {
   return (
@@ -21,7 +23,7 @@ export default function MainLogo({ isScrollTop, footer }: MainLogoProps) {
         <span
           style={{
             color: isScrollTop || footer ? "#fff" : "#f08d47",
-            transition: "color 500ms ease",
+            transition: "color 500ms ease-in-out",
           }}
         >
           리베
@@ -29,7 +31,7 @@ export default function MainLogo({ isScrollTop, footer }: MainLogoProps) {
         <span
           style={{
             color: isScrollTop || footer ? "#fff" : "#8eb62f",
-            transition: "color 500ms ease",
+            transition: "color 500ms ease-in-out",
           }}
         >
           동물메디컬센터

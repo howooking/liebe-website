@@ -22,19 +22,15 @@ export default function MobileDrawer({ isScrollTop }: MobileDrawerProps) {
           Icon={HiOutlineMenu}
           style={{
             color: isScrollTop ? "#fff" : "#0f172a",
-            transition: "color 200ms ease",
+            transition: "color 200ms ease-in-out",
           }}
         />
       </SheetTrigger>
 
       <SheetContent side="right">
         <ul className="flex h-full flex-col items-center justify-center text-xl">
-          {SECTIONS.map((section) => (
-            <MobileDrawerLink
-              path={path}
-              section={section}
-              key={section.href}
-            />
+          {NAV_LINKS.map((navLink) => (
+            <MobileDrawerLink section={navLink} key={navLink.href} />
           ))}
         </ul>
       </SheetContent>
