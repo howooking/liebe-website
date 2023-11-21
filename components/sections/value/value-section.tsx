@@ -12,7 +12,7 @@ export default function ValueSection() {
     <div className="bg-stone-100">
       <Section>
         <Container>
-          <div className="py-12 lg:py-24">
+          <div className="px-6 py-12 lg:py-24">
             <ul className="grid grid-cols-1 justify-center gap-12 lg:grid-cols-3 lg:gap-24">
               {VALUES.map((value, index) => (
                 <motion.li

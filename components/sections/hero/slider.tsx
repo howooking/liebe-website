@@ -19,7 +19,6 @@ export default function Slider() {
             placeholder="blur"
             className="h-[100dvh] object-cover"
             priority
-            sizes="(max-width: 640px) 50vw, (max-width: 768px) 80vw, 90vw"
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />
         </SwiperSlide>
