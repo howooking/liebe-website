@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import logoWhite from "@/public/logo.png";
 import logoFilled from "@/public/logo-filled.png";
 
-type MainLogoProps = { isScrollTop: boolean; footer?: boolean };
+type MainLogoProps = { isScrollTop?: boolean; footer?: boolean };
 
 export default function MainLogo({ isScrollTop, footer }: MainLogoProps) {
   return (
