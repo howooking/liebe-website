@@ -1,17 +1,18 @@
 "use client";
 
-import { SOCIALS } from "@/constants/socials";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react";
-import IconButton from "./icon-button";
+
 import useScrollPosition from "@/hooks/useScrollPosition";
+import IconButton from "./icon-button";
+
+import { SOCIALS } from "@/constants/socials";
 
 export default function FixedSocials() {
   const { isScrollTop } = useScrollPosition();
 
   const path = usePathname();
-  const isRoot = useMemo(() => path === "/", [path]);
+  const isRoot = path === "/";
 
   return (
     <div

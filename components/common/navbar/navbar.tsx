@@ -15,7 +15,7 @@ export default function Navbar() {
       style={{
         background: isScrollTop ? "transparent" : "white",
         transition: "background 500ms ease-in-out",
-        boxShadow: isScrollTop ? "none" : "0px 2px 4px rgba(0, 0, 0, 0.2)",
+        boxShadow: isScrollTop ? "none" : "0px 1px 8px rgba(0, 0, 0, 0.1)",
       }}
     >
       <nav className="mx-auto flex h-12 max-w-[1440px] items-center justify-between">
