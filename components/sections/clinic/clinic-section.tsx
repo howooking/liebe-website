@@ -2,7 +2,7 @@ import Section from "@/components/common/section";
 import SectionTitle from "@/components/common/section-title";
 import Container from "@/components/common/container";
 import ClinicSwiper from "./clinic-swiper";
-import Circles from "../../common/circles";
+import BackgroundCircles from "../../common/background-circles";
 
 export default function ClinicSection() {
   return (
@@ -18,7 +18,7 @@ export default function ClinicSection() {
           <ClinicSwiper />
         </div>
       </Container>
-      <Circles />
+      <BackgroundCircles />
     </Section>
   );
 }

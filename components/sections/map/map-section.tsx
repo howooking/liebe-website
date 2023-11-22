@@ -1,8 +1,8 @@
 import Section from "@/components/common/section";
+import Container from "@/components/common/container";
 import GoogleMap from "./google-map";
 import Contact from "./contact";
-import Container from "@/components/common/container";
-import Circles2 from "@/components/common/circles2";
+import BackgroundCircles from "@/components/common/background-circles";
 
 export default function MapSection() {
   return (
@@ -13,7 +13,7 @@ export default function MapSection() {
           <Contact />
         </div>
       </Container>
-      <Circles2 />
+      <BackgroundCircles opposite />
     </Section>
   );
 }

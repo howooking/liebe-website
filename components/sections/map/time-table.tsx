@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils";
-
 import {
   Table,
   TableBody,
@@ -8,10 +6,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
+import { cn } from "@/lib/utils";
 import { TIME_INFOS } from "@/constants/time-infos";
 
-export default function TimeInfo() {
+export default function TimeTable() {
   return (
     <Table className="overflow-hidden rounded-md">
       <TableHeader className="bg-slate-100">
