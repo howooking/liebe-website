@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 
 import Container from "@/components/common/container";
 import { VALUES } from "./values";
+import Section from "@/components/common/section";
 
 export default function ValueSection() {
   return (
-    <div className="bg-stone-100">
+    <Section bgStone>
       <Container>
         <div className="px-6 py-12 lg:py-24">
           <ul className="grid grid-cols-1 justify-center gap-12 lg:grid-cols-3 lg:gap-24">
@@ -34,6 +35,6 @@ export default function ValueSection() {
           </ul>
         </div>
       </Container>
-    </div>
+    </Section>
   );
 }

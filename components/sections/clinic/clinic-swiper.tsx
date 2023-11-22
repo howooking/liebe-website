@@ -1,78 +1,41 @@
 "use client";
 
-// Import Swiper React components
-
-import { Navigation, Scrollbar } from "swiper/modules";
-
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { Navigation, Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 
-import { CLINICS } from "@/constants/clinics";
-import Image from "next/image";
 import SwiperCardCover from "./swiper-card-cover";
-import { motion } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
-import { useCallback } from "react";
+import { CLINICS } from "@/constants/clinics";
 
 export default function ClinicSwiper() {
   const { width } = useWindowSize();
   const slidesPerView = useCallback(() => {
-    if (!width) {
-      return 3.2;
-    }
-    // sm
-    if (width <= 640) {
-      return 1.1;
-    }
-    // md
-    if (width > 640 && width <= 768) {
-      return 2.15;
-    }
-    // lg
-    if (width > 768) {
-      return 3.2;
-    }
+    if (!width) return 3.2;
+    if (width <= 640) return 1.1;
+    if (width <= 768) return 2.15;
+    return 3.2;
   }, [width]);
 
   const delay = useCallback(
     (index: number) => {
-      if (!width) {
-        return 0.5;
-      }
-      // sm
-      if (width <= 640) {
-        return 0.5;
-      }
-      // md
-      if (width > 640 && width <= 768) {
-        if (index <= 2) {
-          return 0.5 * index;
-        }
-        return 0;
-      }
-      // lg
-      if (width > 768) {
-        if (index <= 3) {
-          return 0.5 * index;
-        }
-        return 0;
-      }
+      if (!width) return 0.5;
+      if (width <= 640) return 0.5;
+      if (width <= 768) return index <= 2 ? 0.5 * index : 0;
+      return index <= 3 ? 0.5 * index : 0;
     },
     [width],
   );
 
   const spaceBetween = useCallback(() => {
-    if (!width) {
-      return 24;
-    }
-    // sm
-    if (width <= 640) {
-      return 12;
-    }
+    if (!width) return 24;
+    if (width <= 640) return 12;
+    return 24;
   }, [width]);
 
   return (
@@ -82,12 +45,10 @@ export default function ClinicSwiper() {
       slidesPerView={slidesPerView()}
       navigation={width! <= 640 ? false : true}
       scrollbar={{ draggable: true }}
+      className="select-none hover:cursor-grab active:cursor-grabbing"
     >
       {CLINICS.map((clinic, index) => (
-        <SwiperSlide
-          key={clinic.id}
-          className="hover:cursor-grab active:cursor-grabbing"
-        >
+        <SwiperSlide key={clinic.id}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

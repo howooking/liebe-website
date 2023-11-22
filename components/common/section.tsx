@@ -1,14 +1,15 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-export default function Section({
-  children,
-  id,
-}: {
+type SectionProps = {
   children: React.ReactNode;
   id?: string;
-}) {
+  bgStone?: boolean;
+};
+
+export default function Section({ children, id, bgStone }: SectionProps) {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -16,7 +17,10 @@ export default function Section({
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       id={id}
-      className="relative scroll-mt-[48px] overflow-hidden"
+      className={cn(
+        "relative scroll-mt-[48px] overflow-hidden",
+        bgStone ? "bg-stone-100" : "",
+      )}
     >
       {children}
     </motion.section>
