@@ -5,14 +5,14 @@ import { useMemo, useState } from "react";
 import Banner from "@/components/common/banner";
 import facilityBanner from "@/public/facility/facility-banner.jpg";
 import Tabs from "@/components/common/tab";
-import Container2 from "@/components/common/container2";
+import ContainerNarrow from "@/components/common/container-narrow";
 import Section from "@/components/common/section";
 import FacilitySwiper from "./facility-swiper";
 import LevelInfo from "./level-info";
 
 import { FACILIES } from "@/constants/facilities";
 
-export default function FacilityClientComponent() {
+export default function FacilityClient() {
   const tabs = useMemo(() => Object.keys(FACILIES), []);
   const [selected, setSelected] = useState(tabs[0]);
 
@@ -25,12 +25,12 @@ export default function FacilityClientComponent() {
       />
       <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
       <div className="bg-stone-100">
-        <Container2>
+        <ContainerNarrow>
           <div className="py-12">
             <FacilitySwiper items={FACILIES[selected]} selected={selected} />
             <LevelInfo selected={selected} setSelected={setSelected} />
           </div>
-        </Container2>
+        </ContainerNarrow>
       </div>
     </Section>
   );

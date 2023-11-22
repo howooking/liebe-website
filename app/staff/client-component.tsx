@@ -1,16 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
+
 import Tabs from "@/components/common/tab";
 import Banner from "@/components/common/banner";
 import Section from "@/components/common/section";
-import Container2 from "@/components/common/container2";
+import ContainerNarrow from "@/components/common/container-narrow";
 import StaffCard from "./staff-card";
-
 import { STAFFS } from "@/constants/staffs";
 import staffBanner from "@/public/staff/staff-banner.jpg";
 
-export default function StaffClientComponent() {
+export default function StaffClient() {
   const tabs = useMemo(() => Object.keys(STAFFS), []);
   const [selected, setSelected] = useState(tabs[0]);
   return (
@@ -27,7 +27,7 @@ export default function StaffClientComponent() {
       />
       <Tabs tabs={tabs} selected={selected} setSelected={setSelected} />
       <div className="bg-stone-100">
-        <Container2>
+        <ContainerNarrow>
           <ul className="grid-col-1 grid gap-6 py-12 md:grid-cols-2">
             {STAFFS[selected].map((staff, index) => (
               <StaffCard
@@ -38,7 +38,7 @@ export default function StaffClientComponent() {
               />
             ))}
           </ul>
-        </Container2>
+        </ContainerNarrow>
       </div>
     </Section>
   );

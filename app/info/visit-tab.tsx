@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { FaBowlFood, FaCamera, FaEye, FaDog, FaCheck } from "react-icons/fa6";
 
-import Container2 from "@/components/common/container2";
+import ContainerNarrow from "@/components/common/container-narrow";
 import Title from "@/components/common/title";
 import Highlight from "@/components/common/highlight";
 import TimeCard from "./time-card";
@@ -11,7 +11,7 @@ import CheckLine from "@/components/common/check-line";
 
 export default function VisitTab() {
   return (
-    <Container2>
+    <ContainerNarrow>
       <section className="py-24">
         <div className="text-center">
           <Title>입원 및 면회 안내</Title>
@@ -21,8 +21,8 @@ export default function VisitTab() {
             <motion.div
               key={info.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.5 }}
               viewport={{ once: true }}
             >
               <TimeCard Icon={info.Icon} title={info.title}>
@@ -32,7 +32,7 @@ export default function VisitTab() {
           ))}
         </div>
       </section>
-    </Container2>
+    </ContainerNarrow>
   );
 }
 

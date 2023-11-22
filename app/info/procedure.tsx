@@ -1,10 +1,7 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 import Title from "@/components/common/title";
 import ProcedureCard from "./procedure-card";
-
 import { PROCEDURES } from "@/constants/procedures";
 
 export default function Procedure() {
@@ -18,8 +15,8 @@ export default function Procedure() {
           <motion.li
             key={index}
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: (index + 2) * 0.2 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: (index + 1) * 0.5 }}
             viewport={{ once: true }}
           >
             <ProcedureCard

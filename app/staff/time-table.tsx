@@ -30,24 +30,17 @@ export default function TimeTable({ off }: { off?: number[] }) {
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead className="border-r text-center text-slate-900 ">
-            일
-          </TableHead>
-          <TableHead className="border-r text-center text-slate-900 ">
-            월
-          </TableHead>
-          <TableHead className="border-r text-center text-slate-900 ">
-            화
-          </TableHead>
-          <TableHead className="border-r text-center text-slate-900 ">
-            수
-          </TableHead>
-          <TableHead className="border-r text-center text-slate-900 ">
-            목
-          </TableHead>
-          <TableHead className="border-r text-center text-slate-900 ">
-            금
-          </TableHead>
+          {["일", "월", "화", "수", "목", "금", "토"].map((day, index) => (
+            <TableHead
+              key={index}
+              className={cn(
+                "border-r text-center text-slate-900",
+                index === 6 ? "" : "border-r",
+              )}
+            >
+              {day}
+            </TableHead>
+          ))}
           <TableHead className="text-center text-slate-900 ">토</TableHead>
         </TableRow>
       </TableHeader>
@@ -62,9 +55,7 @@ export default function TimeTable({ off }: { off?: number[] }) {
               )}
             >
               <div
-                className={cn(
-                  schedule === "휴" ? "font-bold text-rose-500" : "hidden",
-                )}
+                className={cn(schedule === "휴" && "font-bold text-rose-500")}
               >
                 {schedule}
               </div>
@@ -75,10 +66,3 @@ export default function TimeTable({ off }: { off?: number[] }) {
     </Table>
   );
 }
-
-const invoices = [
-  {
-    invoice: "휴무",
-    paymentStatus: "휴무",
-  },
-];

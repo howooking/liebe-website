@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 
-import Container from "@/components/common/container";
+import ContainerWide from "@/components/common/container-wide";
 import { VALUES } from "../../../constants/values";
 import Section from "@/components/common/section";
 
 export default function ValueSection() {
   return (
     <Section bgStone>
-      <Container>
+      <ContainerWide>
         <div className="px-6 py-12 lg:py-24">
           <ul className="grid grid-cols-1 justify-center gap-12 lg:grid-cols-3 lg:gap-24">
             {VALUES.map((value, index) => (
@@ -34,7 +34,7 @@ export default function ValueSection() {
             ))}
           </ul>
         </div>
-      </Container>
+      </ContainerWide>
     </Section>
   );
 }

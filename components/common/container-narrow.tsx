@@ -1,4 +1,4 @@
-export default function Container2({
+export default function ContainerNarrow({
   children,
 }: {
   children: React.ReactNode;

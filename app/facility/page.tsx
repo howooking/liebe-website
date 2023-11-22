@@ -1,4 +1,4 @@
-import FacilityClientComponent from "./client-component";
+import FacilityClient from "./client-component";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function FacilityPage() {
-  return <FacilityClientComponent />;
+  return <FacilityClient />;
 }

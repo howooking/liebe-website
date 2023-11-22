@@ -1,13 +1,13 @@
 import Section from "@/components/common/section";
 import SectionTitle from "@/components/common/section-title";
-import Container from "@/components/common/container";
+import ContainerWide from "@/components/common/container-wide";
 import ClinicSwiper from "./clinic-swiper";
 import BackgroundCircles from "../../common/background-circles";
 
 export default function ClinicSection() {
   return (
     <Section id="clinic">
-      <Container>
+      <ContainerWide>
         <div className="py-12 sm:py-24">
           <div className="text-center">
             <SectionTitle
@@ -17,7 +17,7 @@ export default function ClinicSection() {
           </div>
           <ClinicSwiper />
         </div>
-      </Container>
+      </ContainerWide>
       <BackgroundCircles />
     </Section>
   );

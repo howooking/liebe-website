@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Section from "@/components/common/section";
 import SectionTitle from "@/components/common/section-title";
-import Container from "@/components/common/container";
+import ContainerWide from "@/components/common/container-wide";
 import SelectButton from "./select-button";
 import TestimonialCards from "./testimonial-cards";
 import { TESTIMONIALS } from "@/constants/testimonials";
@@ -14,7 +14,7 @@ export default function TestimonialSection() {
 
   return (
     <Section bgStone>
-      <Container>
+      <ContainerWide>
         <div className="grid grid-cols-1 items-center gap-8 overflow-hidden pb-20 pt-12 sm:pb-40 sm:pt-24 lg:grid-cols-2 lg:gap-24 ">
           <div>
             <SectionTitle
@@ -38,7 +38,7 @@ export default function TestimonialSection() {
             selected={selected}
           />
         </div>
-      </Container>
+      </ContainerWide>
     </Section>
   );
 }

@@ -1,4 +1,4 @@
-import StaffClientComponent from "./client-component";
+import StaffClient from "./client-component";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function StaffPage() {
-  return <StaffClientComponent />;
+  return <StaffClient />;
 }

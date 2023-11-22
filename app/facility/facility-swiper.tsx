@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 
 import Cover from "./cover";
-
 import useWindowSize from "@/hooks/useWindowSize";
 
 export default function FacilitySwiper({
