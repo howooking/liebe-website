@@ -8,8 +8,9 @@ type CopyProps = {
 
 export default function Copy({ subtitle, title }: CopyProps) {
   return (
-    <div className="absolute left-0 top-0 z-50 w-screen">
+    <div className="absolute inset-0 z-50 w-screen select-none">
       <motion.div
+        key={title}
         className="flex h-[100dvh] w-full flex-col items-center justify-center "
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}

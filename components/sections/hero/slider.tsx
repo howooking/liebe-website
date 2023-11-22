@@ -3,10 +3,9 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
 
-import { SLIDES } from "@/constants/slides";
 import Copy from "./copy";
+import { SLIDES } from "@/constants/slides";
 
 export default function Slider() {
   return (
@@ -17,8 +16,8 @@ export default function Slider() {
             src={slide.image}
             alt={slide.title}
             placeholder="blur"
-            className="h-[100dvh] object-cover"
             priority
+            className="h-[100dvh] object-cover"
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />
         </SwiperSlide>
