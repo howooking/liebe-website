@@ -39,6 +39,7 @@ export default function NavLink({ section: { label, href } }: NavLinkProps) {
       ) : (
         <Link
           target={label === "보호자안내서" ? "_blank" : "_self"}
+          rel={label === "보호자안내서" ? "noopener noreferrer" : undefined}
           href={href}
           className={cn(label === "홈으로" ? "md:hidden" : "block", "relative")}
           onMouseEnter={() => setHovered(true)}

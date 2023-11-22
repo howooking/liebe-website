@@ -30,6 +30,7 @@ export default function FixedSocials() {
           href={social.href}
           key={social.label}
           target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center"
         >
           <IconButton Icon={social.icon} naver={social.label === "naver"} />

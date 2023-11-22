@@ -39,7 +39,7 @@ export default function SnsButton({
   };
 
   return (
-    <Link href={href} target="_blank">
+    <Link href={href} target="_blank" rel="noopener noreferrer">
       <motion.div
         variants={itemVariants}
         onClick={() => setOpen(false)}

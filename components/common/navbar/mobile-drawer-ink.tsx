@@ -24,6 +24,7 @@ export default function MobileDrawerLink({
             href={href}
             className="px-1.5 py-3"
             target={label === "보호자안내서" ? "_blank" : "_self"}
+            rel={label === "보호자안내서" ? "noopener noreferrer" : undefined}
           >
             {label}
           </Link>
