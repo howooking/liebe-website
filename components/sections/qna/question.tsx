@@ -26,7 +26,7 @@ export default function Question({
               color: "rgba(3, 6, 23, 1)",
             },
           }}
-          className="text-lg bg-primary bg-clip-text text-left font-semibold"
+          className="text-lg bg-primary bg-clip-text pb-0.5 text-left font-semibold"
         >
           {question}
         </motion.span>

@@ -13,9 +13,9 @@ export default function Home() {
       <ValueSection />
       <ClinicSection />
       <TestimonialSection />
-      <MapSection />
-      <VideosSection />
       <QnaSection />
+      <VideosSection />
+      <MapSection />
     </>
   );
 }

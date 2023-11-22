@@ -69,7 +69,7 @@ const Level = ({
               color: "rgba(15, 23, 42, 1)",
             },
           }}
-          className="text-lg bg-primary bg-clip-text text-left font-semibold"
+          className="text-lg bg-primary bg-clip-text pb-0.5 text-left font-semibold"
         >
           {level} 안내
         </motion.span>
