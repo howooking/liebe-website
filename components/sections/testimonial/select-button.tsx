@@ -12,14 +12,14 @@ export default function SelectButton({
 }) {
   return (
     <div className="mt-8 flex gap-1">
-      {Array.from(Array(numTracks).keys()).map((n, index) => {
+      {Array.from(Array(numTracks).keys()).map((n) => {
         return (
           <button
-            id={`al-${index}`}
-            aria-label={`testiminal card ${index}`}
+            id={`al-${n}`}
+            aria-label={`testiminal card ${n}`}
             key={n}
             onClick={() => setSelected(n)}
-            className="relative h-1.5 w-full bg-slate-300"
+            className="relative h-2 w-full bg-slate-300"
           >
             {selected === n ? (
               <motion.span
@@ -31,7 +31,7 @@ export default function SelectButton({
                   width: "100%",
                 }}
                 transition={{
-                  duration: 5,
+                  duration: 6,
                 }}
                 onAnimationComplete={() => {
                   setSelected(selected === numTracks - 1 ? 0 : selected + 1);

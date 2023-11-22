@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 import Container from "@/components/common/container";
-import { VALUES } from "./values";
+import { VALUES } from "../../../constants/values";
 import Section from "@/components/common/section";
 
 export default function ValueSection() {

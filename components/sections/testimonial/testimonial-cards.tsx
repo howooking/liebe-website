@@ -16,8 +16,8 @@ export default function TestimonialCards({
       {testimonials.map((testimonial, i) => {
         return (
           <TestimonialCard
-            {...testimonial}
             key={i}
+            {...testimonial}
             position={i}
             selected={selected}
             setSelected={setSelected}
