@@ -6,7 +6,7 @@ import Banner from "@/components/common/banner";
 import Section from "@/components/common/section";
 import Tabs from "@/components/common/tab";
 import infoBanner from "@/public/info/info-banner.jpg";
-import { INFO_TABS } from "@/constants/info-page";
+import { INFO_TABS } from "@/constants/info-tabs";
 import TimeTab from "./time-tab";
 import VisitTab from "./visit-tab";
 

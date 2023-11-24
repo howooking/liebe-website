@@ -1,6 +1,6 @@
 import NavLink from "./nav-link";
 
-import { NAV_LINKS } from "@/constants/sections";
+import { NAV_LINKS } from "@/constants/nav-links";
 
 type NavLinksProps = {
   isScrollTop: boolean;

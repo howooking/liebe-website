@@ -25,7 +25,7 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
         <div className="flex flex-col-reverse items-center justify-between md:flex-row md:items-start">
           {/* Staff Information Section */}
           <div className="flex flex-col items-center  gap-4 md:items-start">
-            <div className="space-x-1">
+            <div className="mt-2 space-x-1">
               <span className="text-xl font-bold">{staff.name}</span>
               <span className="text-xl font-thin">{staff.title}</span>
             </div>

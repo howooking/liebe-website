@@ -24,6 +24,10 @@ export const NAV_LINKS = [
     href: "/#map",
   },
   {
+    label: "미용안내",
+    href: "/grooming",
+  },
+  {
     label: "보호자안내서",
     href: "https://sites.google.com/view/ramginfo",
   },

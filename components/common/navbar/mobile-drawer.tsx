@@ -1,7 +1,7 @@
 import { HiOutlineMenu } from "react-icons/hi";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { NAV_LINKS } from "@/constants/sections";
+import { NAV_LINKS } from "@/constants/nav-links";
 import MobileDrawerLink from "./mobile-drawer-ink";
 import IconButton from "../icon-button";
 
