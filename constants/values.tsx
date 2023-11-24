@@ -24,9 +24,8 @@ export const VALUES = [
     ),
     subtitle: (
       <>
-        <Highlight className="font-semibold">사랑</Highlight>과 전문 의료로
-        당신의 반려동물을 책임지고 지켜드립니다. 함께하는 따뜻한 치료, 언제나
-        당신과 함께합니다.
+        <Highlight className="font-semibold">사랑</Highlight>의 손길로
+        보호자님들과 소중한 아이들을 책임지고 지켜드리겠습니다.
       </>
     ),
     Icon: FaHeart,
@@ -40,8 +39,7 @@ export const VALUES = [
     subtitle: (
       <>
         <Highlight className="font-semibold">원칙</Highlight>을 바탕으로 하는
-        전문 의료로, 당신의 반려동물을 안전하게 돌봐 드립니다. 높은 기술과
-        인간적인 손길로 편안한 치료를 약속합니다.
+        전문 의료서비스를 약속합니다.
       </>
     ),
     Icon: FaRoad,

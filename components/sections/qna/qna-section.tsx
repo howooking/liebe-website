@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import Section from "@/components/common/section";
 import SectionTitle from "@/components/common/section-title";
 import BackgroundCircles from "@/components/common/background-circles";
-import { QNAS } from "@/constants/qna";
 import Question from "./question";
+import { QNAS } from "@/constants/qna";
 
 export default function QnaSection() {
   return (
@@ -22,7 +22,7 @@ export default function QnaSection() {
           <SectionTitle title="자주 묻는 질문" />
           {QNAS.map((qna) => (
             <Question question={qna.question} key={qna.question}>
-              <p>{qna.answer}</p>
+              <div className="leading-6">{qna.answer}</div>
             </Question>
           ))}
         </div>

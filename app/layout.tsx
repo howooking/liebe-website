@@ -69,6 +69,8 @@ export const metadata: Metadata = {
     "동물한방병원",
     "한방동물병원",
     "강아지재활센터",
+    "강아지미용",
+    "강아지목욕",
   ],
   applicationName: "리베동물병원 홈페이지",
   category: "동물병원",
