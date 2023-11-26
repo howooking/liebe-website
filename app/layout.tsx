@@ -86,6 +86,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <meta
+        name="naver-site-verification"
+        content="215db4ecd1751800c9ae0507143626a391e720ed"
+      />
       <body
         className={cn("relative text-slate-900 antialiased", font.className)}
       >
