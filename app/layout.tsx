@@ -76,6 +76,7 @@ export const metadata: Metadata = {
   category: "동물병원",
   classification: "동물병원",
   creator: " Howoo",
+  verification: { google: "wY3QAZW61pL73SdqLV6UUTaurZT61xSioIaQYOilQ2o" },
 };
 
 export default function RootLayout({

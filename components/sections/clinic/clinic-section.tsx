@@ -12,7 +12,7 @@ export default function ClinicSection() {
           <div className="text-center">
             <SectionTitle
               title="LIEBE CLINIC"
-              subtitle={<>전문의가 함께하는 리베의 클리닉을 소개합니다</>}
+              subtitle={<>전문가와 함께하는 리베의 클리닉을 소개합니다</>}
             />
           </div>
           <ClinicSwiper />
