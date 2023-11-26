@@ -17,7 +17,7 @@ export default function Slider() {
             alt={slide.title}
             placeholder="blur"
             priority
-            className="h-[100dvh] object-cover"
+            className="h-screen object-cover"
           />
           <Copy subtitle={slide.subtitle} title={slide.title} />
         </SwiperSlide>

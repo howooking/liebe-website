@@ -5,7 +5,7 @@ export default function GoogleMap() {
       width="100%"
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-      className="relative z-10 h-[70dvh] rounded-md md:h-auto"
+      className="relative z-10 h-[70vh] rounded-md md:h-auto"
     />
   );
 }
