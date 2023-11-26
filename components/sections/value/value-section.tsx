@@ -19,7 +19,7 @@ export default function ValueSection() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: (index + 1) * 0.5 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
               >
                 <div className="flex items-center gap-2">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/80 text-white">

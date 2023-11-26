@@ -13,7 +13,7 @@ export default function Home() {
       <ValueSection />
       <ClinicSection />
       {/* <TestimonialSection /> */}
-      <QnaSection />
+      {/* <QnaSection /> */}
       <VideosSection />
       <MapSection />
     </>
