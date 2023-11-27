@@ -35,7 +35,6 @@ const Chip = ({
   selected: boolean;
   setSelected: Dispatch<SetStateAction<string>>;
 }) => {
-  const router = useRouter();
   const handleClickTab = () => {
     setSelected(text);
   };

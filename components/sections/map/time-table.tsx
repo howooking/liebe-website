@@ -14,12 +14,8 @@ export default function TimeTable() {
     <Table className="overflow-hidden rounded-md">
       <TableHeader className="bg-slate-100">
         <TableRow>
-          <TableHead className="h-auto p-2 text-center text-slate-900">
-            분류
-          </TableHead>
-          <TableHead className="h-auto p-2 text-center text-slate-900">
-            시간
-          </TableHead>
+          <TableHead className="h-auto p-2 text-center">분류</TableHead>
+          <TableHead className="h-auto p-2 text-center">시간</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody className="overflow-hidden rounded-md">

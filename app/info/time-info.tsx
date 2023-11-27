@@ -4,7 +4,7 @@ import { MdLunchDining } from "react-icons/md";
 
 import { Badge } from "@/components/ui/badge";
 
-const Time = ({ title, time }: { title: string; time: string }) => (
+export const Time = ({ title, time }: { title: string; time: string }) => (
   <div className="flex items-center gap-1">
     <Badge className="rounded-full bg-slate-800 px-2 py-1 text-sm font-normal">
       {title}

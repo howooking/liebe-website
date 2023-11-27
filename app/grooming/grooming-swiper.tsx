@@ -23,38 +23,28 @@ export default function GroomingSwiper() {
   }, [width]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
-      viewport={{ once: true }}
-      className="mt-12 md:mt-6"
+    <Swiper
+      slidesPerView={slidesPerView()}
+      modules={[Navigation, Scrollbar]}
+      spaceBetween={24}
+      navigation={width! <= 640 ? false : true}
+      scrollbar={{ draggable: true }}
+      className="col-span-2 w-full hover:cursor-grab active:cursor-grabbing"
     >
-      <Swiper
-        slidesPerView={slidesPerView()}
-        modules={[Navigation, Scrollbar]}
-        spaceBetween={24}
-        navigation={width! <= 640 ? false : true}
-        scrollbar={{ draggable: true }}
-      >
-        {GROOMINGS.map((grooming) => (
-          <SwiperSlide
-            key={grooming.id}
-            className="hover:cursor-grab active:cursor-grabbing"
-          >
-            <Image
-              quality={100}
-              src={grooming.image}
-              alt={grooming.title}
-              placeholder="blur"
-              priority
-              className="rounded-md"
-              sizes="(max-width: 1024px) calc(100vw - 24px), 1000px"
-            />
-            <Cover title={grooming.title} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </motion.div>
+      {GROOMINGS.map((grooming) => (
+        <SwiperSlide key={grooming.id}>
+          <Image
+            quality={100}
+            src={grooming.image}
+            alt={grooming.title}
+            placeholder="blur"
+            priority
+            className="rounded-md"
+            sizes="(max-width: 1024px) calc(100vw - 24px), 1000px"
+          />
+          <Cover title={grooming.title} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }

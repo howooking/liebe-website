@@ -3,11 +3,12 @@
 import Banner from "@/components/common/banner";
 import ContainerNarrow from "@/components/common/container-narrow";
 import Section from "@/components/common/section";
-import Title from "@/components/common/title";
 import groomingBanner from "@/public/grooming/grooming-banner.jpg";
 import GroomingSwiper from "./grooming-swiper";
-import GroomingInfo from "./grooming-info";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import TimeInfo from "./time-info";
+import CostInfo from "./cost-info";
 
 export default function GroomingClient() {
   return (
@@ -28,18 +29,23 @@ export default function GroomingClient() {
           </div>
         }
       />
-      <div className="bg-stone-100">
+      <div className="bg-stone-100 py-12">
         <ContainerNarrow>
-          <div className="py-12">
-            <GroomingInfo />
-            <GroomingSwiper />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="grid grid-cols-1 space-y-6 lg:grid-cols-3 lg:gap-6 lg:space-y-0">
+              <TimeInfo />
+              <GroomingSwiper />
+            </div>
+
+            <CostInfo />
+          </motion.div>
         </ContainerNarrow>
       </div>
     </Section>
   );
 }
-
-// <Link href="liebeamc_9room" target="_blank" rel="noopener noreferrer">
-//   인스타 보러가기
-// </Link>
