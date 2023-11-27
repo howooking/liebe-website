@@ -6,12 +6,12 @@ import n1 from "@/public/staff/n1.jpg";
 import n2 from "@/public/staff/n2.jpg";
 import n3 from "@/public/staff/n3.jpg";
 import n4 from "@/public/staff/n4.jpg";
-import n5 from "@/public/staff/n5.jpg";
 import n6 from "@/public/staff/n6.jpg";
 import m1 from "@/public/staff/m1.jpg";
 import m2 from "@/public/staff/m2.jpg";
 import m3 from "@/public/staff/m3.jpg";
 import m4 from "@/public/staff/m4.jpg";
+import m5 from "@/public/staff/m5.jpg";
 import { StaticImageData } from "next/image";
 
 type Staffs = {
@@ -132,7 +132,7 @@ export const STAFFS: Staffs = {
     {
       name: "김윤희",
       title: "미용실장",
-      image: m4,
+      image: m5,
     },
   ],
 };

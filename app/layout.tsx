@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   applicationName: "리베동물병원 홈페이지",
   category: "동물병원",
   classification: "동물병원",
-  creator: " Howoo",
+  creator: "howoo",
   verification: { google: "wY3QAZW61pL73SdqLV6UUTaurZT61xSioIaQYOilQ2o" },
 };
 
