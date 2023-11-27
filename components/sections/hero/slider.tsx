@@ -9,7 +9,7 @@ import { SLIDES } from "@/constants/slides";
 
 export default function Slider() {
   return (
-    <Swiper modules={[Autoplay]} autoplay={{ delay: 6000 }}>
+    <Swiper modules={[Autoplay]} autoplay={{ delay: 6000 }} speed={1000}>
       {SLIDES.map((slide) => (
         <SwiperSlide key={slide.title}>
           <Image
