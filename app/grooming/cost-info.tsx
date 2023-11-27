@@ -1,6 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaCut } from "react-icons/fa";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import CostTable from "./cost-table";
 import GroomingTabs from "./grooming-tabs";
 import AdditionalCost from "./additional-cost";

@@ -11,8 +11,6 @@ import useWindowSize from "@/hooks/useWindowSize";
 import { GROOMINGS } from "@/constants/groomings";
 import Cover from "./cover";
 import { useCallback } from "react";
-import Title from "@/components/common/title";
-import { motion } from "framer-motion";
 
 export default function GroomingSwiper() {
   const { width } = useWindowSize();
@@ -29,7 +27,7 @@ export default function GroomingSwiper() {
       spaceBetween={24}
       navigation={width! <= 640 ? false : true}
       scrollbar={{ draggable: true }}
-      className="col-span-2 w-full hover:cursor-grab active:cursor-grabbing"
+      className="col-span-2 w-full select-none hover:cursor-grab active:cursor-grabbing"
     >
       {GROOMINGS.map((grooming) => (
         <SwiperSlide key={grooming.id}>
@@ -38,9 +36,9 @@ export default function GroomingSwiper() {
             src={grooming.image}
             alt={grooming.title}
             placeholder="blur"
+            sizes="(min-width: 1060px) 318px, (min-width: 800px) 376px, (min-width: 660px) 306px, 276px"
             priority
             className="rounded-md"
-            sizes="(max-width: 1024px) calc(100vw - 24px), 1000px"
           />
           <Cover title={grooming.title} />
         </SwiperSlide>

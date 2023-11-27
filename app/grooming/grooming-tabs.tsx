@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { GROOMING_TABS } from "./cost-info";
 
 type GroomingTabsProps = {

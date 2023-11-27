@@ -26,6 +26,7 @@ export default function ProcedureCard({
         placeholder="blur"
         quality={100}
         className="overflow-hidden rounded-t-md"
+        sizes="(min-width: 1100px) 316px, (min-width: 780px) calc(27vw + 24px), calc(100vw - 25px)"
       />
       <CardHeader className="p-0">
         <CardTitle className="pt-6 text-center text-base font-semibold md:text-xl">

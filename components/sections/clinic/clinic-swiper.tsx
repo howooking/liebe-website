@@ -62,7 +62,7 @@ export default function ClinicSwiper() {
               className="overflow-hidden rounded-md"
               placeholder="blur"
               priority={index <= 3}
-              sizes="(max-width: 640px) 85vw, (max-width: 768px) 43vw, 30vw"
+              sizes="(min-width: 1520px) 426px, (min-width: 780px) 28.61vw, (min-width: 660px) calc(46vw - 21px), (min-width: 440px) 82vw, calc(100vw - 24px)"
             />
             <SwiperCardCover clinic={clinic} />
           </motion.div>

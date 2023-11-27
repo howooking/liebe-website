@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import { motion } from "framer-motion";
+
 import Banner from "@/components/common/banner";
 import ContainerNarrow from "@/components/common/container-narrow";
 import Section from "@/components/common/section";
 import groomingBanner from "@/public/grooming/grooming-banner.jpg";
 import GroomingSwiper from "./grooming-swiper";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import TimeInfo from "./time-info";
 import CostInfo from "./cost-info";
 

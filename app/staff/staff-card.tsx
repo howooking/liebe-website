@@ -57,7 +57,9 @@ export default function StaffCard({ staff, selected, index }: StaffCardProps) {
             src={staff.image}
             alt={staff.name}
             placeholder="blur"
+            priority={index <= 1}
             className="h-[200px] w-[200px] rounded-full"
+            sizes="200px"
           />
         </div>
         <div>{selected === "수의사" && <TimeTable off={staff.off} />}</div>

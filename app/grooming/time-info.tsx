@@ -1,7 +1,6 @@
 "use client";
 
 import { IoIosTime } from "react-icons/io";
-import { FaCut } from "react-icons/fa";
 import {
   Card,
   CardContent,
