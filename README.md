@@ -1,9 +1,4 @@
-[] 수술방 사진 대문에
-[] 전문가가
-[] 플로팅 버튼 그냥 바로 보이도록
-[] 네이버 브라우저 호환성 문제
-
-[배포](https://liebe-website.vercel.app)
+[배포](https://liebeamc.com)
 
 TODO
 

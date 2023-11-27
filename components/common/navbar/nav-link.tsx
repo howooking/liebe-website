@@ -29,7 +29,7 @@ export default function NavLink({ section: { label, href } }: NavLinkProps) {
       {label === "오시는길" || label === "진료과목" ? (
         <a
           href={href}
-          className="relative"
+          className="relative block"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
