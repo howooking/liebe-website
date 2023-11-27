@@ -42,11 +42,11 @@ const Level = ({
   selected,
   level,
   children,
+  setSelected,
 }: {
   selected: string;
   level: string;
   children: JSX.Element;
-  defaultOpen?: boolean;
   setSelected: Dispatch<SetStateAction<string>>;
 }) => {
   useEffect(() => {
@@ -57,7 +57,10 @@ const Level = ({
   return (
     <motion.div animate={open ? "open" : "closed"}>
       <button
-        onClick={() => setOpen((prev) => !prev)}
+        onClick={() => {
+          setOpen((prev) => !prev);
+          setSelected(level);
+        }}
         className="flex w-full items-center justify-between gap-4 py-6"
       >
         <motion.span
