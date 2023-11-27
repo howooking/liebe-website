@@ -2,8 +2,8 @@ import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 export default function AdditionalCost() {
   return (
-    <div className="pb-6">
-      <div className="mt-6 flex h-12 w-full flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 text-white">
+    <div className="pb-1">
+      <div className="mt-1 flex h-12 w-full flex-wrap items-center justify-center gap-2 bg-gradient-to-tr from-slate-700 to-slate-950 text-white">
         추가요금
       </div>
       <Table>

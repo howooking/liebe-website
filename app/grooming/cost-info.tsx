@@ -24,11 +24,13 @@ export default function CostInfo() {
           </div>
         </div>
       </CardHeader>
-      <GroomingTabs selected={selected} setSelected={setSelected} />
       <CardContent className="flex-1 p-0">
+        <GroomingTabs selected={selected} setSelected={setSelected} />
+
         <div className="bg-slate-400 p-3 text-center text-white ">
           {GROOMING_COSTS[selected].caption}
         </div>
+
         <CostTable selected={selected} />
         {selected !== "고양이" && <AdditionalCost />}
       </CardContent>
