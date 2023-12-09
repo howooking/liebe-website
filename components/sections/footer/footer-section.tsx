@@ -8,7 +8,7 @@ export default function FooterSection() {
         <div className="flex flex-col justify-between gap-6 px-3 text-center lg:flex-row lg:text-left">
           <div className="order-2 space-y-2 sm:space-y-4 lg:order-1 lg:flex-1">
             <p>주소 : 서울특별시 송파구 삼전로 56</p>
-            <p>전화번호 : 02.6953.7502</p>
+            <p>전화번호 : 0507.1448.7502</p>
           </div>
 
           <div className="order-1 space-y-2 text-center sm:space-y-4 lg:order-2 lg:flex-1">

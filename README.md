@@ -110,3 +110,56 @@ Sitemap: https://www.liebeamc.com/sitemap.xml
 ```
 
 - opengraph-image, twitter-image
+
+- 네이버 서치어드바이저, 구글 서치 콘솔 등록
+
+2. Nextjs Image optimization
+
+- 본 홈페이지에서 사용한 이미지는 모두 로컬 파일이다.
+- 모든 이미지는 다음과 같이 로컬에서 가져와서 사용하였다.
+
+```js
+import g0 from "@/public/grooming/g0.jpg";
+import g1 from "@/public/grooming/g1.jpg";
+import g2 from "@/public/grooming/g2.jpg";
+import g3 from "@/public/grooming/g3.jpg";
+import g4 from "@/public/grooming/g4.jpg";
+import g5 from "@/public/grooming/g5.jpg";
+import g6 from "@/public/grooming/g6.jpg";
+import g7 from "@/public/grooming/g7.jpg";
+import g8 from "@/public/grooming/g8.jpg";
+import g9 from "@/public/grooming/g9.jpg";
+import g10 from "@/public/grooming/g10.jpg";
+import g11 from "@/public/grooming/g11.jpg";
+
+export const GROOMINGS = [
+  { id: 0, title: "말티즈", image: g0 },
+  { id: 1, title: "푸들", image: g1 },
+  { id: 2, title: "비숑", image: g2 },
+  { id: 3, title: "말티푸", image: g3 },
+  { id: 4, title: "시츄", image: g4 },
+  { id: 5, title: "포메라니안", image: g5 },
+  { id: 6, title: "푸들", image: g6 },
+  { id: 7, title: "시츄", image: g7 },
+  { id: 8, title: "푸들", image: g8 },
+  { id: 9, title: "시츄", image: g9 },
+  { id: 10, title: "말티즈", image: g10 },
+  { id: 11, title: "푸들", image: g11 },
+];
+
+// 사용처
+{GROOMINGS.map((grooming) => (
+  <Image
+    key={grooming.id}
+    quality={100} // 기본 75로 설정된다.
+    src={grooming.image}
+    alt={grooming.title}
+    placeholder="blur"
+    priority
+    className="rounded-md"
+    sizes="(max-width: 1024px) calc(100vw - 24px), 1000px"
+  />
+  <Cover title={grooming.title} />
+))}
+
+```
