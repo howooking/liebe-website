@@ -38,8 +38,8 @@ export default function Contact() {
         <div className="space-y-2">
           <ContactInfoEntry
             icon={RiPhoneFill}
-            text="0507.1448.7502"
-            link="tel:+050714487502"
+            text="02.6953.7502"
+            link="tel:02-6953-7502"
           />
           <ContactInfoEntry
             icon={RiKakaoTalkFill}

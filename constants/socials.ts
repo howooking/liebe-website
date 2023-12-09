@@ -26,9 +26,9 @@ export const SOCIALS = [
   },
   {
     label: "phone",
-    href: "tel:+050714487502",
+    href: "tel:02-6953-7502",
     icon: RiPhoneFill,
-    desc: "0507.1448.7502",
+    desc: "02.6953.7502",
     color: "#03C75A",
   },
 ];
