@@ -43,13 +43,15 @@ export const TIME_INFOS = [
       </div>
     ),
   },
+  //   점심시간 1시-2시
+  // 회진시간 2시-2시 30분  으로 변경부탁 드립니다
   {
     Icon: MdLunchDining,
     title: "식사/회진시간",
     contents: (
       <div className="flex flex-col gap-2">
-        <Time time="오후 12시 - 오후 1시" title="점심시간" />
-        <Time time="오후 1시 - 오후 1시 30분" title="회진시간" />
+        <Time time="오후 1시 - 오후 2시" title="점심시간" />
+        <Time time="오후 2시 - 오후 2시 30분" title="회진시간" />
         <Time time="오후 5시 - 오후 6시" title="저녁시간" />
       </div>
     ),
