@@ -1,8 +1,6 @@
 "use client";
 
-import { INFO_TABS } from "@/constants/info-tabs";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { Dispatch, SetStateAction } from "react";
 
 type TabsProps = {
