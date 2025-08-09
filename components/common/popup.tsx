@@ -40,7 +40,13 @@ export default function Popup() {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative rounded-lg bg-white p-4 shadow-lg">
         <div onClick={handleImageClick} className="cursor-pointer">
-          <Image src="/popup.jpeg" alt="Popup" width={400} height={400} />
+          <Image
+            src="/popup.jpeg"
+            alt="Popup"
+            width={400}
+            height={400}
+            placeholder="blur"
+          />
         </div>
 
         <div className="mt-4 flex justify-between">
