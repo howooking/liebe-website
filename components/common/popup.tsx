@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 
 export default function Popup() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const popupShown = localStorage.getItem("popupShown");
@@ -25,6 +27,11 @@ export default function Popup() {
     setIsOpen(false);
   };
 
+  const handleImageClick = () => {
+    router.push("/info?tab=cost");
+    setIsOpen(false);
+  };
+
   if (!isOpen) {
     return null;
   }
@@ -32,7 +39,9 @@ export default function Popup() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative rounded-lg bg-white p-4 shadow-lg">
-        <Image src="/popup.jpeg" alt="Popup" width={400} height={400} />
+        <div onClick={handleImageClick} className="cursor-pointer">
+          <Image src="/popup.jpeg" alt="Popup" width={400} height={400} />
+        </div>
 
         <div className="mt-4 flex justify-between">
           <Button onClick={handleDontShowAgain} className="">
