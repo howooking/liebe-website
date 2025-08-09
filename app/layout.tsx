@@ -6,6 +6,7 @@ import Navbar from "@/components/common/navbar/navbar";
 import FooterSection from "@/components/sections/footer/footer-section";
 import FloatingPlusButton from "@/components/floating-social-button/floating-plus-button";
 import FixedSocials from "@/components/common/fixed-socials";
+import Popup from "@/components/common/popup";
 
 import { cn } from "@/lib/utils";
 import { baseUrl } from "@/constants/base-url";
@@ -93,6 +94,7 @@ export default function RootLayout({
       <body
         className={cn("relative text-slate-900 antialiased", font.className)}
       >
+        <Popup />
         <Navbar />
         {children}
         <FooterSection />
