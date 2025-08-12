@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import popupImage from "@/public/popup.jpeg";
 
 export default function Popup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ export default function Popup() {
       <div className="relative rounded-lg bg-white p-4 shadow-lg">
         <div onClick={handleImageClick} className="cursor-pointer">
           <Image
-            src="/popup.jpeg"
+            src={popupImage}
             alt="Popup"
             width={400}
             height={400}
