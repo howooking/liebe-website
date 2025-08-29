@@ -46,7 +46,7 @@ export default function Contact() {
             text="카카오상담하기"
             link="https://pf.kakao.com/_uwdNT"
           />
-          <ContactInfoEntry icon={RiMailFill} text="liebeamc2@daum.net" />
+          <ContactInfoEntry icon={RiMailFill} text="liebeamc3@daum.net" />
         </div>
       </div>
     </div>
